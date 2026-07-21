@@ -75,15 +75,9 @@
     ],
     "contact_name": "Daniel Rothvoss",
     "found_emails": [],
-    "found_phones": [
-      "(931) 289-3332",
-      "(888) 626-5151",
-      "(270) 871-9060",
-      "(341) 982-6120",
-      "(423) 836-4030"
-    ],
+    "found_phones": [],
     "best_email": "",
-    "best_phone": "(931) 289-3332"
+    "best_phone": ""
   },
   {
     "license_number": "OCM-CULT-24-000005",
@@ -201,12 +195,9 @@
     ],
     "contact_name": "Morgan Hopkins",
     "found_emails": [],
-    "found_phones": [
-      "(307) 634-5502",
-      "(585) 382-5010"
-    ],
+    "found_phones": [],
     "best_email": "",
-    "best_phone": "(307) 634-5502"
+    "best_phone": ""
   },
   {
     "license_number": "OCM-CULT-24-000011",
@@ -517,13 +508,12 @@
       "Outdoor"
     ],
     "contact_name": "Justin Capoccia",
-    "found_emails": [],
-    "found_phones": [
-      "(221) 128-1242",
-      "(166) 965-8260"
+    "found_emails": [
+      "kickflys@gmail.com"
     ],
-    "best_email": "",
-    "best_phone": "(221) 128-1242"
+    "found_phones": [],
+    "best_email": "kickflys@gmail.com",
+    "best_phone": ""
   },
   {
     "license_number": "OCM-CULT-24-000026",
@@ -661,12 +651,9 @@
     ],
     "contact_name": "Bradley Mills",
     "found_emails": [],
-    "found_phones": [
-      "(888) 626-5151",
-      "(604) 940-9949"
-    ],
+    "found_phones": [],
     "best_email": "",
-    "best_phone": "(888) 626-5151"
+    "best_phone": ""
   },
   {
     "license_number": "OCM-CULT-24-000032",
@@ -1393,16 +1380,9 @@
     ],
     "contact_name": "Martha Johnson",
     "found_emails": [],
-    "found_phones": [
-      "(158) 100-7896",
-      "(518) 275-0687",
-      "(716) 778-7077",
-      "(158) 110-4037",
-      "(856) 833-3668",
-      "(158) 134-4884"
-    ],
+    "found_phones": [],
     "best_email": "",
-    "best_phone": "(158) 100-7896"
+    "best_phone": ""
   },
   {
     "license_number": "OCM-CULT-24-000071",
@@ -1711,12 +1691,9 @@
     ],
     "contact_name": "James Ryan",
     "found_emails": [],
-    "found_phones": [
-      "(168) 038-0843",
-      "(585) 727-0369"
-    ],
+    "found_phones": [],
     "best_email": "",
-    "best_phone": "(168) 038-0843"
+    "best_phone": ""
   },
   {
     "license_number": "OCM-CULT-24-000088",
