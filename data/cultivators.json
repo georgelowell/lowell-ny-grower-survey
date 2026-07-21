@@ -405,9 +405,11 @@
       "Indoor"
     ],
     "contact_name": "Brianna Delgado",
-    "found_emails": [],
+    "found_emails": [
+      "descriptionstodefine@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "descriptionstodefine@gmail.com",
     "best_phone": ""
   },
   {
@@ -423,9 +425,11 @@
       "Combination"
     ],
     "contact_name": "Wanda DelVillar",
-    "found_emails": [],
+    "found_emails": [
+      "cornucopiagrowers@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "cornucopiagrowers@gmail.com",
     "best_phone": ""
   },
   {
@@ -565,7 +569,8 @@
     "contact_name": "Valerie Mendola",
     "found_emails": [
       "118trinityacresfarm@gmail.com",
-      "pumpkinpatch@trinity-acres.farm"
+      "pumpkinpatch@trinity-acres.farm",
+      "trinityacresfarmcannabis@gmail.com"
     ],
     "found_phones": [
       "(720) 296-7896"
@@ -587,36 +592,37 @@
     ],
     "contact_name": "Nathaniel Vincek",
     "found_emails": [
-      "mcastenaro@gmail.com",
-      "alpine.agronomyadk@gmail.com",
-      "chiodosonsllc@outlook.com",
-      "ccraftersllc@gmail.com",
-      "caymens30@aol.com",
-      "tamheartstone@gmail.com",
-      "jayabounader@gmail.com",
-      "anlcc.online@proton.me",
-      "jesseholmz@icloud.com",
-      "adirondackhempfarms@gmail.com",
-      "AndrewJMaggio@gmail.com",
-      "battenkillbuds@gmail.com",
-      "kingaswad@yahoo.com",
-      "pcannon524@gmail.com",
-      "adirondackadvisorygroup@gmail.com",
-      "info@statebridgefarm.com",
-      "m_ribeiro1@ymail.com",
-      "potucekfarm@aol.com",
-      "greenspectrumscbd@gmail.com",
       "blackdirtcanna@gmail.com",
-      "buffalobotanicals@gmail.com",
-      "eblazak@bristolextracts.com",
-      "cornucopiagrowers@gmail.com",
+      "potucekfarm@aol.com",
+      "jesseholmz@icloud.com",
+      "m_ribeiro1@ymail.com",
+      "alpine.agronomyadk@gmail.com",
+      "tamheartstone@gmail.com",
+      "ny@centralprocessors.com",
+      "anlcc.online@proton.me",
+      "AndrewJMaggio@gmail.com",
+      "caymens30@aol.com",
+      "adirondackhempfarms@gmail.com",
+      "info@statebridgefarm.com",
+      "saratogahempfarms@gmail.com",
+      "pcannon524@gmail.com",
+      "ccraftersllc@gmail.com",
+      "jayabounader@gmail.com",
       "nelsonavestable@gmail.com",
-      "ny@centralprocessors.com"
+      "battenkillbuds@gmail.com",
+      "chiodosonsllc@outlook.com",
+      "buffalobotanicals@gmail.com",
+      "greenspectrumscbd@gmail.com",
+      "kingaswad@yahoo.com",
+      "eblazak@bristolextracts.com",
+      "mcastenaro@gmail.com",
+      "cornucopiagrowers@gmail.com",
+      "adirondackadvisorygroup@gmail.com"
     ],
     "found_phones": [
       "(516) 642-4058"
     ],
-    "best_email": "mcastenaro@gmail.com",
+    "best_email": "blackdirtcanna@gmail.com",
     "best_phone": "(516) 642-4058"
   },
   {
@@ -632,9 +638,11 @@
       "Mixed Light"
     ],
     "contact_name": "Sebastiano Bulfamante",
-    "found_emails": [],
+    "found_emails": [
+      "sebastiano.bulfamante@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "sebastiano.bulfamante@gmail.com",
     "best_phone": ""
   },
   {
@@ -686,9 +694,11 @@
       "Outdoor"
     ],
     "contact_name": "Richard DePalma",
-    "found_emails": [],
+    "found_emails": [
+      "marissahempacres@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "marissahempacres@gmail.com",
     "best_phone": ""
   },
   {
@@ -704,9 +714,11 @@
       "Outdoor"
     ],
     "contact_name": "David Quinn",
-    "found_emails": [],
+    "found_emails": [
+      "americanweedllc@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "americanweedllc@gmail.com",
     "best_phone": ""
   },
   {
@@ -722,9 +734,11 @@
       "Combination"
     ],
     "contact_name": "Jeffrey Luciano",
-    "found_emails": [],
+    "found_emails": [
+      "highendgrowsllc@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "highendgrowsllc@gmail.com",
     "best_phone": ""
   },
   {
@@ -758,9 +772,11 @@
       "Combination"
     ],
     "contact_name": "Derek Montana",
-    "found_emails": [],
+    "found_emails": [
+      "westkillbend@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "westkillbend@gmail.com",
     "best_phone": ""
   },
   {
@@ -830,9 +846,11 @@
       "Mixed Light"
     ],
     "contact_name": "Daniel Casacci",
-    "found_emails": [],
+    "found_emails": [
+      "newyorkseedlab@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "newyorkseedlab@gmail.com",
     "best_phone": ""
   },
   {
@@ -1185,9 +1203,11 @@
       "Outdoor"
     ],
     "contact_name": "David Kennedy",
-    "found_emails": [],
+    "found_emails": [
+      "kennedysherbalsolution@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "kennedysherbalsolution@gmail.com",
     "best_phone": ""
   },
   {
@@ -1654,9 +1674,11 @@
       "Combination"
     ],
     "contact_name": "Maria Perry",
-    "found_emails": [],
+    "found_emails": [
+      "missperryfarms@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "missperryfarms@gmail.com",
     "best_phone": ""
   },
   {
@@ -1762,9 +1784,11 @@
       "Outdoor"
     ],
     "contact_name": "Stephen Halton",
-    "found_emails": [],
+    "found_emails": [
+      "haltonhay@outlook.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "haltonhay@outlook.com",
     "best_phone": ""
   },
   {
@@ -2397,9 +2421,11 @@
       "Mixed Light"
     ],
     "contact_name": "Matthew White",
-    "found_emails": [],
+    "found_emails": [
+      "cannacurefarms@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "cannacurefarms@gmail.com",
     "best_phone": ""
   },
   {
@@ -2757,9 +2783,11 @@
       "Mixed Light"
     ],
     "contact_name": "MARCOS RIBEIRO",
-    "found_emails": [],
+    "found_emails": [
+      "eastendflowerfarm@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "eastendflowerfarm@gmail.com",
     "best_phone": ""
   },
   {
@@ -2870,9 +2898,11 @@
       "Outdoor"
     ],
     "contact_name": "Oksana Pidhoreckyj",
-    "found_emails": [],
+    "found_emails": [
+      "romanempirefarms1@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "romanempirefarms1@gmail.com",
     "best_phone": ""
   },
   {
@@ -3469,9 +3499,11 @@
       "Mixed Light"
     ],
     "contact_name": "George Horstmann",
-    "found_emails": [],
+    "found_emails": [
+      "jackbearfarm@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "jackbearfarm@gmail.com",
     "best_phone": ""
   },
   {
@@ -4029,9 +4061,11 @@
       "Outdoor"
     ],
     "contact_name": "James Dutcher",
-    "found_emails": [],
+    "found_emails": [
+      "bigyieldgrowersllc@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "bigyieldgrowersllc@gmail.com",
     "best_phone": ""
   },
   {
@@ -4425,9 +4459,11 @@
       "Indoor"
     ],
     "contact_name": "Ka Lay Tom",
-    "found_emails": [],
+    "found_emails": [
+      "greengrowcannabisinc@gmail.com"
+    ],
     "found_phones": [],
-    "best_email": "",
+    "best_email": "greengrowcannabisinc@gmail.com",
     "best_phone": ""
   },
   {

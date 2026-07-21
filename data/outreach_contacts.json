@@ -268,6 +268,40 @@
     "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-BNB2-95B5-KGL6"
   },
   {
+    "entity": "Descript LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000020",
+    "contact_name": "Brianna Delgado",
+    "email": "descriptionstodefine@gmail.com",
+    "phone": "",
+    "county": "Allegany",
+    "region": "Western NY",
+    "methods": [
+      "Indoor"
+    ],
+    "tier": "CULT_INDOOR_T2",
+    "website": "",
+    "token": "LOW-ACL7-NRMQ-2Y2N",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-ACL7-NRMQ-2Y2N"
+  },
+  {
+    "entity": "Cornucopia Growers LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000021",
+    "contact_name": "Wanda DelVillar",
+    "email": "cornucopiagrowers@gmail.com",
+    "phone": "",
+    "county": "Schoharie",
+    "region": "Mohawk Valley",
+    "methods": [
+      "Combination"
+    ],
+    "tier": "CCULT_COMBINATION_T2",
+    "website": "",
+    "token": "LOW-S9BH-C6NW-PKH7",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-S9BH-C6NW-PKH7"
+  },
+  {
     "entity": "Central Processors NY, LLC",
     "dba": "",
     "license_number": "OCM-CULT-24-000022",
@@ -374,7 +408,7 @@
     "dba": "",
     "license_number": "OCM-CULT-24-000028",
     "contact_name": "Nathaniel Vincek",
-    "email": "mcastenaro@gmail.com",
+    "email": "blackdirtcanna@gmail.com",
     "phone": "(516) 642-4058",
     "county": "Washington",
     "region": "Capital District",
@@ -385,6 +419,108 @@
     "website": "",
     "token": "LOW-WU9Q-Q3K5-6TTS",
     "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-WU9Q-Q3K5-6TTS"
+  },
+  {
+    "entity": "Sebastiano Bulfamante",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000029",
+    "contact_name": "Sebastiano Bulfamante",
+    "email": "sebastiano.bulfamante@gmail.com",
+    "phone": "",
+    "county": "Suffolk",
+    "region": "Long Island",
+    "methods": [
+      "Mixed Light"
+    ],
+    "tier": "CCULT_MIXED_T3",
+    "website": "",
+    "token": "LOW-KPV8-ABEL-CCRW",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-KPV8-ABEL-CCRW"
+  },
+  {
+    "entity": "marissa hemp acres inc",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000033",
+    "contact_name": "Richard DePalma",
+    "email": "marissahempacres@gmail.com",
+    "phone": "",
+    "county": "Sullivan",
+    "region": "Mid-Hudson",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T4",
+    "website": "",
+    "token": "LOW-7W9Z-UYCT-QY3C",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-7W9Z-UYCT-QY3C"
+  },
+  {
+    "entity": "American Weed LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000034",
+    "contact_name": "David Quinn",
+    "email": "americanweedllc@gmail.com",
+    "phone": "",
+    "county": "Tompkins",
+    "region": "Southern Tier",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T5",
+    "website": "",
+    "token": "LOW-4PHL-7P8D-QX7G",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-4PHL-7P8D-QX7G"
+  },
+  {
+    "entity": "High End Grows, LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000035",
+    "contact_name": "Jeffrey Luciano",
+    "email": "highendgrowsllc@gmail.com",
+    "phone": "",
+    "county": "Tompkins",
+    "region": "Southern Tier",
+    "methods": [
+      "Combination"
+    ],
+    "tier": "CCULT_COMBINATION_T2",
+    "website": "",
+    "token": "LOW-P6F4-S8J5-F9RU",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-P6F4-S8J5-F9RU"
+  },
+  {
+    "entity": "Westkill Bend Inc",
+    "dba": "Blackbird Gardens",
+    "license_number": "OCM-CULT-24-000037",
+    "contact_name": "Derek Montana",
+    "email": "westkillbend@gmail.com",
+    "phone": "",
+    "county": "Schoharie",
+    "region": "Mohawk Valley",
+    "methods": [
+      "Combination"
+    ],
+    "tier": "CCULT_COMBINATION_T2",
+    "website": "",
+    "token": "LOW-RP92-V4BE-DRGK",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-RP92-V4BE-DRGK"
+  },
+  {
+    "entity": "New York Seed Laboratory LLC",
+    "dba": "NY Seed Laboratory",
+    "license_number": "OCM-CULT-24-000041",
+    "contact_name": "Daniel Casacci",
+    "email": "newyorkseedlab@gmail.com",
+    "phone": "",
+    "county": "Erie",
+    "region": "Western NY",
+    "methods": [
+      "Mixed Light"
+    ],
+    "tier": "CCULT_MIXED_T3",
+    "website": "",
+    "token": "LOW-2APT-46PU-E4GY",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-2APT-46PU-E4GY"
   },
   {
     "entity": "Hempire Inc.",
@@ -438,6 +574,23 @@
     "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-RLRE-LHVF-VM93"
   },
   {
+    "entity": "Kennedys herbal solution",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000059",
+    "contact_name": "David Kennedy",
+    "email": "kennedysherbalsolution@gmail.com",
+    "phone": "",
+    "county": "Washington",
+    "region": "Capital District",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T4",
+    "website": "",
+    "token": "LOW-SLYQ-BLCY-8YJH",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-SLYQ-BLCY-8YJH"
+  },
+  {
     "entity": "JRS Naturals",
     "dba": "",
     "license_number": "OCM-CULT-24-000074",
@@ -451,6 +604,40 @@
     "website": "alchemypure.com",
     "token": "LOW-YGB7-ZRJ4-HZVJ",
     "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-YGB7-ZRJ4-HZVJ"
+  },
+  {
+    "entity": "Miss Perry Farms LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000085",
+    "contact_name": "Maria Perry",
+    "email": "missperryfarms@gmail.com",
+    "phone": "",
+    "county": "Oneida",
+    "region": "Mohawk Valley",
+    "methods": [
+      "Combination"
+    ],
+    "tier": "CCULT_COMBINATION_T2",
+    "website": "www.missperryfarms.com",
+    "token": "LOW-WWV8-6AJQ-SABN",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-WWV8-6AJQ-SABN"
+  },
+  {
+    "entity": "Halton Hay Inc",
+    "dba": "Real Life Botanicals",
+    "license_number": "OCM-CULT-24-000091",
+    "contact_name": "Stephen Halton",
+    "email": "haltonhay@outlook.com",
+    "phone": "",
+    "county": "Madison",
+    "region": "Central NY",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T4",
+    "website": "",
+    "token": "LOW-8JNK-TQ6X-DU37",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-8JNK-TQ6X-DU37"
   },
   {
     "entity": "Nectara Ltd.",
@@ -470,6 +657,40 @@
     "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-AAWW-VBGZ-M6ZL"
   },
   {
+    "entity": "Canna Cure Farms, LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000134",
+    "contact_name": "Matthew White",
+    "email": "cannacurefarms@gmail.com",
+    "phone": "",
+    "county": "Washington",
+    "region": "Capital District",
+    "methods": [
+      "Mixed Light"
+    ],
+    "tier": "CCULT_MIXED_T3",
+    "website": "www.nycannacurefarms.com",
+    "token": "LOW-LKNK-BWAT-J2CS",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-LKNK-BWAT-J2CS"
+  },
+  {
+    "entity": "EAST END FLOWER FARM LTD",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000154",
+    "contact_name": "MARCOS RIBEIRO",
+    "email": "eastendflowerfarm@gmail.com",
+    "phone": "",
+    "county": "Suffolk",
+    "region": "Long Island",
+    "methods": [
+      "Mixed Light"
+    ],
+    "tier": "CCULT_MIXED_T2",
+    "website": "",
+    "token": "LOW-QJM9-M9ZK-VJ72",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-QJM9-M9ZK-VJ72"
+  },
+  {
     "entity": "Trucann LLC",
     "dba": "Trucann",
     "license_number": "OCM-CULT-24-000156",
@@ -485,6 +706,23 @@
     "website": "www.trucann.com",
     "token": "LOW-AGS8-DD9T-BZFA",
     "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-AGS8-DD9T-BZFA"
+  },
+  {
+    "entity": "Roman Empire Farms",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000160",
+    "contact_name": "Oksana Pidhoreckyj",
+    "email": "romanempirefarms1@gmail.com",
+    "phone": "",
+    "county": "Montgomery",
+    "region": "Mohawk Valley",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T4",
+    "website": "www.romanempirefarms.com",
+    "token": "LOW-7QZL-MWCN-PXVK",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-7QZL-MWCN-PXVK"
   },
   {
     "entity": "urbanXtracts",
@@ -504,6 +742,23 @@
     "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-D62K-FL2Y-FSN5"
   },
   {
+    "entity": "Jack Bear Farm LLC",
+    "dba": "Jack Bear Farm",
+    "license_number": "OCM-CULT-25-000193",
+    "contact_name": "George Horstmann",
+    "email": "jackbearfarm@gmail.com",
+    "phone": "",
+    "county": "Albany",
+    "region": "Capital District",
+    "methods": [
+      "Mixed Light"
+    ],
+    "tier": "CCULT_MIXED_T2",
+    "website": "",
+    "token": "LOW-YCV4-ZQEA-D3XH",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-YCV4-ZQEA-D3XH"
+  },
+  {
     "entity": "NOWAVE LLC",
     "dba": "",
     "license_number": "OCM-CULT-25-000195",
@@ -519,5 +774,39 @@
     "website": "www.nowave.com",
     "token": "LOW-M5KE-C8HM-VBJE",
     "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-M5KE-C8HM-VBJE"
+  },
+  {
+    "entity": "Big Yield Growers LLC",
+    "dba": "BYG",
+    "license_number": "OCM-CULT-25-000224",
+    "contact_name": "James Dutcher",
+    "email": "bigyieldgrowersllc@gmail.com",
+    "phone": "",
+    "county": "St Lawrence",
+    "region": "North Country",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T4",
+    "website": "https://www.bigyieldgrowers.com/",
+    "token": "LOW-TMDM-JTLQ-BL39",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-TMDM-JTLQ-BL39"
+  },
+  {
+    "entity": "Green Grow Cannabis Garden INC.",
+    "dba": "",
+    "license_number": "OCM-CULT-26-000246",
+    "contact_name": "Ka Lay Tom",
+    "email": "greengrowcannabisinc@gmail.com",
+    "phone": "",
+    "county": "Delaware",
+    "region": "Southern Tier",
+    "methods": [
+      "Indoor"
+    ],
+    "tier": "CULT_INDOOR_T2",
+    "website": "www.greengrowcann.com",
+    "token": "LOW-FX42-GBP2-86CD",
+    "survey_link": "https://georgelowell.github.io/lowell-ny-grower-survey/survey.html?token=LOW-FX42-GBP2-86CD"
   }
 ]
