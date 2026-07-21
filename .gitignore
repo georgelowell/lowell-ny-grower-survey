@@ -1,0 +1,18 @@
+# Node modules (if any)
+node_modules/
+
+# Local data copies
+*.local.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.idea/
+.vscode/
+*.swp
+
+# GitHub Pages build artifacts (if using Jekyll)
+_site/
+.sass-cache/

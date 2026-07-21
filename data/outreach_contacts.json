@@ -1,0 +1,572 @@
+[
+  {
+    "entity": "Next Gen Hemp Growers LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000001",
+    "contact_name": "Lorraine Kellogg",
+    "email": "lorikellogg@hotmail.com",
+    "phone": "(211) 413-6287",
+    "county": "Broome",
+    "region": "Southern Tier",
+    "methods": [
+      "Mixed Light"
+    ],
+    "tier": "CCULT_MIXED_T3",
+    "website": "",
+    "score": 5
+  },
+  {
+    "entity": "Bone Creek Farm LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000002",
+    "contact_name": "Joseph Gelormino",
+    "email": "bonecreekfarmllc@gmail.com",
+    "phone": "",
+    "county": "Broome",
+    "region": "Southern Tier",
+    "methods": [
+      "Combination"
+    ],
+    "tier": "CCULT_COMBINATION_T2",
+    "website": "bonecreekfarm.com",
+    "score": 3
+  },
+  {
+    "entity": "4 Erratic Farm LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000003",
+    "contact_name": "David Dzielak",
+    "email": "dzielakd@gmail.com",
+    "phone": "",
+    "county": "New York",
+    "region": "Manhattan",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T4",
+    "website": "",
+    "score": 3
+  },
+  {
+    "entity": "TNH 420 LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000004",
+    "contact_name": "Daniel Rothvoss",
+    "email": "",
+    "phone": "(931) 289-3332",
+    "county": "Columbia",
+    "region": "Capital District",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T5",
+    "website": "",
+    "score": 10
+  },
+  {
+    "entity": "Rippin' Ridge Farm, LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000005",
+    "contact_name": "Jennifer Basic",
+    "email": "JBasicLaw@BasicCompanies.com",
+    "phone": "",
+    "county": "Madison",
+    "region": "Central NY",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T5",
+    "website": "",
+    "score": 3
+  },
+  {
+    "entity": "NG Growers Inc.",
+    "dba": "Nanticoke Gardens",
+    "license_number": "OCM-CULT-24-000006",
+    "contact_name": "Peter Shafer",
+    "email": "info@nanticokegardens.com",
+    "phone": "(607) 754-5008",
+    "county": "Broome",
+    "region": "Southern Tier",
+    "methods": [],
+    "tier": "CCULT_MIXED_T3",
+    "website": "www.nanticoke.co",
+    "score": 5
+  },
+  {
+    "entity": "Honey Dog Heaven LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000007",
+    "contact_name": "james chambers",
+    "email": "info@honeydogheaven.com",
+    "phone": "(518) 325-1348",
+    "county": "Columbia",
+    "region": "Capital District",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T4",
+    "website": "",
+    "score": 5
+  },
+  {
+    "entity": "PECONIC GROWERS LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000008",
+    "contact_name": "Dillon White",
+    "email": "Dillon.peconicgrowers@gmail.co",
+    "phone": "",
+    "county": "Suffolk",
+    "region": "Long Island",
+    "methods": [
+      "Mixed Light"
+    ],
+    "tier": "CULT_MIXED_T4",
+    "website": "www.peconicgrowers.com",
+    "score": 8
+  },
+  {
+    "entity": "Harney Brothers LLC",
+    "dba": "Dutchess Diesel",
+    "license_number": "OCM-CULT-24-000009",
+    "contact_name": "Michael Harney",
+    "email": "info@harneybrotherscannabis.com",
+    "phone": "(800) 222-1222",
+    "county": "Dutchess",
+    "region": "Mid-Hudson",
+    "methods": [],
+    "tier": "CCULT_COMBINATION_T2",
+    "website": "",
+    "score": 5
+  },
+  {
+    "entity": "CSH Wyoming LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000010",
+    "contact_name": "Morgan Hopkins",
+    "email": "",
+    "phone": "(307) 634-5502",
+    "county": "Wyoming",
+    "region": "Finger Lakes",
+    "methods": [
+      "Combination"
+    ],
+    "tier": "CCULT_COMBINATION_T2",
+    "website": "",
+    "score": 4
+  },
+  {
+    "entity": "Eaton License LLC",
+    "dba": "Eaton Botanicals",
+    "license_number": "OCM-CULT-24-000011",
+    "contact_name": "Daniel Dolgin",
+    "email": "dan@eatonhemp.com",
+    "phone": "",
+    "county": "Madison",
+    "region": "Central NY",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T5",
+    "website": "www.eatonbotanicals.com",
+    "score": 3
+  },
+  {
+    "entity": "Torrwood Farm, LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000012",
+    "contact_name": "Charles Kerr",
+    "email": "contact@torrwoodfarm.com",
+    "phone": "",
+    "county": "Sullivan",
+    "region": "Mid-Hudson",
+    "methods": [
+      "Combination"
+    ],
+    "tier": "CCULT_COMBINATION_T2",
+    "website": "",
+    "score": 3
+  },
+  {
+    "entity": "Enfield Glen Hopyard LLC",
+    "dba": "Enfield Glen Hopyard",
+    "license_number": "OCM-CULT-24-000013",
+    "contact_name": "Jason Beizavi",
+    "email": "jason@enfieldglenhopyard.com",
+    "phone": "",
+    "county": "Tompkins",
+    "region": "Southern Tier",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T4",
+    "website": "",
+    "score": 3
+  },
+  {
+    "entity": "Tumbleweed Farms, LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000014",
+    "contact_name": "Jose Rodrigues",
+    "email": "joesrodriguesiii@gmail.com",
+    "phone": "",
+    "county": "Otsego",
+    "region": "Mohawk Valley",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T4",
+    "website": "",
+    "score": 3
+  },
+  {
+    "entity": "Moby & Zeke, LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000015",
+    "contact_name": "Nicholas pistolesi",
+    "email": "indialaurie@yahoo.com",
+    "phone": "",
+    "county": "Tompkins",
+    "region": "Southern Tier",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T5",
+    "website": "",
+    "score": 3
+  },
+  {
+    "entity": "Emerald City NY, LLC",
+    "dba": "Green Spectrums",
+    "license_number": "OCM-CULT-24-000017",
+    "contact_name": "Michael Fertucci",
+    "email": "Corporate@your-domain.com",
+    "phone": "(800) 555-5432",
+    "county": "Dutchess",
+    "region": "Mid-Hudson",
+    "methods": [
+      "Indoor"
+    ],
+    "tier": "CULT_INDOOR_T1",
+    "website": "emeraldcitynyllc.com",
+    "score": 20
+  },
+  {
+    "entity": "Glenna & Co. LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000018",
+    "contact_name": "Glenna Colaprete",
+    "email": "info@glennas.com",
+    "phone": "(585) 442-4223",
+    "county": "Monroe",
+    "region": "Finger Lakes",
+    "methods": [
+      "Mixed Light"
+    ],
+    "tier": "CCULT_MIXED_T2",
+    "website": "glennas.com",
+    "score": 10
+  },
+  {
+    "entity": "Outcast Acres LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000019",
+    "contact_name": "Christopher George",
+    "email": "chris@outcastacresfarm.com",
+    "phone": "(619) 405-5976",
+    "county": "Washington",
+    "region": "Capital District",
+    "methods": [
+      "Combination"
+    ],
+    "tier": "CCULT_COMBINATION_T2",
+    "website": "",
+    "score": 8
+  },
+  {
+    "entity": "Central Processors NY, LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000022",
+    "contact_name": "John Vavalo",
+    "email": "ny@centralprocessors.com",
+    "phone": "(859) 253-6359",
+    "county": "Onondaga",
+    "region": "Central NY",
+    "methods": [
+      "Mixed Light"
+    ],
+    "tier": "CCULT_MIXED_T3",
+    "website": "www.centralprocessorsny.com",
+    "score": 9
+  },
+  {
+    "entity": "Cherry Valley Growers, Inc",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000023",
+    "contact_name": "Joseph Passalaqua",
+    "email": "jopass@yahoo.com",
+    "phone": "",
+    "county": "Otsego",
+    "region": "Mohawk Valley",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T3",
+    "website": "",
+    "score": 3
+  },
+  {
+    "entity": "Raga Growers, LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000024",
+    "contact_name": "Gary Glowaczewski",
+    "email": "ragagrowers@gmail.com",
+    "phone": "(917) 336-2471",
+    "county": "Orange",
+    "region": "Mid-Hudson",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T4",
+    "website": "",
+    "score": 7
+  },
+  {
+    "entity": "KickFly's LLC",
+    "dba": "Kickfly's",
+    "license_number": "OCM-CULT-24-000025",
+    "contact_name": "Justin Capoccia",
+    "email": "",
+    "phone": "(221) 128-1242",
+    "county": "Orange",
+    "region": "Mid-Hudson",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T4",
+    "website": "www.kickflys.com",
+    "score": 4
+  },
+  {
+    "entity": "Earthborn Garden LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000026",
+    "contact_name": "Anne Banks",
+    "email": "earthborngarden@gmail.com",
+    "phone": "(159) 007-7541",
+    "county": "Columbia",
+    "region": "Capital District",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T5",
+    "website": "earthborngarden.net",
+    "score": 31
+  },
+  {
+    "entity": "Trinity Acres Farm, LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000027",
+    "contact_name": "Valerie Mendola",
+    "email": "118trinityacresfarm@gmail.com",
+    "phone": "(720) 296-7896",
+    "county": "Chenango",
+    "region": "Southern Tier",
+    "methods": [
+      "Combination"
+    ],
+    "tier": "CCULT_COMBINATION_T1",
+    "website": "",
+    "score": 8
+  },
+  {
+    "entity": "Saratoga Hemp Farms LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000028",
+    "contact_name": "Nathaniel Vincek",
+    "email": "mcastenaro@gmail.com",
+    "phone": "(516) 642-4058",
+    "county": "Washington",
+    "region": "Capital District",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T5",
+    "website": "",
+    "score": 77
+  },
+  {
+    "entity": "Four Winds Terracult, LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000030",
+    "contact_name": "Bradley Mills",
+    "email": "",
+    "phone": "(888) 626-5151",
+    "county": "Genesee",
+    "region": "Finger Lakes",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T4",
+    "website": "",
+    "score": 4
+  },
+  {
+    "entity": "Hempire Inc.",
+    "dba": "Empire Farm 1830",
+    "license_number": "OCM-CULT-24-000051",
+    "contact_name": "Tessa Edick",
+    "email": "hello@empirefarm1830.com",
+    "phone": "",
+    "county": "Columbia",
+    "region": "Capital District",
+    "methods": [
+      "Combination"
+    ],
+    "tier": "CCULT_COMBINATION_T2",
+    "website": "empirefarm1830.com",
+    "score": 3
+  },
+  {
+    "entity": "Bristol Extracts LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000052",
+    "contact_name": "Eric Blazak",
+    "email": "tamheartstone@gmail.com",
+    "phone": "(720) 633-1615",
+    "county": "Ontario",
+    "region": "Finger Lakes",
+    "methods": [
+      "Combination"
+    ],
+    "tier": "CULT_COMBINATION_T3",
+    "website": "bristolextracts.com",
+    "score": 85
+  },
+  {
+    "entity": "Black Dirt Cannabis Company LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000056",
+    "contact_name": "Michael White",
+    "email": "blackdirtcanna@gmail.com",
+    "phone": "(845) 606-2128",
+    "county": "Orange",
+    "region": "Mid-Hudson",
+    "methods": [
+      "Mixed Light"
+    ],
+    "tier": "CCULT_OUTDOOR_T4",
+    "website": "blackdirtcannabiscompany.com",
+    "score": 8
+  },
+  {
+    "entity": "Slack Hollow Organics LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000070",
+    "contact_name": "Martha Johnson",
+    "email": "",
+    "phone": "(158) 100-7896",
+    "county": "Washington",
+    "region": "Capital District",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T5",
+    "website": "slackhollowhemp.com",
+    "score": 12
+  },
+  {
+    "entity": "JRS Naturals",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000074",
+    "contact_name": "Hannah Karcheski",
+    "email": "jerry@alchemypure.com",
+    "phone": "(917) 826-7522",
+    "county": "Dutchess",
+    "region": "Mid-Hudson",
+    "methods": [],
+    "tier": "CCULT_OUTDOOR_T5",
+    "website": "alchemypure.com",
+    "score": 12
+  },
+  {
+    "entity": "James E Ryan",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000087",
+    "contact_name": "James Ryan",
+    "email": "",
+    "phone": "(168) 038-0843",
+    "county": "Wayne",
+    "region": "Finger Lakes",
+    "methods": [
+      "Indoor"
+    ],
+    "tier": "CULT_INDOOR_T1",
+    "website": "www.ryanfarmsmarionny.com",
+    "score": 4
+  },
+  {
+    "entity": "Nectara Ltd.",
+    "dba": "Skyrose",
+    "license_number": "OCM-CULT-24-000119",
+    "contact_name": "Jennifer Hindes",
+    "email": "info@skyrosefarm.com",
+    "phone": "(295) 798-6256",
+    "county": "Columbia",
+    "region": "Capital District",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CCULT_OUTDOOR_T5",
+    "website": "skyrosefarm.com",
+    "score": 14
+  },
+  {
+    "entity": "Trucann LLC",
+    "dba": "Trucann",
+    "license_number": "OCM-CULT-24-000156",
+    "contact_name": "Paal Elfstrum",
+    "email": "info@trucann.com",
+    "phone": "(347) 377-7146",
+    "county": "Niagara",
+    "region": "Western NY",
+    "methods": [
+      "Mixed Light"
+    ],
+    "tier": "CULT_MIXED_T4",
+    "website": "www.trucann.com",
+    "score": 8
+  },
+  {
+    "entity": "urbanXtracts",
+    "dba": "",
+    "license_number": "OCM-CULT-24-000171",
+    "contact_name": "Eran Sherin",
+    "email": "inquiries@urbanxtracts.com",
+    "phone": "(330) 643-9697",
+    "county": "Orange",
+    "region": "Mid-Hudson",
+    "methods": [
+      "Combination"
+    ],
+    "tier": "CULT_COMBINATION_T3",
+    "website": "urbanXtracts.com",
+    "score": 19
+  },
+  {
+    "entity": "NOWAVE LLC",
+    "dba": "",
+    "license_number": "OCM-CULT-25-000195",
+    "contact_name": "Robert Anderson",
+    "email": "",
+    "phone": "(246) 040-1670",
+    "county": "Madison",
+    "region": "Central NY",
+    "methods": [
+      "Outdoor"
+    ],
+    "tier": "CULT_OUTDOOR_T4",
+    "website": "www.nowave.com",
+    "score": 2
+  }
+]

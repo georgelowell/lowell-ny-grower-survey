@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Lowell Grower's Survey</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .admin-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    .admin-table th { text-align: left; padding: 0.5rem; background: var(--cream); font-weight: 600; position: sticky; top: 0; }
+    .admin-table td { padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--gray-light); vertical-align: top; }
+    .admin-table tr:hover { background: #faf8f4; }
+    .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+    .badge-green { background: #e6f4ea; color: #1e7e34; }
+    .badge-gray { background: #f0f0f0; color: #666; }
+    .badge-gold { background: #fdf6e3; color: #856404; }
+    .badge-blue { background: #e0f0fa; color: #1565c0; }
+    .mono { font-family: 'SF Mono', 'Menlo', monospace; font-size: 0.8rem; }
+    .copy-btn { font-size: 0.75rem; padding: 0.15rem 0.5rem; cursor: pointer; }
+    .token-cell { max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
+    .filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .filters select, .filters input { padding: 0.4rem 0.6rem; font-size: 0.85rem; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem; }
+    .stat-mini { background: var(--cream); border-radius: 6px; padding: 0.75rem; text-align: center; }
+    .stat-mini .num { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); }
+    .stat-mini .lbl { font-size: 0.75rem; color: var(--gray); text-transform: uppercase; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div>
+      <h1>Survey Admin</h1>
+      <div class="subtitle">Token Management & Distribution</div>
+    </div>
+    <nav>
+      <a href="index.html" style="color:var(--white); font-size:0.85rem; text-decoration:underline;">Home</a>
+      <span style="color:rgba(255,255,255,0.5); margin:0 0.5rem;">|</span>
+      <a href="results.html" style="color:var(--white); font-size:0.85rem; text-decoration:underline;">Results</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container container-wide">
+
+  <!-- Data Loading / Status -->
+  <div class="card" id="data-panel">
+    <h2>Cultivator Database</h2>
+    <div class="stats-grid" id="stats-grid">
+      <div class="stat-mini"><div class="num" id="stat-total">—</div><div class="lbl">Total Cultivators</div></div>
+      <div class="stat-mini"><div class="num" id="stat-outdoor">—</div><div class="lbl">Outdoor</div></div>
+      <div class="stat-mini"><div class="num" id="stat-indoor">—</div><div class="lbl">Indoor</div></div>
+      <div class="stat-mini"><div class="num" id="stat-with-email">—</div><div class="lbl">With Email Found</div></div>
+      <div class="stat-mini"><div class="num" id="stat-with-phone">—</div><div class="lbl">With Phone Found</div></div>
+      <div class="stat-mini"><div class="num" id="stat-tokens">—</div><div class="lbl">Tokens Generated</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;">
+      <h2 style="margin:0;">Cultivators</h2>
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+        <button class="btn btn-primary" onclick="generateAllTokens()" id="gen-btn">Generate Tokens</button>
+        <button class="btn btn-secondary" onclick="exportCSV()">Export CSV</button>
+        <button class="btn btn-secondary" onclick="exportOutreachCSV()">Outreach CSV</button>
+      </div>
+    </div>
+
+    <div class="filters">
+      <select id="filter-method" onchange="applyFilters()">
+        <option value="all">All Methods</option>
+        <option value="outdoor">Outdoor</option>
+        <option value="indoor">Indoor</option>
+        <option value="mixed_light">Mixed Light</option>
+        <option value="combination">Combination</option>
+      </select>
+      <select id="filter-contact" onchange="applyFilters()">
+        <option value="all">All Contact Status</option>
+        <option value="has_email">Has Email</option>
+        <option value="has_phone">Has Phone</option>
+        <option value="no_email">No Email</option>
+      </select>
+      <select id="filter-token" onchange="applyFilters()">
+        <option value="all">Token: All</option>
+        <option value="has_token">Has Token</option>
+        <option value="no_token">No Token</option>
+      </select>
+      <input type="text" id="filter-search" placeholder="Search entity name..." oninput="applyFilters()" />
+      <span id="filter-count" style="font-size:0.85rem; color:var(--gray); align-self:center;"></span>
+    </div>
+
+    <div style="overflow-x:auto;">
+      <table class="admin-table" id="cultivator-table">
+        <thead>
+          <tr>
+            <th style="width:30px;">#</th>
+            <th>Entity Name</th>
+            <th>DBA</th>
+            <th>Method</th>
+            <th>County</th>
+            <th>Contact</th>
+            <th>Email Found</th>
+            <th>Phone Found</th>
+            <th>Token</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>Admin dashboard — not for public distribution</p>
+</footer>
+
+<script>
+const STORAGE_KEY = 'lowell_survey_admin_data';
+
+// ── Data ──
+let cultivators = [];
+let tokens = {};
+
+// ── Token Generation ──
+function generateToken(licenseNumber) {
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  const parts = [];
+  for (let p = 0; p < 3; p++) {
+    let part = '';
+    for (let i = 0; i < 4; i++) {
+      part += chars[Math.floor(Math.random() * chars.length)];
+    }
+    parts.push(part);
+  }
+  return `LOW-${parts.join('-')}`;
+}
+
+// ── Generate Tokens for All ──
+async function generateAllTokens() {
+  const btn = document.getElementById('gen-btn');
+  btn.disabled = true;
+  btn.textContent = 'Generating...';
+
+  // Load stored token data
+  let stored = {};
+  try {
+    const s = localStorage.getItem('lowell_survey_tokens');
+    if (s) stored = JSON.parse(s);
+  } catch(e) {}
+
+  let count = 0;
+  for (const c of cultivators) {
+    const key = c.license_number;
+    if (!stored[key]) {
+      stored[key] = {
+        token: generateToken(key),
+        license: key,
+        entity: c.entity_name,
+        created: new Date().toISOString(),
+        used: false,
+        email: c.found_emails?.[0] || '',
+        phone: c.found_phones?.[0] || '',
+      };
+      count++;
+    }
+  }
+
+  localStorage.setItem('lowell_survey_tokens', JSON.stringify(stored));
+  tokens = stored;
+
+  btn.disabled = false;
+  btn.textContent = 'Generate Tokens';
+  
+  // Update UI
+  document.getElementById('stat-tokens').textContent = Object.keys(tokens).length;
+  renderTable();
+  showNotification(`Generated ${count} new token${count !== 1 ? 's' : ''}!`);
+}
+
+// ── Import cultivator data ──
+async function loadData() {
+  // Load from embedded JSON or GitHub
+  // For now, load from the local data file
+  try {
+    const resp = await fetch('data/cultivators.json');
+    const data = await resp.json();
+    cultivators = data;
+  } catch(e) {
+    console.warn('Could not load cultivators.json, using sample', e);
+    cultivators = getSampleData();
+  }
+
+  // Load stored tokens
+  try {
+    const s = localStorage.getItem('lowell_survey_tokens');
+    if (s) tokens = JSON.parse(s);
+  } catch(e) {}
+
+  updateStats();
+  renderTable();
+}
+
+function getSampleData() {
+  return [
+    { entity_name: 'Sample Grow LLC', dba: 'Sample Farm', county: 'Columbia', tier_type: 'CULT_OUTDOOR_T4', cultivation_methods: ['Outdoor', 'Mixed Light'], found_emails: ['sample@email.com'], found_phones: ['(518) 555-0100'], license_number: 'OCM-CULT-24-000001', contact_name: 'John Sample', website: 'samplegrow.com', operational_status: 'Active' },
+  ];
+}
+
+function updateStats() {
+  const total = cultivators.length;
+  const outdoor = cultivators.filter(c => c.cultivation_methods?.includes('Outdoor') || c.cultivation_methods?.includes('outdoor')).length;
+  const indoor = cultivators.filter(c => c.cultivation_methods?.includes('Indoor') || c.cultivation_methods?.includes('indoor')).length;
+  const withEmail = cultivators.filter(c => c.found_emails?.length > 0).length;
+  const withPhone = cultivators.filter(c => c.found_phones?.length > 0).length;
+  const tokenCount = Object.keys(tokens).length;
+
+  document.getElementById('stat-total').textContent = total;
+  document.getElementById('stat-outdoor').textContent = outdoor;
+  document.getElementById('stat-indoor').textContent = indoor;
+  document.getElementById('stat-with-email').textContent = withEmail;
+  document.getElementById('stat-with-phone').textContent = withPhone;
+  document.getElementById('stat-tokens').textContent = tokenCount;
+}
+
+function applyFilters() {
+  renderTable();
+}
+
+function renderTable() {
+  const method = document.getElementById('filter-method').value;
+  const contact = document.getElementById('filter-contact').value;
+  const tokenFilter = document.getElementById('filter-token').value;
+  const search = document.getElementById('filter-search').value.toLowerCase();
+
+  let filtered = cultivators.filter(c => {
+    const methods = (c.cultivation_methods || []).map(m => m.toLowerCase());
+    const methodsStr = methods.join(' ');
+    
+    if (method !== 'all' && !methodsStr.includes(method)) return false;
+    if (contact === 'has_email' && (!c.found_emails || c.found_emails.length === 0)) return false;
+    if (contact === 'has_phone' && (!c.found_phones || c.found_phones.length === 0)) return false;
+    if (contact === 'no_email' && c.found_emails && c.found_emails.length > 0) return false;
+    
+    const hasToken = !!tokens[c.license_number];
+    if (tokenFilter === 'has_token' && !hasToken) return false;
+    if (tokenFilter === 'no_token' && hasToken) return false;
+    
+    if (search && !c.entity_name.toLowerCase().includes(search) && 
+        !(c.dba || '').toLowerCase().includes(search)) return false;
+    
+    return true;
+  });
+
+  document.getElementById('filter-count').textContent = `${filtered.length} of ${cultivators.length}`;
+
+  const tbody = document.getElementById('table-body');
+  tbody.innerHTML = filtered.map((c, i) => {
+    const methods = (c.cultivation_methods || []).join(', ');
+    const email = c.found_emails?.[0] || '';
+    const phone = c.found_phones?.[0] || '';
+    const token = tokens[c.license_number];
+    const tokenStr = token ? token.token : '';
+    const surveyLink = tokenStr ? `survey.html?token=${encodeURIComponent(tokenStr)}` : '';
+
+    return `<tr>
+      <td>${i + 1}</td>
+      <td><strong>${escapeHtml(c.entity_name)}</strong></td>
+      <td>${escapeHtml(c.dba || '')}</td>
+      <td><span class="badge ${getMethodBadge(methods)}">${escapeHtml(methods)}</span></td>
+      <td>${escapeHtml(c.county || '')}</td>
+      <td style="font-size:0.8rem;">${escapeHtml(c.contact_name || '')}</td>
+      <td>${email ? `<span class="mono">${escapeHtml(email)}</span>` : '<span style="color:#999;">—</span>'}</td>
+      <td>${phone ? escapeHtml(phone) : '<span style="color:#999;">—</span>'}</td>
+      <td class="token-cell">
+        ${tokenStr ? `<span class="mono">${tokenStr}</span>
+          <br><button class="copy-btn btn btn-secondary" onclick="copyLink('${surveyLink}')">Copy Link</button>` 
+          : '<span style="color:#999;">—</span>'}
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+function getMethodBadge(methods) {
+  if (methods.includes('Outdoor')) return 'badge-green';
+  if (methods.includes('Indoor')) return 'badge-blue';
+  if (methods.includes('Mixed')) return 'badge-gold';
+  return 'badge-gray';
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function copyLink(url) {
+  const fullUrl = window.location.origin + '/' + window.location.pathname.split('/').slice(0, -1).join('/') + '/' + url;
+  navigator.clipboard.writeText(fullUrl).then(() => {
+    showNotification('Link copied!');
+  }).catch(() => {
+    // Fallback
+    const input = document.createElement('input');
+    input.value = fullUrl;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand('copy');
+    document.body.removeChild(input);
+    showNotification('Link copied!');
+  });
+}
+
+function showNotification(msg) {
+  const el = document.createElement('div');
+  el.style.cssText = 'position:fixed; bottom:2rem; right:2rem; background:var(--green); color:white; padding:1rem 1.5rem; border-radius:8px; font-size:0.9rem; font-weight:600; z-index:1000; box-shadow:0 4px 12px rgba(0,0,0,0.15);';
+  el.textContent = msg;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 3000);
+}
+
+// ── Export CSV ──
+function exportCSV() {
+  let csv = 'License Number,Entity Name,DBA,License Type,County,Region,Operational Status,Tier Type,Cultivation Methods,Contact Name,Email Found,Phone Found,Website\n';
+  for (const c of cultivators) {
+    csv += [
+      csvCell(c.license_number),
+      csvCell(c.entity_name),
+      csvCell(c.dba),
+      csvCell(c.license_type),
+      csvCell(c.county),
+      csvCell(c.region),
+      csvCell(c.operational_status),
+      csvCell(c.tier_type),
+      csvCell((c.cultivation_methods || []).join('; ')),
+      csvCell(c.contact_name),
+      csvCell(c.found_emails?.[0] || ''),
+      csvCell(c.found_phones?.[0] || ''),
+      csvCell(c.website),
+    ].join(',') + '\n';
+  }
+  downloadCSV(csv, 'lowell_survey_cultivators.csv');
+}
+
+function exportOutreachCSV() {
+  let csv = 'License Number,Entity Name,DBA,County,Email,Phone,Survey Link\n';
+  for (const c of cultivators) {
+    const token = tokens[c.license_number];
+    const link = token ? `https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=${encodeURIComponent(token.token)}` : '';
+    if (c.found_emails?.[0] || c.found_phones?.[0]) {
+      csv += [
+        csvCell(c.license_number),
+        csvCell(c.entity_name),
+        csvCell(c.dba),
+        csvCell(c.county),
+        csvCell(c.found_emails?.[0] || ''),
+        csvCell(c.found_phones?.[0] || ''),
+        csvCell(link),
+      ].join(',') + '\n';
+    }
+  }
+  downloadCSV(csv, 'lowell_survey_outreach.csv');
+}
+
+function csvCell(val) {
+  if (!val) return '';
+  val = String(val).replace(/"/g, '""');
+  if (val.includes(',') || val.includes('"') || val.includes('\n')) {
+    return '"' + val + '"';
+  }
+  return val;
+}
+
+function downloadCSV(csv, filename) {
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = filename;
+  link.click();
+  URL.revokeObjectURL(link);
+}
+
+// ── Boot ──
+document.addEventListener('DOMContentLoaded', loadData);
+</script>
+
+</body>
+</html>

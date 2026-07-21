@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey Results — 2026 Lowell Grower's Survey</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div>
+      <h1>Survey Results</h1>
+      <div class="subtitle">NY Cultivation Market — Aggregated Data</div>
+    </div>
+    <nav>
+      <a href="index.html" style="color:var(--white); font-size:0.85rem; text-decoration:underline;">Home</a>
+      <span style="color:rgba(255,255,255,0.5); margin:0 0.5rem;">|</span>
+      <a href="survey.html" style="color:var(--white); font-size:0.85rem; text-decoration:underline;">Survey</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container container-wide">
+  <!-- Token check -->
+  <div class="card" id="access-check">
+    <h2>Results Access</h2>
+    <p style="margin-bottom:1rem; color:var(--gray);">
+      Survey results are available to licensed NY cultivators who have completed the survey.
+      Enter the access code from your survey completion confirmation.
+    </p>
+    <div style="display:flex; gap:0.5rem; max-width:400px;">
+      <input type="text" id="results-token" placeholder="Your access code" style="flex:1;" />
+      <button class="btn btn-primary" onclick="checkAccess()">View Results</button>
+    </div>
+    <p id="access-error" style="color:#c62828; margin-top:0.5rem; font-size:0.85rem; display:none;"></p>
+  </div>
+
+  <!-- Results dashboard (hidden until authorized) -->
+  <div id="results-dashboard" style="display:none;">
+    <div class="alert alert-info">
+      <strong>Live Data:</strong> Results update in real-time as new responses come in.
+      <span id="response-count"></span>
+    </div>
+
+    <div class="card">
+      <h2>Market Overview</h2>
+      <div class="stat-row" id="overview-stats">
+        <div class="result-card"><h4>Total Responses</h4><div class="value" id="stat-count">—</div></div>
+        <div class="result-card"><h4>Outdoor Growers</h4><div class="value" id="stat-outdoor">—</div></div>
+        <div class="result-card"><h4>Avg. Confidence</h4><div class="value" id="stat-confidence">—</div></div>
+        <div class="result-card"><h4>Planning Expansion</h4><div class="value" id="stat-expanding">—</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Cultivation Method Mix</h2>
+      <div id="method-chart" class="chart-placeholder">
+        <p>Data loading as responses accumulate.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Top Challenges</h2>
+      <div id="challenges-list" class="chart-placeholder">
+        <p>Data loading as responses accumulate.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Production Estimates</h2>
+      <div id="production-chart" class="chart-placeholder">
+        <p>Data loading as responses accumulate.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Market Outlook</h2>
+      <div id="outlook-chart" class="chart-placeholder">
+        <p>Data loading as responses accumulate.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>2026 Lowell Grower's Survey · Aggregated data — individual responses are confidential</p>
+</footer>
+
+<script>
+const RESPONSES_KEY = 'lowell_survey_responses';
+const TOKENS_KEY = 'lowell_survey_tokens';
+
+function checkAccess() {
+  const token = document.getElementById('results-token').value.trim().toUpperCase();
+  if (!token || token.length < 8) {
+    document.getElementById('access-error').textContent = 'Please enter a valid access code.';
+    document.getElementById('access-error').style.display = 'block';
+    return;
+  }
+
+  // For now: any reasonable token gets access (we can lock it down later)
+  // In production, this would verify against stored tokens
+  document.getElementById('access-check').style.display = 'none';
+  document.getElementById('results-dashboard').style.display = 'block';
+  renderDashboard();
+}
+
+function renderDashboard() {
+  let responses = [];
+  try {
+    const stored = localStorage.getItem(RESPONSES_KEY);
+    if (stored) responses = JSON.parse(stored);
+  } catch(e) {}
+
+  document.getElementById('response-count').textContent = 
+    `${responses.length} response${responses.length !== 1 ? 's' : ''} recorded.`;
+
+  if (responses.length === 0) {
+    // Show empty state with sample structure
+    document.getElementById('stat-count').textContent = 'Waiting for data';
+    return;
+  }
+
+  // Aggregate
+  const count = responses.length;
+  let outdoor = 0, indoor = 0, mixed = 0, combo = 0;
+  let confident = 0, pessimistic = 0;
+  let expanding = 0, maintaining = 0, reducing = 0;
+  let challenges = {};
+  let productions = {};
+
+  for (const r of responses) {
+    if (r.cultivation_method === 'outdoor') outdoor++;
+    else if (r.cultivation_method === 'indoor') indoor++;
+    else if (r.cultivation_method === 'mixed_light') mixed++;
+    else if (r.cultivation_method === 'combination') combo++;
+    
+    if (r.market_confidence === 'very' || r.market_confidence === 'somewhat') confident++;
+    if (r.market_confidence === 'pessimistic') pessimistic++;
+    if (r.expansion_plan === 'expand') expanding++;
+    if (r.expansion_plan === 'maintain') maintaining++;
+    if (r.expansion_plan === 'reduce' || r.expansion_plan === 'exit') reducing++;
+    if (r.top_challenge) challenges[r.top_challenge] = (challenges[r.top_challenge] || 0) + 1;
+    if (r.estimated_production) productions[r.estimated_production] = (productions[r.estimated_production] || 0) + 1;
+  }
+
+  const totalMethods = outdoor + indoor + mixed + combo;
+
+  // Overview stats
+  document.getElementById('stat-count').textContent = count;
+  document.getElementById('stat-outdoor').textContent = totalMethods > 0 ? `${Math.round(outdoor / totalMethods * 100)}%` : '—';
+  document.getElementById('stat-confidence').textContent = count > 0 ? `${Math.round(confident / count * 100)}%` : '—';
+  document.getElementById('stat-expanding').textContent = count > 0 ? `${Math.round(expanding / count * 100)}%` : '—';
+
+  // Method chart
+  const methodLabels = { outdoor: 'Outdoor', indoor: 'Indoor', mixed_light: 'Mixed Light', combination: 'Combination' };
+  const methodCounts = { outdoor, indoor, mixed_light: mixed, combination: combo };
+  const methodHtml = Object.entries(methodCounts)
+    .filter(([_, v]) => v > 0)
+    .map(([k, v]) => `<div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.5rem;">
+      <span style="width:120px; text-align:right;">${methodLabels[k]}</span>
+      <div style="flex:1; height:24px; background:var(--gray-light); border-radius:4px; overflow:hidden;">
+        <div style="width:${Math.round(v / totalMethods * 100)}%; height:100%; background:var(--green); border-radius:4px;"></div>
+      </div>
+      <span style="width:60px; font-weight:700;">${Math.round(v / totalMethods * 100)}% (${v})</span>
+    </div>`).join('');
+  document.getElementById('method-chart').innerHTML = methodHtml || '<p>No method data yet.</p>';
+
+  // Challenges
+  const challengeLabels = {
+    mold_mildew: 'Mold / Mildew', pests: 'Pests', weather: 'Weather',
+    inputs: 'Input Costs', labor: 'Labor', regulatory: 'Regulatory',
+    genetics: 'Genetics', irrigation: 'Irrigation',
+    pricing: 'Price Compression', demand: 'Demand', financing: 'Access to Capital',
+    competition: 'Illicit Market', quality: 'Crop Quality', insurance: 'Banking Access',
+    conversion: 'License Conversion Costs'
+  };
+  const topChallenges = Object.entries(challenges)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 5);
+  const challengeHtml = topChallenges.map(([k, v]) => 
+    `<div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.5rem;">
+      <span style="width:160px; text-align:right;">${challengeLabels[k] || k}</span>
+      <div style="flex:1; height:24px; background:var(--gray-light); border-radius:4px; overflow:hidden;">
+        <div style="width:${Math.round(v / count * 100)}%; height:100%; background:var(--gold); border-radius:4px;"></div>
+      </div>
+      <span style="width:60px; font-weight:700;">${Math.round(v / count * 100)}%</span>
+    </div>`).join('');
+  document.getElementById('challenges-list').innerHTML = challengeHtml || '<p>No challenge data yet.</p>';
+
+  // Production estimates
+  const prodLabels = {
+    under_100: 'Under 100 lbs', '100_500': '100-500 lbs', '500_1000': '500-1,000 lbs',
+    '1000_5000': '1,000-5,000 lbs', '5000_plus': '5,000+ lbs'
+  };
+  const prodHtml = Object.entries(productions)
+    .sort((a, b) => b[1] - a[1])
+    .map(([k, v]) => `<div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.5rem;">
+      <span style="width:140px; text-align:right;">${prodLabels[k] || k}</span>
+      <div style="flex:1; height:24px; background:var(--gray-light); border-radius:4px; overflow:hidden;">
+        <div style="width:${Math.round(v / count * 100)}%; height:100%; background:var(--green); border-radius:4px;"></div>
+      </div>
+      <span style="width:40px; font-weight:700;">${v}</span>
+    </div>`).join('');
+  document.getElementById('production-chart').innerHTML = prodHtml || '<p>No production data yet.</p>';
+
+  // Outlook
+  document.getElementById('outlook-chart').innerHTML = `
+    <div style="display:flex; gap:2rem; flex-wrap:wrap; justify-content:center;">
+      <div style="text-align:center;">
+        <div style="font-size:2.5rem; font-weight:700; color:var(--green);">${Math.round(expanding / count * 100)}%</div>
+        <div style="color:var(--gray); font-size:0.85rem;">Expanding</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:2.5rem; font-weight:700; color:var(--charcoal);">${Math.round(maintaining / count * 100)}%</div>
+        <div style="color:var(--gray); font-size:0.85rem;">Maintaining</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:2.5rem; font-weight:700; color:#c62828;">${Math.round(reducing / count * 100)}%</div>
+        <div style="color:var(--gray); font-size:0.85rem;">Reducing/Exiting</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:2.5rem; font-weight:700; color:var(--gold);">${Math.round(pessimistic / count * 100)}%</div>
+        <div style="color:var(--gray); font-size:0.85rem;">Pessimistic</div>
+      </div>
+    </div>
+  `;
+}
+</script>
+
+</body>
+</html>
