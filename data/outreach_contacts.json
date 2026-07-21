@@ -13,7 +13,9 @@
     ],
     "tier": "CCULT_MIXED_T3",
     "website": "",
-    "score": 5
+    "score": 5,
+    "token": "LOW-MFYQ-TW4V-GNPT",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-MFYQ-TW4V-GNPT"
   },
   {
     "entity": "Bone Creek Farm LLC",
@@ -29,7 +31,9 @@
     ],
     "tier": "CCULT_COMBINATION_T2",
     "website": "bonecreekfarm.com",
-    "score": 3
+    "score": 3,
+    "token": "LOW-KZR6-QERD-X7HM",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-KZR6-QERD-X7HM"
   },
   {
     "entity": "4 Erratic Farm LLC",
@@ -45,7 +49,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T4",
     "website": "",
-    "score": 3
+    "score": 3,
+    "token": "LOW-BBG4-6RXM-B79G",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-BBG4-6RXM-B79G"
   },
   {
     "entity": "TNH 420 LLC",
@@ -61,7 +67,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T5",
     "website": "",
-    "score": 10
+    "score": 10,
+    "token": "LOW-9YAH-CE2A-T3K7",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-9YAH-CE2A-T3K7"
   },
   {
     "entity": "Rippin' Ridge Farm, LLC",
@@ -77,7 +85,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T5",
     "website": "",
-    "score": 3
+    "score": 3,
+    "token": "LOW-VJY5-SHQH-89RU",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-VJY5-SHQH-89RU"
   },
   {
     "entity": "NG Growers Inc.",
@@ -91,7 +101,9 @@
     "methods": [],
     "tier": "CCULT_MIXED_T3",
     "website": "www.nanticoke.co",
-    "score": 5
+    "score": 5,
+    "token": "LOW-TEBB-5QKN-JLLN",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-TEBB-5QKN-JLLN"
   },
   {
     "entity": "Honey Dog Heaven LLC",
@@ -107,7 +119,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T4",
     "website": "",
-    "score": 5
+    "score": 5,
+    "token": "LOW-UQ89-VGN8-8B3E",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-UQ89-VGN8-8B3E"
   },
   {
     "entity": "PECONIC GROWERS LLC",
@@ -123,7 +137,9 @@
     ],
     "tier": "CULT_MIXED_T4",
     "website": "www.peconicgrowers.com",
-    "score": 8
+    "score": 8,
+    "token": "LOW-6FQB-RCBN-XYTX",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-6FQB-RCBN-XYTX"
   },
   {
     "entity": "Harney Brothers LLC",
@@ -137,7 +153,9 @@
     "methods": [],
     "tier": "CCULT_COMBINATION_T2",
     "website": "",
-    "score": 5
+    "score": 5,
+    "token": "LOW-FBBZ-GXV9-Y96U",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-FBBZ-GXV9-Y96U"
   },
   {
     "entity": "CSH Wyoming LLC",
@@ -153,7 +171,9 @@
     ],
     "tier": "CCULT_COMBINATION_T2",
     "website": "",
-    "score": 4
+    "score": 4,
+    "token": "LOW-8QMC-QEMV-23NR",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-8QMC-QEMV-23NR"
   },
   {
     "entity": "Eaton License LLC",
@@ -169,7 +189,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T5",
     "website": "www.eatonbotanicals.com",
-    "score": 3
+    "score": 3,
+    "token": "LOW-X7PQ-ZCNP-VN63",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-X7PQ-ZCNP-VN63"
   },
   {
     "entity": "Torrwood Farm, LLC",
@@ -185,7 +207,9 @@
     ],
     "tier": "CCULT_COMBINATION_T2",
     "website": "",
-    "score": 3
+    "score": 3,
+    "token": "LOW-ZZNN-UJQN-DV7V",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-ZZNN-UJQN-DV7V"
   },
   {
     "entity": "Enfield Glen Hopyard LLC",
@@ -201,7 +225,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T4",
     "website": "",
-    "score": 3
+    "score": 3,
+    "token": "LOW-XHEH-22UY-LEAD",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-XHEH-22UY-LEAD"
   },
   {
     "entity": "Tumbleweed Farms, LLC",
@@ -217,7 +243,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T4",
     "website": "",
-    "score": 3
+    "score": 3,
+    "token": "LOW-85NQ-NSTN-ULUB",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-85NQ-NSTN-ULUB"
   },
   {
     "entity": "Moby & Zeke, LLC",
@@ -233,7 +261,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T5",
     "website": "",
-    "score": 3
+    "score": 3,
+    "token": "LOW-GDBH-KBZ5-X4ZE",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-GDBH-KBZ5-X4ZE"
   },
   {
     "entity": "Emerald City NY, LLC",
@@ -249,7 +279,9 @@
     ],
     "tier": "CULT_INDOOR_T1",
     "website": "emeraldcitynyllc.com",
-    "score": 20
+    "score": 20,
+    "token": "LOW-Q4K4-P7JP-NKVM",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-Q4K4-P7JP-NKVM"
   },
   {
     "entity": "Glenna & Co. LLC",
@@ -265,7 +297,9 @@
     ],
     "tier": "CCULT_MIXED_T2",
     "website": "glennas.com",
-    "score": 10
+    "score": 10,
+    "token": "LOW-3BW7-DEXZ-DG6F",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-3BW7-DEXZ-DG6F"
   },
   {
     "entity": "Outcast Acres LLC",
@@ -281,7 +315,9 @@
     ],
     "tier": "CCULT_COMBINATION_T2",
     "website": "",
-    "score": 8
+    "score": 8,
+    "token": "LOW-BNB2-95B5-KGL6",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-BNB2-95B5-KGL6"
   },
   {
     "entity": "Central Processors NY, LLC",
@@ -297,7 +333,9 @@
     ],
     "tier": "CCULT_MIXED_T3",
     "website": "www.centralprocessorsny.com",
-    "score": 9
+    "score": 9,
+    "token": "LOW-BFEZ-8AU3-6JTE",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-BFEZ-8AU3-6JTE"
   },
   {
     "entity": "Cherry Valley Growers, Inc",
@@ -313,7 +351,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T3",
     "website": "",
-    "score": 3
+    "score": 3,
+    "token": "LOW-T5VY-3DXN-LYKZ",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-T5VY-3DXN-LYKZ"
   },
   {
     "entity": "Raga Growers, LLC",
@@ -329,7 +369,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T4",
     "website": "",
-    "score": 7
+    "score": 7,
+    "token": "LOW-HJ7U-P4XX-F8P4",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-HJ7U-P4XX-F8P4"
   },
   {
     "entity": "KickFly's LLC",
@@ -345,7 +387,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T4",
     "website": "www.kickflys.com",
-    "score": 4
+    "score": 4,
+    "token": "LOW-8GHA-9YQ7-KWNL",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-8GHA-9YQ7-KWNL"
   },
   {
     "entity": "Earthborn Garden LLC",
@@ -361,7 +405,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T5",
     "website": "earthborngarden.net",
-    "score": 31
+    "score": 31,
+    "token": "LOW-DAUR-GYWR-D87A",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-DAUR-GYWR-D87A"
   },
   {
     "entity": "Trinity Acres Farm, LLC",
@@ -377,7 +423,9 @@
     ],
     "tier": "CCULT_COMBINATION_T1",
     "website": "",
-    "score": 8
+    "score": 8,
+    "token": "LOW-JFFS-H7VH-CWXV",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-JFFS-H7VH-CWXV"
   },
   {
     "entity": "Saratoga Hemp Farms LLC",
@@ -393,7 +441,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T5",
     "website": "",
-    "score": 77
+    "score": 77,
+    "token": "LOW-WU9Q-Q3K5-6TTS",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-WU9Q-Q3K5-6TTS"
   },
   {
     "entity": "Four Winds Terracult, LLC",
@@ -409,7 +459,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T4",
     "website": "",
-    "score": 4
+    "score": 4,
+    "token": "LOW-T5DT-QETB-MLFP",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-T5DT-QETB-MLFP"
   },
   {
     "entity": "Hempire Inc.",
@@ -425,7 +477,9 @@
     ],
     "tier": "CCULT_COMBINATION_T2",
     "website": "empirefarm1830.com",
-    "score": 3
+    "score": 3,
+    "token": "LOW-Z2E5-9Z4W-Z6BV",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-Z2E5-9Z4W-Z6BV"
   },
   {
     "entity": "Bristol Extracts LLC",
@@ -441,7 +495,9 @@
     ],
     "tier": "CULT_COMBINATION_T3",
     "website": "bristolextracts.com",
-    "score": 85
+    "score": 85,
+    "token": "LOW-BMMM-5WXQ-MRYS",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-BMMM-5WXQ-MRYS"
   },
   {
     "entity": "Black Dirt Cannabis Company LLC",
@@ -457,7 +513,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T4",
     "website": "blackdirtcannabiscompany.com",
-    "score": 8
+    "score": 8,
+    "token": "LOW-RLRE-LHVF-VM93",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-RLRE-LHVF-VM93"
   },
   {
     "entity": "Slack Hollow Organics LLC",
@@ -473,7 +531,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T5",
     "website": "slackhollowhemp.com",
-    "score": 12
+    "score": 12,
+    "token": "LOW-VTU4-8NWC-JMUE",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-VTU4-8NWC-JMUE"
   },
   {
     "entity": "JRS Naturals",
@@ -487,7 +547,9 @@
     "methods": [],
     "tier": "CCULT_OUTDOOR_T5",
     "website": "alchemypure.com",
-    "score": 12
+    "score": 12,
+    "token": "LOW-YGB7-ZRJ4-HZVJ",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-YGB7-ZRJ4-HZVJ"
   },
   {
     "entity": "James E Ryan",
@@ -503,7 +565,9 @@
     ],
     "tier": "CULT_INDOOR_T1",
     "website": "www.ryanfarmsmarionny.com",
-    "score": 4
+    "score": 4,
+    "token": "LOW-3GGD-R7BD-S8G3",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-3GGD-R7BD-S8G3"
   },
   {
     "entity": "Nectara Ltd.",
@@ -519,7 +583,9 @@
     ],
     "tier": "CCULT_OUTDOOR_T5",
     "website": "skyrosefarm.com",
-    "score": 14
+    "score": 14,
+    "token": "LOW-AAWW-VBGZ-M6ZL",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-AAWW-VBGZ-M6ZL"
   },
   {
     "entity": "Trucann LLC",
@@ -535,7 +601,9 @@
     ],
     "tier": "CULT_MIXED_T4",
     "website": "www.trucann.com",
-    "score": 8
+    "score": 8,
+    "token": "LOW-AGS8-DD9T-BZFA",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-AGS8-DD9T-BZFA"
   },
   {
     "entity": "urbanXtracts",
@@ -551,7 +619,9 @@
     ],
     "tier": "CULT_COMBINATION_T3",
     "website": "urbanXtracts.com",
-    "score": 19
+    "score": 19,
+    "token": "LOW-D62K-FL2Y-FSN5",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-D62K-FL2Y-FSN5"
   },
   {
     "entity": "NOWAVE LLC",
@@ -567,6 +637,8 @@
     ],
     "tier": "CULT_OUTDOOR_T4",
     "website": "www.nowave.com",
-    "score": 2
+    "score": 2,
+    "token": "LOW-M5KE-C8HM-VBJE",
+    "survey_link": "https://lowell-herb-co.github.io/lowell-ny-grower-survey/survey.html?token=LOW-M5KE-C8HM-VBJE"
   }
 ]
