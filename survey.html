@@ -218,7 +218,7 @@
         </div>
 
         <div style="text-align:center; margin-top:1.25rem;">
-          <button type="button" class="btn btn-gold" onclick="submitSurvey()" style="font-size:1rem; padding:0.75rem 2.5rem;">📊 Submit &amp; View Results</button>
+          <button type="button" class="btn btn-gold" onclick="submitSurvey()" style="font-size:1rem; padding:0.75rem 2.5rem;">Submit</button>
         </div>
       </div>
 
@@ -329,38 +329,8 @@ function showResults(response) {
 
   el.innerHTML = `
     <div class="alert alert-success">
-      <strong>✓ Response recorded!</strong> Thank you for participating. Results update as more growers respond.
-    </div>
-
-    <h2 style="font-family:Georgia,serif; color:#236749; margin-bottom:1rem;">
-      Live Results
-    </h2>
-    <p class="hint" style="margin-bottom:1rem;">
-      ${count} respondent${count !== 1 ? 's' : ''} so far.
-    </p>
-
-    <div class="stat-row">
-      <div class="result-card">
-        <h4>Responses</h4>
-        <div class="value">${count}</div>
-      </div>
-      <div class="result-card">
-        <h4>Results Emailed To</h4>
-        <div class="value" style="font-size:1rem;">${response.results_email || '—'}</div>
-      </div>
-      <div class="result-card">
-        <h4>Market Confidence</h4>
-        <div class="value">—</div>
-        <div style="font-size:0.8rem; color:#888;">Updates as data accumulates</div>
-      </div>
-    </div>
-
-    <hr style="margin:1.5rem 0; border:none; border-top:1px solid #e8e4dc;" />
-    <p style="text-align:center; color:#6b6b6b; font-size:0.85rem;">
-      Results will be published at: <a href="results.html" style="color:#236749;">View Full Results</a>
-      <br/>You'll also receive them at the email(s) you provided.
-    </p>
-  `;
+      <strong>Thank you, we will send you the results shortly.</strong>
+    </div>`;
 }
 </script>
 
