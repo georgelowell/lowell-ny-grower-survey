@@ -145,7 +145,7 @@
 
   <!-- Chart 2: Canopy acres stacked bar -->
   <div class="chart-card">
-    <h2>Estimated Canopy (Acres) by Method</h2>
+    <h2>Production-Equivalent Canopy (Weighted: 7x Indoor / 3x Greenhouse / 1x Outdoor)</h2>
     <div class="legend">
       <div class="legend-item"><div class="legend-dot bar-outdoor"></div> Outdoor</div>
       <div class="legend-item"><div class="legend-dot bar-indoor"></div> Indoor</div>
@@ -172,16 +172,21 @@
 
 <script>
 const DATA = [
-  { label: 'Jul 2024', licenses: 207, entities: 166, outdoor: 90, indoor: 24, mixed: 37, combo: 37,
-    canopyOut: 2400000, canopyIn: 218000, canopyMix: 414000, canopyCombo: 0 },
-  { label: 'Jan 2025', licenses: 238, entities: 190, outdoor: 98, indoor: 32, mixed: 44, combo: 42,
-    canopyOut: 2652000, canopyIn: 287000, canopyMix: 475000, canopyCombo: 0 },
-  { label: 'Apr 2025', licenses: 245, entities: 198, outdoor: 99, indoor: 35, mixed: 49, combo: 40,
-    canopyOut: 2635000, canopyIn: 318000, canopyMix: 505000, canopyCombo: 0 },
-  { label: 'Jan 2026', licenses: 301, entities: 233, outdoor: 119, indoor: 75, mixed: 42, combo: 38,
-    canopyOut: 3115000, canopyIn: 697000, canopyMix: 575000, canopyCombo: 0 },
-  { label: 'Jul 2026', licenses: 308, entities: 241, outdoor: 117, indoor: 81, mixed: 42, combo: 40,
-    canopyOut: 4186000, canopyIn: 797000, canopyMix: 723000, canopyCombo: 0 }
+  { label: 'Jul 2024', licenses: 207, entities: 166, outdoor: 90, indoor: 24, mixed: 37,
+    canopyOut: 2400000, canopyIn: 218000, canopyMix: 414000,
+    wOut: 2400000, wIn: 1526000, wMix: 1242000 },
+  { label: 'Jan 2025', licenses: 238, entities: 190, outdoor: 98, indoor: 32, mixed: 44,
+    canopyOut: 2652000, canopyIn: 287000, canopyMix: 475000,
+    wOut: 2652000, wIn: 2009000, wMix: 1425000 },
+  { label: 'Apr 2025', licenses: 245, entities: 198, outdoor: 99, indoor: 35, mixed: 49,
+    canopyOut: 2635000, canopyIn: 318000, canopyMix: 505000,
+    wOut: 2635000, wIn: 2226000, wMix: 1515000 },
+  { label: 'Jan 2026', licenses: 301, entities: 233, outdoor: 119, indoor: 75, mixed: 42,
+    canopyOut: 3115000, canopyIn: 697000, canopyMix: 575000,
+    wOut: 3115000, wIn: 4879000, wMix: 1725000 },
+  { label: 'Jul 2026', licenses: 308, entities: 241, outdoor: 117, indoor: 81, mixed: 42,
+    canopyOut: 4186000, canopyIn: 797000, canopyMix: 723000,
+    wOut: 4186000, wIn: 5579000, wMix: 2169000 }
 ];
 
 function render() {
@@ -230,14 +235,14 @@ function render() {
     chart.appendChild(group);
   });
 
-  // ── Chart 2: Canopy acres stacked ──
-  const maxCanopy = Math.max(...DATA.map(d => (d.canopyOut + d.canopyIn + d.canopyMix) / 43560)) * 1.15;
+  // ── Chart 2: Weighted Canopy (ac-equiv) stacked ──
+  const maxWeighted = Math.max(...DATA.map(d => (d.wOut + d.wIn + d.wMix) / 43560)) * 1.15;
   const canopyEl = document.getElementById('canopy-chart');
   const yCan = document.getElementById('y-axis-canopy');
   yCan.innerHTML = '';
   for (let i = 0; i <= 4; i++) {
-    const val = (maxCanopy / 4 * i).toFixed(0);
-    yCan.innerHTML += `<div>${val} ac</div>`;
+    const val = (maxWeighted / 4 * i).toFixed(0);
+    yCan.innerHTML += `<div>${val}</div>`;
   }
   document.querySelectorAll('#canopy-chart .bar-group').forEach(g => g.remove());
   
@@ -246,12 +251,12 @@ function render() {
     group.className = 'bar-group';
     
     const canopyData = [
-      { cls: 'bar-outdoor', val: d.canopyOut },
-      { cls: 'bar-indoor', val: d.canopyIn },
-      { cls: 'bar-mixed', val: d.canopyMix }
+      { cls: 'bar-outdoor', val: d.wOut },
+      { cls: 'bar-indoor', val: d.wIn },
+      { cls: 'bar-mixed', val: d.wMix }
     ];
     
-    const maxVal = maxCanopy * 43560;
+    const maxVal = maxWeighted * 43560;
     canopyData.forEach(s => {
       if (s.val === 0) return;
       const seg = document.createElement('div');
@@ -272,6 +277,10 @@ function render() {
   const first = DATA[0];
   const last = DATA[DATA.length - 1];
   const stats = document.getElementById('stats');
+  const physical = (last.canopyOut + last.canopyIn + last.canopyMix) / 43560;
+  const weighted = (last.wOut + last.wIn + last.wMix) / 43560;
+  const physFirst = (first.canopyOut + first.canopyIn + first.canopyMix) / 43560;
+  const wFirst = (first.wOut + first.wIn + first.wMix) / 43560;
   stats.innerHTML = `
     <div class="stat-card">
       <div class="num">${last.licenses}</div>
@@ -284,44 +293,47 @@ function render() {
       <div class="sub pos">+${last.entities - first.entities} since Jul 2024</div>
     </div>
     <div class="stat-card">
-      <div class="num">${((last.canopyOut+last.canopyIn+last.canopyMix)/43560).toFixed(0)}</div>
-      <div class="lbl">Est. Canopy (acres)</div>
-      <div class="sub pos">+${(((last.canopyOut+last.canopyIn+last.canopyMix) - (first.canopyOut+first.canopyIn+first.canopyMix))/43560).toFixed(0)} since Jul 2024</div>
+      <div class="num">${physical.toFixed(0)}</div>
+      <div class="lbl">Physical Canopy (acres)</div>
+      <div class="sub pos">+${(physical - physFirst).toFixed(0)} since Jul 2024</div>
     </div>
     <div class="stat-card">
-      <div class="num">${last.indoor}</div>
-      <div class="lbl">Indoor Growers</div>
-      <div class="sub pos">+${last.indoor - first.indoor} since Jul 2024 (${Math.round((last.indoor-first.indoor)/first.indoor*100)}%)</div>
+      <div class="num">${weighted.toFixed(0)}</div>
+      <div class="lbl">Production-Equivalent (ac)</div>
+      <div class="sub pos">+${(weighted - wFirst).toFixed(0)} since Jul 2024</div>
     </div>
     <div class="stat-card">
-      <div class="num">${last.outdoor}</div>
-      <div class="lbl">Outdoor Growers</div>
-      <div class="sub pos">+${last.outdoor - first.outdoor} since Jul 2024</div>
+      <div class="num">${(weighted / physical).toFixed(2)}x</div>
+      <div class="lbl">Weighting Ratio</div>
+      <div class="sub">Every physical acre = ${(weighted/physical).toFixed(2)} production acres</div>
     </div>
     <div class="stat-card">
-      <div class="num">${((last.canopyOut - first.canopyOut)/43560).toFixed(0)}</div>
-      <div class="lbl">New Outdoor Canopy (ac)</div>
-      <div class="sub pos">Driven by T4/T5 license conversions</div>
+      <div class="num">${((last.wIn + last.wMix) / 43560).toFixed(0)}</div>
+      <div class="lbl">Indoor+GH Production (ac-equiv)</div>
+      <div class="sub pos">${((last.wIn + last.wMix) / (last.wOut + last.wIn + last.wMix) * 100).toFixed(0)}% of total capacity</div>
     </div>
   `;
 
   // ── Data table ──
   const table = document.getElementById('data-table');
   let html = `<tr>
-    <th>Date</th><th>Total Licenses</th><th>Unique Entities</th>
+    <th>Date</th><th>Licenses</th><th>Growers</th>
     <th>Out</th><th>In</th><th>Mix</th>
-    <th>Out Canopy (ac)</th><th>In Canopy (ac)</th><th>Mix Canopy (ac)</th><th>Total Canopy (ac)</th>
+    <th>Physical Canopy</th>
+    <th>Weighted Canopy (7x/3x/1x)</th>
+    <th>Ratio</th>
   </tr>`;
   DATA.forEach(d => {
-    const totalCanopy = (d.canopyOut + d.canopyIn + d.canopyMix) / 43560;
+    const physical = (d.canopyOut + d.canopyIn + d.canopyMix) / 43560;
+    const weighted = (d.wOut + d.wIn + d.wMix) / 43560;
+    const ratio = (weighted / physical).toFixed(2);
     html += `<tr>
       <td class="accent">${d.label}</td>
       <td>${d.licenses}</td><td>${d.entities}</td>
       <td>${d.outdoor}</td><td>${d.indoor}</td><td>${d.mixed}</td>
-      <td>${(d.canopyOut/43560).toFixed(0)}</td>
-      <td>${(d.canopyIn/43560).toFixed(1)}</td>
-      <td>${(d.canopyMix/43560).toFixed(1)}</td>
-      <td class="accent">${totalCanopy.toFixed(1)}</td>
+      <td>${physical.toFixed(1)} ac</td>
+      <td class="accent">${weighted.toFixed(0)} ac-equiv</td>
+      <td>${ratio}x</td>
     </tr>`;
   });
   table.innerHTML = html;
