@@ -304,6 +304,15 @@ function submitSurvey() {
   response._submitted_at = new Date().toISOString();
   response._version = '2.0';
 
+  // Send to server
+  fetch('https://survey-collector-wablvffojq-uc.a.run.app/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(response)
+  }).catch(function(err) {
+    console.error('Submit failed:', err);
+  });
+
   saveResponse(response);
 }
 
