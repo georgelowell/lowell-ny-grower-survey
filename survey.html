@@ -54,12 +54,12 @@
     </div>
 
     <div id="welcome-section" style="display:none;">
-      <div class="alert alert-info">
-        <strong>Verified:</strong> Your license is recognized. Responses are confidential and tied only to your license token for results access.
-      </div>
-      <div style="text-align:center; margin-top:1.5rem;">
-        <button class="btn btn-primary" onclick="showSection(0)">Begin Survey →</button>
-      </div>
+    <div class="alert alert-info">
+      <strong>Verified:</strong> Your access code is recognized. Your responses are strictly confidential and will only be reported in aggregate.
+    </div>
+    <div style="text-align:center; margin-top:1.5rem;">
+      <button class="btn btn-primary" onclick="showSection(0)">Begin Survey →</button>
+    </div>
     </div>
   </div>
 
@@ -374,22 +374,8 @@
           <textarea name="open_ended" rows="4" placeholder="Your thoughts..." style="margin-bottom:0;"></textarea>
         </div>
 
-        <div class="form-group">
-          <label>Would you be open to a follow-up conversation?</label>
-          <div class="radio-group">
-            <label><input type="radio" name="follow_up" value="yes" required /> Yes — I'm happy to chat</label>
-            <label><input type="radio" name="follow_up" value="yes_contact" /> Yes — here's the best way to reach me:</label>
-            <label><input type="radio" name="follow_up" value="no" /> No thanks</label>
-          </div>
-        </div>
-
-        <div class="form-group" id="contact-field" style="display:none;">
-          <label>Best contact (email or phone)</label>
-          <input type="text" name="follow_up_contact" placeholder="email@example.com or (555) 123-4567" />
-        </div>
-
         <div class="alert alert-info" style="margin-top:1rem;">
-          <strong>By submitting:</strong> Your individual responses are confidential. Aggregated results will be shared with all survey participants. You'll receive a link to the results page upon completion.
+          <strong>By submitting:</strong> Your individual responses are strictly confidential. Only aggregated, anonymized data will be shared with survey participants. You'll receive access to the full results upon completion.
         </div>
 
         <div class="nav-buttons">
@@ -499,22 +485,13 @@ function prevSection() {
   }
 }
 
-// Show contact field conditionally
-document.addEventListener('change', function(e) {
-  if (e.target.name === 'follow_up' && e.target.value === 'yes_contact') {
-    document.getElementById('contact-field').style.display = 'block';
-  } else if (e.target.name === 'follow_up') {
-    document.getElementById('contact-field').style.display = 'none';
-  }
-});
-
 // ── Submit ──
 function submitSurvey() {
   const btn = document.querySelector('.btn-gold');
   btn.disabled = true;
   btn.textContent = 'Submitting...';
 
-  // Collect all form data
+  // Collect all form data (respondent never enters identity info)
   const form = document.getElementById('survey-form');
   const data = new FormData(form);
   const response = {};
@@ -522,9 +499,9 @@ function submitSurvey() {
     response[key] = value;
   }
 
-  // Add metadata
-  response.token = surveyToken;
-  response.submitted_at = new Date().toISOString();
+  // Silently attach token — maps to entity, license number, and license type on our side
+  response._token = surveyToken;
+  response._submitted_at = new Date().toISOString();
   response._version = '1.0';
 
   // Save to localStorage (fallback) + try GitHub API
