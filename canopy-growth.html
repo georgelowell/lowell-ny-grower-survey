@@ -311,8 +311,8 @@ function render() {
   const table = document.getElementById('data-table');
   let html = `<tr>
     <th>Date</th><th>Total Licenses</th><th>Unique Entities</th>
-    <th>Outdoor</th><th>Indoor</th><th>Mixed</th><th>Combo</th>
-    <th>Outdoor Canopy (ac)</th><th>Indoor Canopy (ac)</th><th>Total Canopy (ac)</th>
+    <th>Out</th><th>In</th><th>Mix</th><th>Comb</th>
+    <th>Out Canopy (ac)</th><th>In Canopy (ac)</th><th>Mix Canopy (ac)</th><th>Comb Canopy (ac)</th><th>Total Canopy (ac)</th>
   </tr>`;
   DATA.forEach(d => {
     const totalCanopy = (d.canopyOut + d.canopyIn + d.canopyMix + d.canopyCombo) / 43560;
@@ -321,7 +321,9 @@ function render() {
       <td>${d.licenses}</td><td>${d.entities}</td>
       <td>${d.outdoor}</td><td>${d.indoor}</td><td>${d.mixed}</td><td>${d.combo}</td>
       <td>${(d.canopyOut/43560).toFixed(0)}</td>
-      <td>${(d.canopyIn/43560).toFixed(0)}</td>
+      <td>${(d.canopyIn/43560).toFixed(1)}</td>
+      <td>${(d.canopyMix/43560).toFixed(1)}</td>
+      <td>${(d.canopyCombo/43560).toFixed(1)}</td>
       <td class="accent">${totalCanopy.toFixed(1)}</td>
     </tr>`;
   });
