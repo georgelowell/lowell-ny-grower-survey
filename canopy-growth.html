@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NY Cannabis Canopy Growth 2024-2026</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      padding: 2rem;
+    }
+    .container { max-width: 1100px; margin: 0 auto; }
+    h1 { font-size: 1.8rem; margin-bottom: 0.3rem; color: #c8a84e; }
+    .subtitle { color: #888; margin-bottom: 2rem; font-size: 0.95rem; }
+    
+    .chart-card {
+      background: #16213e;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #2a2a4a;
+    }
+    .chart-card h2 { font-size: 1.1rem; color: #c8a84e; margin-bottom: 1rem; }
+    
+    .stacked-bar {
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      height: 300px;
+      padding: 0 20px;
+      position: relative;
+      border-bottom: 2px solid #333;
+    }
+    .bar-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: flex-end;
+      position: relative;
+    }
+    .bar-segment { width: 100%; border-radius: 3px 3px 0 0; min-height: 2px; transition: height 0.5s; }
+    .bar-outdoor { background: #2d8a5c; }
+    .bar-indoor { background: #4a90d9; }
+    .bar-mixed { background: #c8a84e; }
+    .bar-combo { background: #9b59b6; }
+    
+    .bar-label {
+      margin-top: 8px;
+      font-size: 0.75rem;
+      color: #aaa;
+      text-align: center;
+      white-space: nowrap;
+    }
+    
+    .y-axis {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: #666;
+      padding-bottom: 25px;
+    }
+    
+    .legend {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 1rem 0;
+    }
+    .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; }
+    .legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .stat-card {
+      background: #0f3460;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .stat-card .num { font-size: 1.8rem; font-weight: 700; color: #c8a84e; }
+    .stat-card .lbl { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.2rem; }
+    .stat-card .sub { font-size: 0.8rem; color: #4a90d9; margin-top: 0.3rem; }
+    .pos { color: #2d8a5c !important; }
+    .neg { color: #e74c3c !important; }
+
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 1rem; }
+    th { text-align: left; padding: 0.5rem; border-bottom: 2px solid #333; color: #888; font-weight: 600; }
+    td { padding: 0.4rem 0.5rem; border-bottom: 1px solid #2a2a4a; }
+    .accent { color: #c8a84e; font-weight: 600; }
+    
+    .canopy-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      height: 250px;
+      padding: 0 10px;
+    }
+    .canopy-bar {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .canopy-fill { width: 100%; border-radius: 3px 3px 0 0; transition: height 0.5s; }
+    .canopy-val { font-size: 0.65rem; color: #c8a84e; margin-bottom: 2px; }
+    .canopy-label { font-size: 0.7rem; color: #666; margin-top: 4px; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <h1>NY Cannabis Cultivation Canopy</h1>
+  <div class="subtitle">2-Year Growth by Method (Jul 2024 → Jul 2026) · Data from NY OCM Open Data + Wayback Machine</div>
+
+  <!-- Chart 1: Stacked bar by method over time -->
+  <div class="chart-card">
+    <h2>Active Cultivation Licenses by Method</h2>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot bar-outdoor"></div> Outdoor</div>
+      <div class="legend-item"><div class="legend-dot bar-indoor"></div> Indoor</div>
+      <div class="legend-item"><div class="legend-dot bar-mixed"></div> Mixed Light</div>
+      <div class="legend-item"><div class="legend-dot bar-combo"></div> Combination</div>
+    </div>
+    <div class="stacked-bar" id="license-chart">
+      <div class="y-axis" id="y-axis-licenses"></div>
+    </div>
+  </div>
+
+  <!-- Chart 2: Canopy acres stacked bar -->
+  <div class="chart-card">
+    <h2>Estimated Canopy (Acres) by Method</h2>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot bar-outdoor"></div> Outdoor</div>
+      <div class="legend-item"><div class="legend-dot bar-indoor"></div> Indoor</div>
+      <div class="legend-item"><div class="legend-dot bar-mixed"></div> Mixed Light</div>
+      <div class="legend-item"><div class="legend-dot bar-combo"></div> Combination</div>
+    </div>
+    <div class="stacked-bar" id="canopy-chart">
+      <div class="y-axis" id="y-axis-canopy"></div>
+    </div>
+  </div>
+
+  <!-- Key Stats -->
+  <div class="stats-grid" id="stats"></div>
+
+  <!-- Data Table -->
+  <div class="chart-card">
+    <h2>Full Data</h2>
+    <div class="table-wrap">
+      <table id="data-table"></table>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const DATA = [
+  { label: 'Jul 2024', licenses: 207, entities: 166, outdoor: 90, indoor: 24, mixed: 37, combo: 37,
+    canopyOut: 521500, canopyIn: 245000, canopyMix: 315000, canopyCombo: 375000 },
+  { label: 'Jan 2025', licenses: 238, entities: 190, outdoor: 98, indoor: 32, mixed: 44, combo: 42,
+    canopyOut: 625000, canopyIn: 327500, canopyMix: 375000, canopyCombo: 420000 },
+  { label: 'Apr 2025', licenses: 245, entities: 198, outdoor: 99, indoor: 35, mixed: 49, combo: 40,
+    canopyOut: 637500, canopyIn: 357500, canopyMix: 425000, canopyCombo: 400000 },
+  { label: 'Jan 2026', licenses: 301, entities: 233, outdoor: 119, indoor: 75, mixed: 42, combo: 38,
+    canopyOut: 2212500, canopyIn: 672500, canopyMix: 450000, canopyCombo: 562500 },
+  { label: 'Jul 2026', licenses: 308, entities: 241, outdoor: 117, indoor: 81, mixed: 42, combo: 40,
+    canopyOut: 3837500, canopyIn: 732500, canopyMix: 465000, canopyCombo: 582500 }
+];
+
+function render() {
+  // ── Chart 1: License counts stacked ──
+  const maxLicenses = Math.max(...DATA.map(d => d.licenses)) * 1.15;
+  const chart = document.getElementById('license-chart');
+  
+  // Y axis
+  const yLic = document.getElementById('y-axis-licenses');
+  yLic.innerHTML = '';
+  for (let i = 0; i <= 4; i++) {
+    const val = Math.round(maxLicenses / 4 * i);
+    yLic.innerHTML += `<div>${val}</div>`;
+  }
+  // Remove existing bars, keep y-axis
+  document.querySelectorAll('.bar-group').forEach(g => g.remove());
+  
+  DATA.forEach(d => {
+    const group = document.createElement('div');
+    group.className = 'bar-group';
+    group.style.cssText = `flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end;`;
+    
+    // Calculate totals for stacking
+    const total = d.outdoor + d.indoor + d.mixed + d.combo;
+    const segments = [
+      { cls: 'bar-outdoor', val: d.outdoor },
+      { cls: 'bar-indoor', val: d.indoor },
+      { cls: 'bar-mixed', val: d.mixed },
+      { cls: 'bar-combo', val: d.combo }
+    ];
+    
+    let cum = 0;
+    segments.forEach(s => {
+      if (s.val === 0) return;
+      const seg = document.createElement('div');
+      seg.className = `bar-segment ${s.cls}`;
+      const pct = s.val / maxLicenses * 100;
+      seg.style.height = `${pct}%`;
+      seg.title = `${s.cls.replace('bar-', '')}: ${s.val}`;
+      group.appendChild(seg);
+    });
+    
+    const label = document.createElement('div');
+    label.className = 'bar-label';
+    label.textContent = d.label;
+    group.appendChild(label);
+    chart.appendChild(group);
+  });
+
+  // ── Chart 2: Canopy acres stacked ──
+  const maxCanopy = Math.max(...DATA.map(d => (d.canopyOut + d.canopyIn + d.canopyMix + d.canopyCombo) / 43560)) * 1.15;
+  const canopyEl = document.getElementById('canopy-chart');
+  const yCan = document.getElementById('y-axis-canopy');
+  yCan.innerHTML = '';
+  for (let i = 0; i <= 4; i++) {
+    const val = (maxCanopy / 4 * i).toFixed(0);
+    yCan.innerHTML += `<div>${val} ac</div>`;
+  }
+  document.querySelectorAll('#canopy-chart .bar-group').forEach(g => g.remove());
+  
+  DATA.forEach(d => {
+    const group = document.createElement('div');
+    group.className = 'bar-group';
+    
+    const canopyData = [
+      { cls: 'bar-outdoor', val: d.canopyOut },
+      { cls: 'bar-indoor', val: d.canopyIn },
+      { cls: 'bar-mixed', val: d.canopyMix },
+      { cls: 'bar-combo', val: d.canopyCombo }
+    ];
+    
+    const maxVal = maxCanopy * 43560;
+    canopyData.forEach(s => {
+      if (s.val === 0) return;
+      const seg = document.createElement('div');
+      seg.className = `bar-segment ${s.cls}`;
+      seg.style.height = `${s.val / maxVal * 100}%`;
+      seg.title = `${s.cls.replace('bar-', '')}: ${(s.val/43560).toFixed(1)} ac`;
+      group.appendChild(seg);
+    });
+    
+    const label = document.createElement('div');
+    label.className = 'bar-label';
+    label.textContent = d.label;
+    group.appendChild(label);
+    canopyEl.appendChild(group);
+  });
+
+  // ── Stats cards ──
+  const first = DATA[0];
+  const last = DATA[DATA.length - 1];
+  const stats = document.getElementById('stats');
+  stats.innerHTML = `
+    <div class="stat-card">
+      <div class="num">${last.licenses}</div>
+      <div class="lbl">Active Licenses</div>
+      <div class="sub pos">+${last.licenses - first.licenses} since Jul 2024</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">${last.entities}</div>
+      <div class="lbl">Unique Growers</div>
+      <div class="sub pos">+${last.entities - first.entities} since Jul 2024</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">${((last.canopyOut+last.canopyIn+last.canopyMix+last.canopyCombo)/43560).toFixed(0)}</div>
+      <div class="lbl">Est. Canopy (acres)</div>
+      <div class="sub pos">+${(((last.canopyOut+last.canopyIn+last.canopyMix+last.canopyCombo) - (first.canopyOut+first.canopyIn+first.canopyMix+first.canopyCombo))/43560).toFixed(0)} since Jul 2024</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">${last.indoor}</div>
+      <div class="lbl">Indoor Growers</div>
+      <div class="sub pos">+${last.indoor - first.indoor} since Jul 2024 (${Math.round((last.indoor-first.indoor)/first.indoor*100)}%)</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">${last.outdoor}</div>
+      <div class="lbl">Outdoor Growers</div>
+      <div class="sub pos">+${last.outdoor - first.outdoor} since Jul 2024</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">${((last.canopyOut - first.canopyOut)/43560).toFixed(0)}</div>
+      <div class="lbl">New Outdoor Canopy (ac)</div>
+      <div class="sub pos">Driven by T4/T5 license conversions</div>
+    </div>
+  `;
+
+  // ── Data table ──
+  const table = document.getElementById('data-table');
+  let html = `<tr>
+    <th>Date</th><th>Total Licenses</th><th>Unique Entities</th>
+    <th>Outdoor</th><th>Indoor</th><th>Mixed</th><th>Combo</th>
+    <th>Outdoor Canopy (ac)</th><th>Indoor Canopy (ac)</th><th>Total Canopy (ac)</th>
+  </tr>`;
+  DATA.forEach(d => {
+    const totalCanopy = (d.canopyOut + d.canopyIn + d.canopyMix + d.canopyCombo) / 43560;
+    html += `<tr>
+      <td class="accent">${d.label}</td>
+      <td>${d.licenses}</td><td>${d.entities}</td>
+      <td>${d.outdoor}</td><td>${d.indoor}</td><td>${d.mixed}</td><td>${d.combo}</td>
+      <td>${(d.canopyOut/43560).toFixed(0)}</td>
+      <td>${(d.canopyIn/43560).toFixed(0)}</td>
+      <td class="accent">${totalCanopy.toFixed(1)}</td>
+    </tr>`;
+  });
+  table.innerHTML = html;
+}
+
+render();
+</script>
+</body>
+</html>
