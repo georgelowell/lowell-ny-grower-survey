@@ -173,15 +173,15 @@
 <script>
 const DATA = [
   { label: 'Jul 2024', licenses: 207, entities: 166, outdoor: 90, indoor: 24, mixed: 37, combo: 37,
-    canopyOut: 521500, canopyIn: 245000, canopyMix: 315000, canopyCombo: 375000 },
+    canopyOut: 2400000, canopyIn: 218000, canopyMix: 414000, canopyCombo: 0 },
   { label: 'Jan 2025', licenses: 238, entities: 190, outdoor: 98, indoor: 32, mixed: 44, combo: 42,
-    canopyOut: 625000, canopyIn: 327500, canopyMix: 375000, canopyCombo: 420000 },
+    canopyOut: 2652000, canopyIn: 287000, canopyMix: 475000, canopyCombo: 0 },
   { label: 'Apr 2025', licenses: 245, entities: 198, outdoor: 99, indoor: 35, mixed: 49, combo: 40,
-    canopyOut: 637500, canopyIn: 357500, canopyMix: 425000, canopyCombo: 400000 },
+    canopyOut: 2635000, canopyIn: 318000, canopyMix: 505000, canopyCombo: 0 },
   { label: 'Jan 2026', licenses: 301, entities: 233, outdoor: 119, indoor: 75, mixed: 42, combo: 38,
-    canopyOut: 2212500, canopyIn: 672500, canopyMix: 450000, canopyCombo: 562500 },
+    canopyOut: 3115000, canopyIn: 697000, canopyMix: 575000, canopyCombo: 0 },
   { label: 'Jul 2026', licenses: 308, entities: 241, outdoor: 117, indoor: 81, mixed: 42, combo: 40,
-    canopyOut: 3837500, canopyIn: 732500, canopyMix: 465000, canopyCombo: 582500 }
+    canopyOut: 4186000, canopyIn: 797000, canopyMix: 723000, canopyCombo: 0 }
 ];
 
 function render() {
@@ -205,12 +205,11 @@ function render() {
     group.style.cssText = `flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end;`;
     
     // Calculate totals for stacking
-    const total = d.outdoor + d.indoor + d.mixed + d.combo;
+    const totalCanopy = (d.canopyOut + d.canopyIn + d.canopyMix) / 43560;
     const segments = [
       { cls: 'bar-outdoor', val: d.outdoor },
       { cls: 'bar-indoor', val: d.indoor },
-      { cls: 'bar-mixed', val: d.mixed },
-      { cls: 'bar-combo', val: d.combo }
+      { cls: 'bar-mixed', val: d.mixed }
     ];
     
     let cum = 0;
@@ -232,7 +231,7 @@ function render() {
   });
 
   // ── Chart 2: Canopy acres stacked ──
-  const maxCanopy = Math.max(...DATA.map(d => (d.canopyOut + d.canopyIn + d.canopyMix + d.canopyCombo) / 43560)) * 1.15;
+  const maxCanopy = Math.max(...DATA.map(d => (d.canopyOut + d.canopyIn + d.canopyMix) / 43560)) * 1.15;
   const canopyEl = document.getElementById('canopy-chart');
   const yCan = document.getElementById('y-axis-canopy');
   yCan.innerHTML = '';
@@ -249,8 +248,7 @@ function render() {
     const canopyData = [
       { cls: 'bar-outdoor', val: d.canopyOut },
       { cls: 'bar-indoor', val: d.canopyIn },
-      { cls: 'bar-mixed', val: d.canopyMix },
-      { cls: 'bar-combo', val: d.canopyCombo }
+      { cls: 'bar-mixed', val: d.canopyMix }
     ];
     
     const maxVal = maxCanopy * 43560;
@@ -286,9 +284,9 @@ function render() {
       <div class="sub pos">+${last.entities - first.entities} since Jul 2024</div>
     </div>
     <div class="stat-card">
-      <div class="num">${((last.canopyOut+last.canopyIn+last.canopyMix+last.canopyCombo)/43560).toFixed(0)}</div>
+      <div class="num">${((last.canopyOut+last.canopyIn+last.canopyMix)/43560).toFixed(0)}</div>
       <div class="lbl">Est. Canopy (acres)</div>
-      <div class="sub pos">+${(((last.canopyOut+last.canopyIn+last.canopyMix+last.canopyCombo) - (first.canopyOut+first.canopyIn+first.canopyMix+first.canopyCombo))/43560).toFixed(0)} since Jul 2024</div>
+      <div class="sub pos">+${(((last.canopyOut+last.canopyIn+last.canopyMix) - (first.canopyOut+first.canopyIn+first.canopyMix))/43560).toFixed(0)} since Jul 2024</div>
     </div>
     <div class="stat-card">
       <div class="num">${last.indoor}</div>
@@ -311,19 +309,18 @@ function render() {
   const table = document.getElementById('data-table');
   let html = `<tr>
     <th>Date</th><th>Total Licenses</th><th>Unique Entities</th>
-    <th>Out</th><th>In</th><th>Mix</th><th>Comb</th>
-    <th>Out Canopy (ac)</th><th>In Canopy (ac)</th><th>Mix Canopy (ac)</th><th>Comb Canopy (ac)</th><th>Total Canopy (ac)</th>
+    <th>Out</th><th>In</th><th>Mix</th>
+    <th>Out Canopy (ac)</th><th>In Canopy (ac)</th><th>Mix Canopy (ac)</th><th>Total Canopy (ac)</th>
   </tr>`;
   DATA.forEach(d => {
-    const totalCanopy = (d.canopyOut + d.canopyIn + d.canopyMix + d.canopyCombo) / 43560;
+    const totalCanopy = (d.canopyOut + d.canopyIn + d.canopyMix) / 43560;
     html += `<tr>
       <td class="accent">${d.label}</td>
       <td>${d.licenses}</td><td>${d.entities}</td>
-      <td>${d.outdoor}</td><td>${d.indoor}</td><td>${d.mixed}</td><td>${d.combo}</td>
+      <td>${d.outdoor}</td><td>${d.indoor}</td><td>${d.mixed}</td>
       <td>${(d.canopyOut/43560).toFixed(0)}</td>
       <td>${(d.canopyIn/43560).toFixed(1)}</td>
       <td>${(d.canopyMix/43560).toFixed(1)}</td>
-      <td>${(d.canopyCombo/43560).toFixed(1)}</td>
       <td class="accent">${totalCanopy.toFixed(1)}</td>
     </tr>`;
   });
