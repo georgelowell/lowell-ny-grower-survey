@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2026 Lowell Grower's Survey</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    body { background: #f5f0e8; }
+    .container { max-width: 640px; }
+    .card { padding: 1.5rem; margin-bottom: 1rem; }
+    h2 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+    .section-desc { font-size: 0.85rem; color: #6b6b6b; margin-bottom: 1rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.3rem; }
+    .form-group .hint { font-size: 0.8rem; margin-bottom: 0.3rem; }
+    input, select { padding: 0.5rem 0.7rem; font-size: 0.9rem; }
+    .radio-group { gap: 0.3rem; }
+    .radio-group label { font-size: 0.88rem; padding: 0.2rem 0; }
+    hr { border: none; border-top: 1px solid #e8e4dc; margin: 1.25rem 0; }
+    .btn { padding: 0.6rem 1.5rem; font-size: 0.9rem; }
+    .btn-gold { background: #c8a84e; color: #2c2c2c; }
+    .btn-gold:hover { background: #e0c878; }
+    .alert { font-size: 0.85rem; padding: 0.75rem 1rem; }
+    header h1 { font-size: 1.2rem; }
+    header .subtitle { font-size: 0.8rem; }
+    .compact-select { padding: 0.4rem 0.6rem; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    @media (max-width: 500px) { .two-col { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
 
@@ -19,393 +42,283 @@
 </header>
 
 <main class="container">
-  <div class="card" id="intro-screen">
-    <div class="hero" style="padding:1rem 0 0;">
-      <h1>NY Grower's Survey</h1>
-      <p>Help us understand the health of the New York cultivation market. Complete this survey and get access to the full aggregated results — benchmark your operation against the market.</p>
+  <!-- TOKEN CHECK -->
+  <div class="card" id="token-card">
+    <p style="color:#6b6b6b; font-size:0.9rem; margin-bottom:0.75rem;">
+      Enter the access code from your email invitation to begin.
+    </p>
+    <div style="display:flex; gap:0.5rem; max-width:350px;">
+      <input type="text" id="token-input" placeholder="LOW-XXXX-XXXX-XXXX" style="flex:1; font-family:monospace; letter-spacing:0.08em;" autocomplete="off" />
+      <button class="btn btn-primary" onclick="startSurvey()">Start</button>
     </div>
-
-    <div class="features">
-      <div class="feature">
-        <div class="icon">🔒</div>
-        <h3>Confidential</h3>
-        <p>Your individual responses are private. Only aggregated data is shared.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">📊</div>
-        <h3>Get the Results</h3>
-        <p>Every respondent gets access to the full survey results and market benchmarks.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">⏱️</div>
-        <h3>5-7 Minutes</h3>
-        <p>Designed to be quick. Your time matters.</p>
-      </div>
-    </div>
-
-    <div id="token-section" class="token-input-area">
-      <p style="margin-bottom:1rem; color:var(--gray); font-size:0.9rem;">
-        Enter the access code from your survey invitation to begin.
-      </p>
-      <input type="text" id="token-input" placeholder="XXXX-XXXX-XXXX" maxlength="50" autocomplete="off" />
-      <br /><br />
-      <button class="btn btn-primary" onclick="startSurvey()">Start Survey →</button>
-      <p id="token-error" style="color:#c62828; margin-top:0.5rem; font-size:0.85rem; display:none;"></p>
-    </div>
-
-    <div id="welcome-section" style="display:none;">
-    <div class="alert alert-info">
-      <strong>Verified:</strong> Your access code is recognized. Your responses are strictly confidential and will only be reported in aggregate.
-    </div>
-    <div style="text-align:center; margin-top:1.5rem;">
-      <button class="btn btn-primary" onclick="showSection(0)">Begin Survey →</button>
-    </div>
-    </div>
+    <p id="token-error" style="color:#c62828; margin-top:0.4rem; font-size:0.85rem; display:none;"></p>
   </div>
 
-  <!-- Survey Form -->
-  <div class="card" id="survey-screen" style="display:none;">
-    <div class="progress-text" id="progress-text">Section 1 of 6</div>
-    <div class="progress-bar">
-      <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
+  <!-- SURVEY FORM -->
+  <div id="survey-body" style="display:none;">
+    <div class="card">
+      <p style="font-size:0.85rem; color:#6b6b6b; margin-bottom:0.5rem;">
+        All responses are strictly confidential. Only aggregated data is shared. Takes about 3 minutes.
+      </p>
     </div>
 
     <form id="survey-form" onsubmit="return false;">
 
-      <!-- SECTION 1: About Your Operation -->
-      <div class="survey-section active" data-section="0">
+      <!-- SECTION 1 -->
+      <div class="card">
         <h2>About Your Operation</h2>
+        <div class="section-desc">A quick snapshot of your business.</div>
 
         <div class="form-group">
-          <label>Primary Cultivation Method</label>
+          <label>Primary cultivation method</label>
           <div class="radio-group">
-            <label><input type="radio" name="cultivation_method" value="outdoor" required /> Outdoor (full sun, field-grown)</label>
-            <label><input type="radio" name="cultivation_method" value="indoor" /> Indoor (artificial lighting, climate-controlled)</label>
-            <label><input type="radio" name="cultivation_method" value="mixed_light" /> Mixed Light (greenhouse with supplemental lighting)</label>
-            <label><input type="radio" name="cultivation_method" value="combination" /> Combination (outdoor + indoor/greenhouse)</label>
+            <label><input type="radio" name="method" value="outdoor" required /> Outdoor</label>
+            <label><input type="radio" name="method" value="indoor" /> Indoor</label>
+            <label><input type="radio" name="method" value="mixed_light" /> Mixed Light (greenhouse)</label>
+            <label><input type="radio" name="method" value="combination" /> Combination</label>
           </div>
         </div>
 
-        <div class="form-group">
-          <label>Years operating as a licensed cannabis cultivator in NY?</label>
-          <select name="years_operating" required>
-            <option value="">Select...</option>
-            <option value="1">Less than 1 year</option>
-            <option value="2">1-2 years</option>
-            <option value="3">3-4 years</option>
-            <option value="5">5+ years (legacy hemp / early license)</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Current operational status</label>
-          <select name="operational_status" required>
-            <option value="">Select...</option>
-            <option value="active">Actively growing / operational</option>
-            <option value="seasonal">Seasonal / preparing for harvest</option>
-            <option value="building">Building out / not yet producing</option>
-            <option value="paused">Paused / temporarily inactive</option>
-          </select>
-        </div>
-
-        <div class="nav-buttons">
-          <span></span>
-          <button type="button" class="btn btn-primary" onclick="nextSection()">Next →</button>
+        <div class="two-col">
+          <div class="form-group">
+            <label>Years licensed in NY?</label>
+            <select name="years" required>
+              <option value="">Select</option>
+              <option value="1">&lt;1 year</option>
+              <option value="2">1-2</option>
+              <option value="3">3-4</option>
+              <option value="5">5+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Operational status</label>
+            <select name="status" required>
+              <option value="">Select</option>
+              <option value="active">Active</option>
+              <option value="seasonal">Seasonal</option>
+              <option value="building">Building out</option>
+              <option value="paused">Paused</option>
+            </select>
+          </div>
         </div>
       </div>
 
-      <!-- SECTION 2: Plant Counts & Genetics -->
-      <div class="survey-section" data-section="1">
+      <!-- SECTION 2 -->
+      <div class="card">
         <h2>Plant Counts &amp; Genetics</h2>
+        <div class="section-desc">Compare this season to last.</div>
 
-        <div class="form-group">
-          <label>How many plants did you flower last season (2025)?</label>
-          <select name="plants_last_year" required>
-            <option value="">Select...</option>
-            <option value="under_500">Under 500</option>
-            <option value="500_2000">500 - 2,000</option>
-            <option value="2000_5000">2,000 - 5,000</option>
-            <option value="5000_10000">5,000 - 10,000</option>
-            <option value="10000_plus">10,000+</option>
-            <option value="na">Not yet harvestable / first season</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>How many plants are you flowering this season (2026)?</label>
-          <select name="plants_this_year" required>
-            <option value="">Select...</option>
-            <option value="under_500">Under 500</option>
-            <option value="500_2000">500 - 2,000</option>
-            <option value="2000_5000">2,000 - 5,000</option>
-            <option value="5000_10000">5,000 - 10,000</option>
-            <option value="10000_plus">10,000+</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>How many unique genetics (strains) did you run last season (2025)?</label>
-          <select name="genetics_last_year" required>
-            <option value="">Select...</option>
-            <option value="1_3">1-3</option>
-            <option value="4_6">4-6</option>
-            <option value="7_10">7-10</option>
-            <option value="11_plus">11+</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>How many unique genetics (strains) are you running this season (2026)?</label>
-          <select name="genetics_this_year" required>
-            <option value="">Select...</option>
-            <option value="1_3">1-3</option>
-            <option value="4_6">4-6</option>
-            <option value="7_10">7-10</option>
-            <option value="11_plus">11+</option>
-          </select>
-        </div>
-
-        <div class="nav-buttons">
-          <button type="button" class="btn btn-secondary" onclick="prevSection()">← Back</button>
-          <button type="button" class="btn btn-primary" onclick="nextSection()">Next →</button>
-        </div>
-      </div>
-
-      <!-- SECTION 3: Fresh Frozen vs Dried Flower -->
-      <div class="survey-section" data-section="2">
-        <h2>Fresh Frozen &amp; Dried Flower</h2>
-
-        <div class="form-group">
-          <label>What % of your 2025 harvest went to fresh frozen vs. dried flower?</label>
-          <div class="radio-group">
-            <label><input type="radio" name="ff_last_year" value="all_dried" required /> 100% dried flower — none went to fresh frozen</label>
-            <label><input type="radio" name="ff_last_year" value="some_ff" /> Some fresh frozen (1-25%)</label>
-            <label><input type="radio" name="ff_last_year" value="quarter_ff" /> 25-50% fresh frozen</label>
-            <label><input type="radio" name="ff_last_year" value="mostly_ff" /> 50-75% fresh frozen</label>
-            <label><input type="radio" name="ff_last_year" value="mostly_ff" /> 75%+ fresh frozen</label>
-            <label><input type="radio" name="ff_last_year" value="na" /> Not applicable / first harvest</label>
+        <div class="two-col">
+          <div class="form-group">
+            <label>Plants flowered last season (2025)</label>
+            <select name="plants_ly" required>
+              <option value="">Select</option>
+              <option value="under_500">&lt;500</option>
+              <option value="500_2000">500-2,000</option>
+              <option value="2000_5000">2,000-5,000</option>
+              <option value="5000_10000">5,000-10,000</option>
+              <option value="10000_plus">10,000+</option>
+              <option value="na">First season</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Plants flowering this season (2026)</label>
+            <select name="plants_ty" required>
+              <option value="">Select</option>
+              <option value="under_500">&lt;500</option>
+              <option value="500_2000">500-2,000</option>
+              <option value="2000_5000">2,000-5,000</option>
+              <option value="5000_10000">5,000-10,000</option>
+              <option value="10000_plus">10,000+</option>
+            </select>
           </div>
         </div>
 
-        <div class="form-group">
-          <label>What % of your 2026 harvest do you expect to go to fresh frozen vs. dried flower?</label>
-          <div class="radio-group">
-            <label><input type="radio" name="ff_this_year" value="all_dried" required /> 100% dried flower — no plans for fresh frozen</label>
-            <label><input type="radio" name="ff_this_year" value="some_ff" /> Some fresh frozen (1-25%)</label>
-            <label><input type="radio" name="ff_this_year" value="quarter_ff" /> 25-50% fresh frozen</label>
-            <label><input type="radio" name="ff_this_year" value="mostly_ff" /> 50-75% fresh frozen</label>
-            <label><input type="radio" name="ff_this_year" value="mostly_ff" /> 75%+ fresh frozen</label>
+        <div class="two-col">
+          <div class="form-group">
+            <label>Unique genetics last season</label>
+            <select name="genetics_ly" required>
+              <option value="">Select</option>
+              <option value="1_3">1-3</option>
+              <option value="4_6">4-6</option>
+              <option value="7_10">7-10</option>
+              <option value="11_plus">11+</option>
+            </select>
           </div>
-        </div>
-
-        <div class="form-group">
-          <label>What % of your 2025 fresh frozen yield was sold as bulk biomass vs. processed/CPG (your own brand or partner brand)?</label>
-          <select name="ff_2025_sales" required>
-            <option value="">Select...</option>
-            <option value="no_ff">Didn't produce fresh frozen</option>
-            <option value="all_bulk">100% bulk biomass</option>
-            <option value="mostly_bulk">Mostly bulk (75%+ bulk)</option>
-            <option value="mixed">Roughly 50/50</option>
-            <option value="mostly_cpg">Mostly CPG/processed (75%+)</option>
-            <option value="all_cpg">100% CPG/processed</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>What % of your dried flower is expected to sell as CPG (branded retail) vs. bulk wholesale?</label>
-          <select name="flower_sales_mix" required>
-            <option value="">Select...</option>
-            <option value="all_bulk">100% bulk wholesale</option>
-            <option value="mostly_bulk">Mostly bulk (75%+ bulk)</option>
-            <option value="mixed">Roughly 50/50</option>
-            <option value="mostly_cpg">Mostly CPG (75%+)</option>
-            <option value="all_cpg">100% CPG / branded retail</option>
-          </select>
-        </div>
-
-        <div class="nav-buttons">
-          <button type="button" class="btn btn-secondary" onclick="prevSection()">← Back</button>
-          <button type="button" class="btn btn-primary" onclick="nextSection()">Next →</button>
+          <div class="form-group">
+            <label>Unique genetics this season</label>
+            <select name="genetics_ty" required>
+              <option value="">Select</option>
+              <option value="1_3">1-3</option>
+              <option value="4_6">4-6</option>
+              <option value="7_10">7-10</option>
+              <option value="11_plus">11+</option>
+            </select>
+          </div>
         </div>
       </div>
 
-      <!-- SECTION 4: Market Outlook -->
-      <div class="survey-section" data-section="3">
+      <!-- SECTION 3 -->
+      <div class="card">
+        <h2>Fresh Frozen vs Dried Flower</h2>
+        <div class="section-desc">Tell us about your harvest destination.</div>
+
+        <div class="two-col">
+          <div class="form-group">
+            <label>% to fresh frozen — last season</label>
+            <select name="ff_ly" required>
+              <option value="">Select</option>
+              <option value="none">None — all dried</option>
+              <option value="1_25">1-25%</option>
+              <option value="25_50">25-50%</option>
+              <option value="50_75">50-75%</option>
+              <option value="75_plus">75%+</option>
+              <option value="na">First season</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>% to fresh frozen — this season</label>
+            <select name="ff_ty" required>
+              <option value="">Select</option>
+              <option value="none">None — all dried</option>
+              <option value="1_25">1-25%</option>
+              <option value="25_50">25-50%</option>
+              <option value="50_75">50-75%</option>
+              <option value="75_plus">75%+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="form-group">
+            <label>Fresh frozen sold as bulk vs CPG?</label>
+            <select name="ff_sales" required>
+              <option value="">Select</option>
+              <option value="no_ff">Didn't produce FF</option>
+              <option value="all_bulk">All bulk biomass</option>
+              <option value="mostly_bulk">Mostly bulk</option>
+              <option value="half">Roughly 50/50</option>
+              <option value="mostly_cpg">Mostly CPG</option>
+              <option value="all_cpg">All CPG/branded</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Dried flower: CPG vs bulk wholesale?</label>
+            <select name="flower_sales" required>
+              <option value="">Select</option>
+              <option value="all_bulk">All bulk</option>
+              <option value="mostly_bulk">Mostly bulk</option>
+              <option value="half">Roughly 50/50</option>
+              <option value="mostly_cpg">Mostly CPG</option>
+              <option value="all_cpg">All CPG/branded</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 4 -->
+      <div class="card">
         <h2>Market Outlook</h2>
+        <div class="section-desc">A few quick pulse checks.</div>
 
-        <div class="form-group">
-          <label>Approximately what % of your 2025 harvest has been sold to date?</label>
-          <select name="previous_sales" required>
-            <option value="">Select...</option>
-            <option value="0_25">0-25%</option>
-            <option value="25_50">25-50%</option>
-            <option value="50_75">50-75%</option>
-            <option value="75_100">75-100%</option>
-            <option value="na">Not applicable (new this season)</option>
-          </select>
+        <div class="two-col">
+          <div class="form-group">
+            <label>% of 2025 harvest sold to date?</label>
+            <select name="sold" required>
+              <option value="">Select</option>
+              <option value="0_25">0-25%</option>
+              <option value="25_50">25-50%</option>
+              <option value="50_75">50-75%</option>
+              <option value="75_100">75-100%</option>
+              <option value="na">First season</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Biggest challenge right now?</label>
+            <select name="challenge" required>
+              <option value="">Select</option>
+              <option value="pricing">Price compression</option>
+              <option value="demand">Demand / oversupply</option>
+              <option value="financing">Access to capital</option>
+              <option value="regulatory">Regulatory costs</option>
+              <option value="competition">Illicit market</option>
+              <option value="quality">Crop quality</option>
+              <option value="labor">Labor</option>
+              <option value="insurance">Insurance / banking</option>
+            </select>
+          </div>
         </div>
 
         <div class="form-group">
-          <label>What is the single biggest challenge facing your business right now?</label>
-          <select name="biggest_challenge" required>
-            <option value="">Select...</option>
-            <option value="pricing">Price compression / low wholesale prices</option>
-            <option value="demand">Insufficient demand / oversupply</option>
-            <option value="financing">Access to capital / financing</option>
-            <option value="regulatory">Regulatory uncertainty / compliance costs</option>
-            <option value="competition">Competition from illicit market</option>
-            <option value="quality">Quality / crop loss challenges</option>
-            <option value="labor">Labor / staffing</option>
-            <option value="insurance">Insurance / banking access</option>
-            <option value="conversion">License conversion / expansion costs</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>How confident are you in the NY cannabis market's trajectory?</label>
-          <select name="market_confidence" required>
-            <option value="">Select...</option>
-            <option value="very">Very confident — trend is positive</option>
-            <option value="somewhat">Somewhat confident</option>
-            <option value="neutral">Neutral</option>
-            <option value="worried">Somewhat worried</option>
-            <option value="pessimistic">Pessimistic — considering exit</option>
-          </select>
-        </div>
-
-        <div class="nav-buttons">
-          <button type="button" class="btn btn-secondary" onclick="prevSection()">← Back</button>
-          <button type="button" class="btn btn-primary" onclick="nextSection()">Next →</button>
+          <label>Confidence in NY market trajectory?</label>
+          <div class="radio-group" style="flex-direction:row; flex-wrap:wrap;">
+            <label style="margin-right:0.75rem;"><input type="radio" name="confidence" value="very" required /> Very confident</label>
+            <label style="margin-right:0.75rem;"><input type="radio" name="confidence" value="somewhat" /> Somewhat</label>
+            <label style="margin-right:0.75rem;"><input type="radio" name="confidence" value="neutral" /> Neutral</label>
+            <label style="margin-right:0.75rem;"><input type="radio" name="confidence" value="worried" /> Worried</label>
+            <label><input type="radio" name="confidence" value="pessimistic" /> Pessimistic</label>
+          </div>
         </div>
       </div>
 
-      <!-- SECTION 5: Final & Submit -->
-      <div class="survey-section" data-section="4">
-        <h2>Almost Done</h2>
+      <!-- SECTION 5 -->
+      <div class="card">
+        <h2>Results &amp; Follow-Up</h2>
 
         <div class="form-group">
-          <label>Is there anything else you'd like to share about the NY cultivation market?</label>
-          <textarea name="open_ended" rows="4" placeholder="Your thoughts..." style="margin-bottom:0;"></textarea>
+          <label>Where should we send the survey results?</label>
+          <div class="hint">We'll email you the aggregated data once responses come in. Multiple emails ok — separate with commas.</div>
+          <input type="text" name="results_email" placeholder="you@email.com, partner@email.com" style="width:100%;" />
         </div>
 
-        <div class="alert alert-info" style="margin-top:1rem;">
-          <strong>By submitting:</strong> Your individual responses are strictly confidential. Only aggregated, anonymized data will be shared with survey participants. You'll receive access to the full results upon completion.
+        <div class="form-group">
+          <label>Anything else you'd like to share?</label>
+          <textarea name="notes" rows="2" placeholder="Optional..." style="width:100%;"></textarea>
         </div>
 
-        <div class="nav-buttons">
-          <button type="button" class="btn btn-secondary" onclick="prevSection()">← Back</button>
-          <button type="button" class="btn btn-gold" onclick="submitSurvey()">📊 Submit & View Results</button>
+        <div class="alert alert-info" style="margin-top:0.75rem;">
+          <strong>Confidential:</strong> Your individual responses are private. Only anonymized, aggregated results are published.
+        </div>
+
+        <div style="text-align:center; margin-top:1.25rem;">
+          <button type="button" class="btn btn-gold" onclick="submitSurvey()" style="font-size:1rem; padding:0.75rem 2.5rem;">📊 Submit &amp; View Results</button>
         </div>
       </div>
 
     </form>
   </div>
 
-  <!-- Results / Thank You Screen -->
+  <!-- RESULTS / THANK YOU -->
   <div class="card" id="results-screen" style="display:none;">
     <div id="results-content"></div>
   </div>
 </main>
 
 <footer>
-  <p>2026 Lowell Grower's Survey · Powered by Lowell Herb Co · Responses confidential</p>
+  <p>2026 Lowell Grower's Survey · Lowell Herb Co · Responses confidential</p>
 </footer>
 
 <script>
-// ── Token & Data Layer ──
-const TOKENS_KEY = 'lowell_survey_tokens';
 const RESPONSES_KEY = 'lowell_survey_responses';
-
-// ── Survey Sections ──
-const TOTAL_SECTIONS = 5;
-let currentSection = 0;
 let surveyToken = null;
-let surveyData = null;
 
-// ── Initialize ──
-function init() {
-  // Check URL for token param
-  const params = new URLSearchParams(window.location.search);
-  const token = params.get('token');
-  if (token) {
-    document.getElementById('token-input').value = token;
-    startSurvey();
-  }
-}
-
-// ── Token Validation ──
 function startSurvey() {
   const token = document.getElementById('token-input').value.trim().toUpperCase();
   if (!token || token.length < 8) {
-    showTokenError('Please enter a valid access code.');
+    document.getElementById('token-error').textContent = 'Please enter a valid access code.';
+    document.getElementById('token-error').style.display = 'block';
     return;
   }
-
-  // Load tokens from our embedded database or GitHub
   surveyToken = token;
-  document.getElementById('token-section').style.display = 'none';
-  document.getElementById('welcome-section').style.display = 'block';
-  document.getElementById('survey-screen').style.display = 'block';
-  document.getElementById('intro-screen').style.display = 'none';
+  document.getElementById('token-card').style.display = 'none';
+  document.getElementById('survey-body').style.display = 'block';
 }
 
-function showTokenError(msg) {
-  const el = document.getElementById('token-error');
-  el.textContent = msg;
-  el.style.display = 'block';
-}
-
-// ── Section Navigation ──
-function showSection(idx) {
-  document.querySelectorAll('.survey-section').forEach(s => s.classList.remove('active'));
-  document.querySelector(`.survey-section[data-section="${idx}"]`).classList.add('active');
-  currentSection = idx;
-  
-  const pct = Math.round(((idx + 1) / TOTAL_SECTIONS) * 100);
-  document.getElementById('progress-fill').style.width = pct + '%';
-  document.getElementById('progress-text').textContent = `Section ${idx + 1} of ${TOTAL_SECTIONS}`;
-  
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function nextSection() {
-  // Simple validation for current section
-  const section = document.querySelector(`.survey-section[data-section="${currentSection}"]`);
-  const required = section.querySelectorAll('[required]');
-  for (const el of required) {
-    if (!el.value && el.type !== 'radio') {
-      el.style.borderColor = '#c62828';
-      el.focus();
-      return;
-    }
-    if (el.type === 'radio') {
-      const name = el.name;
-      const checked = section.querySelector(`input[name="${name}"]:checked`);
-      if (!checked) {
-        el.closest('.form-group')?.querySelector('label')?.style.setProperty('color', '#c62828');
-        return;
-      }
-    }
-  }
-  
-  if (currentSection < TOTAL_SECTIONS - 1) {
-    showSection(currentSection + 1);
-  }
-}
-
-function prevSection() {
-  if (currentSection > 0) {
-    showSection(currentSection - 1);
-  }
-}
-
-// ── Submit ──
 function submitSurvey() {
   const btn = document.querySelector('.btn-gold');
   btn.disabled = true;
   btn.textContent = 'Submitting...';
 
-  // Collect all form data (respondent never enters identity info)
   const form = document.getElementById('survey-form');
   const data = new FormData(form);
   const response = {};
@@ -413,17 +326,34 @@ function submitSurvey() {
     response[key] = value;
   }
 
-  // Silently attach token — maps to entity, license number, and license type on our side
+  // Validate required fields
+  const required = form.querySelectorAll('[required]');
+  for (const el of required) {
+    if ((el.type === 'radio' || el.type === 'checkbox')) {
+      const name = el.name;
+      if (!form.querySelector(`input[name="${name}"]:checked`)) {
+        btn.disabled = false;
+        btn.textContent = '📊 Submit & View Results';
+        alert('Please answer all required questions before submitting.');
+        return;
+      }
+    } else if (!el.value) {
+      btn.disabled = false;
+      btn.textContent = '📊 Submit & View Results';
+      el.focus();
+      alert('Please answer all required questions before submitting.');
+      return;
+    }
+  }
+
   response._token = surveyToken;
   response._submitted_at = new Date().toISOString();
-  response._version = '1.0';
+  response._version = '2.0';
 
-  // Save to localStorage (fallback) + try GitHub API
   saveResponse(response);
 }
 
 function saveResponse(response) {
-  // ── Save locally (always works) ──
   let allResponses = [];
   try {
     const stored = localStorage.getItem(RESPONSES_KEY);
@@ -432,173 +362,58 @@ function saveResponse(response) {
   allResponses.push(response);
   localStorage.setItem(RESPONSES_KEY, JSON.stringify(allResponses));
 
-  // ── Try to submit via GitHub Issues API ──
-  // This stores responses as structured issues for easy aggregation
-  const repo = 'lowell-herb-co/lowell-ny-grower-survey';
-  const body = {
-    title: `Survey Response: ${response.token?.slice(0,8)}...`,
-    body: '```json\n' + JSON.stringify(response, null, 2) + '\n```',
-    labels: ['survey-response']
-  };
-
-  fetch(`https://api.github.com/repos/${repo}/issues`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/vnd.github.v3+json'
-    },
-    body: JSON.stringify(body)
-  })
-  .then(r => {
-    if (!r.ok) console.warn('GitHub backup failed, response stored locally:', r.status);
-    showResultsPage(response);
-  })
-  .catch(() => {
-    // GitHub may not be available — still show results from local
-    showResultsPage(response);
-  });
+  showResults(response);
 }
 
-// ── Results Page ──
-function showResultsPage(response) {
-  document.getElementById('survey-screen').style.display = 'none';
+function showResults(response) {
+  document.getElementById('survey-body').style.display = 'none';
   document.getElementById('results-screen').style.display = 'block';
-  document.getElementById('intro-screen').style.display = 'none';
 
-  // Build results dashboard
   const el = document.getElementById('results-content');
-  
-  // Get all stored responses for aggregation
+
   let allResponses = [];
   try {
     const stored = localStorage.getItem(RESPONSES_KEY);
     if (stored) allResponses = JSON.parse(stored);
   } catch(e) {}
 
-  // Load sample benchmark data
-  const sampleData = getSampleBenchmarks(allResponses);
+  const count = allResponses.length;
 
   el.innerHTML = `
     <div class="alert alert-success">
-      <strong>✓ Response recorded!</strong> Thank you for participating. Below are the aggregated results.
-      <br><small>Bookmark this page to return — new data is added as more growers respond.</small>
+      <strong>✓ Response recorded!</strong> Thank you for participating. Results update as more growers respond.
     </div>
 
-    <h2 style="font-family:var(--font-serif); color:var(--green-dark); margin-bottom:1.5rem;">
-      Market Benchmarks
+    <h2 style="font-family:Georgia,serif; color:#236749; margin-bottom:1rem;">
+      Live Results
     </h2>
-    <p class="hint" style="margin-bottom:1.5rem;">
-      Results from ${allResponses.length} respondent${allResponses.length !== 1 ? 's' : ''}. 
-      Updated in real-time as surveys are completed.
+    <p class="hint" style="margin-bottom:1rem;">
+      ${count} respondent${count !== 1 ? 's' : ''} so far.
     </p>
 
     <div class="stat-row">
       <div class="result-card">
         <h4>Responses</h4>
-        <div class="value">${allResponses.length}</div>
+        <div class="value">${count}</div>
       </div>
       <div class="result-card">
-        <h4>Avg. Canopy Size</h4>
-        <div class="value">${sampleData.avgCanopy}</div>
+        <h4>Results Emailed To</h4>
+        <div class="value" style="font-size:1rem;">${response.results_email || '—'}</div>
       </div>
       <div class="result-card">
         <h4>Market Confidence</h4>
-        <div class="value">${sampleData.confidencePct}%</div>
-      </div>
-      <div class="result-card">
-        <h4>Considering Exit</h4>
-        <div class="value">${sampleData.exitPct}%</div>
+        <div class="value">—</div>
+        <div style="font-size:0.8rem; color:#888;">Updates as data accumulates</div>
       </div>
     </div>
 
-    <h3>Top Challenges</h3>
-    <div id="challenges-chart" class="chart-placeholder">
-      <p>Chart loads as responses accumulate.</p>
-      <ul style="text-align:left; margin-top:1rem;">
-        ${sampleData.challenges.map(c => `<li><strong>${c.label}:</strong> ${c.pct}%</li>`).join('')}
-      </ul>
-    </div>
-
-    <h3>Cultivation Method Mix</h3>
-    <div id="method-chart" class="chart-placeholder">
-      ${sampleData.methods.map(m => `<div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.5rem;">
-        <span style="width:120px; text-align:right;">${m.label}</span>
-        <div style="flex:1; height:24px; background:var(--gray-light); border-radius:4px; overflow:hidden;">
-          <div style="width:${m.pct}%; height:100%; background:var(--green); border-radius:4px;"></div>
-        </div>
-        <span style="width:40px; font-weight:700;">${m.pct}%</span>
-      </div>`).join('')}
-    </div>
-
-    <h3>Future Plans</h3>
-    <div class="chart-placeholder">
-      <p><strong>Expanding next season:</strong> ${sampleData.expandingPct}%</p>
-      <p><strong>Considering indoor conversion:</strong> ${sampleData.convertingPct}%</p>
-    </div>
-
-    <hr style="margin:2rem 0; border:none; border-top:1px solid var(--gray-light);" />
-    <p style="text-align:center; color:var(--gray); font-size:0.85rem;">
-      Aggregated from survey responses. Individual responses are confidential.
-      <br>Results update as new responses are submitted.
+    <hr style="margin:1.5rem 0; border:none; border-top:1px solid #e8e4dc;" />
+    <p style="text-align:center; color:#6b6b6b; font-size:0.85rem;">
+      Results will be published at: <a href="results.html" style="color:#236749;">View Full Results</a>
+      <br/>You'll also receive them at the email(s) you provided.
     </p>
   `;
 }
-
-// ── Sample Benchmark Generator ──
-function getSampleBenchmarks(responses) {
-  // If we have real data, use it. Otherwise show what's available.
-  const count = responses.length;
-  
-  // Count methods
-  const methods = { outdoor: 0, indoor: 0, mixed_light: 0, combination: 0 };
-  const challenges = {};
-  let confident = 0, pessimistic = 0, expanding = 0, converting = 0;
-  let canopySizes = [];
-
-  for (const r of responses) {
-    if (r.cultivation_method && methods[r.cultivation_method] !== undefined) {
-      methods[r.cultivation_method]++;
-    }
-    if (r.top_challenge) challenges[r.top_challenge] = (challenges[r.top_challenge] || 0) + 1;
-    if (r.market_confidence === 'very' || r.market_confidence === 'somewhat') confident++;
-    if (r.market_confidence === 'pessimistic') pessimistic++;
-    if (r.expansion_plan === 'expand') expanding++;
-    if (r.conversion_interest === 'yes_planning' || r.conversion_interest === 'yes_considering') converting++;
-    if (r.canopy_size) canopySizes.push(r.canopy_size);
-  }
-
-  const challengeLabels = {
-    mold_mildew: 'Mold / Mildew', pests: 'Pests', weather: 'Weather',
-    inputs: 'Input Costs', labor: 'Labor', regulatory: 'Regulatory',
-    genetics: 'Genetics', irrigation: 'Irrigation',
-    pricing: 'Price Compression', demand: 'Demand / Oversupply',
-    financing: 'Access to Capital', competition: 'Illicit Market',
-    quality: 'Crop Quality', insurance: 'Insurance / Banking'
-  };
-
-  const topChallenges = Object.entries(challenges)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5)
-    .map(([k, v]) => ({ label: challengeLabels[k] || k, pct: Math.round(v / count * 100) }));
-
-  const methodLabels = { outdoor: 'Outdoor', indoor: 'Indoor', mixed_light: 'Mixed Light', combination: 'Combination' };
-  const methodData = Object.entries(methods)
-    .filter(([_, v]) => v > 0)
-    .map(([k, v]) => ({ label: methodLabels[k], pct: Math.round(v / count * 100) }));
-
-  return {
-    avgCanopy: count > 0 ? `${Math.round(canopySizes.length / count * 100)}% Tier 3+` : '—',
-    confidencePct: count > 0 ? Math.round(confident / count * 100) : 0,
-    exitPct: count > 0 ? Math.round(pessimistic / count * 100) : 0,
-    expandingPct: count > 0 ? Math.round(expanding / count * 100) : 0,
-    convertingPct: count > 0 ? Math.round(converting / count * 100) : 0,
-    challenges: topChallenges,
-    methods: methodData
-  };
-}
-
-// ── Boot ──
-document.addEventListener('DOMContentLoaded', init);
 </script>
 
 </body>
