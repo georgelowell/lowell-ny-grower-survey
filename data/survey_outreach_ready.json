@@ -1,0 +1,2138 @@
+[
+  {
+    "aucc_license": "OCM-AUCC-22-000005",
+    "aucc_name": "Enfield Glen Hopyard LLC / DBA Enfield Glen Hopyard",
+    "current_license": "OCM-CULT-24-000013",
+    "current_name": "Enfield Glen Hopyard LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jason Beizavi",
+    "email": "Jason@enfieldglenhopyard.com",
+    "county": "Tompkins",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": true
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000006",
+    "aucc_name": "Empire Agricultural Services, LLC",
+    "current_license": "OCM-CULT-24-000053",
+    "current_name": "Empire Agricultural Services, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Frank Mahns",
+    "email": "frankmahns1212@gmail.com",
+    "county": "Monroe",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000011",
+    "aucc_name": "Phil Spinelli Farrier Service LLC / DBA Nightshade Farm",
+    "current_license": "OCM-CULT-24-000038",
+    "current_name": "Phil Spinelli Farrier Service LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Philip Spinelli",
+    "email": "nightshadefarm@gmail.com",
+    "county": "Albany",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000012",
+    "aucc_name": "Lunulata LLC",
+    "current_license": "OCM-CULT-24-000152",
+    "current_name": "Lunulata LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Robert Semaan",
+    "email": "eschwesinger@gmail.com",
+    "county": "Dutchess",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000013",
+    "aucc_name": "Timothy G Hunter",
+    "current_license": "OCM-CULT-24-000178",
+    "current_name": "Timothy G Hunter",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Timothy Hunter",
+    "email": "Hunterpharms@gmail.com",
+    "county": "Wayne",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000015",
+    "aucc_name": "American Weed LLC",
+    "current_license": "OCM-CULT-24-000034",
+    "current_name": "American Weed LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "David Quinn",
+    "email": "Americanweedllc@gmail.com",
+    "county": "Cayuga",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000017",
+    "aucc_name": "PASSION FIELD FARM LLC",
+    "current_license": "OCM-CULT-24-000118",
+    "current_name": "PASSION FIELD FARM LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Casey O'Brien",
+    "email": "CURLEYTWO@GMAIL.COM",
+    "county": "Dutchess",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000018",
+    "aucc_name": "Kennedys herbal solution",
+    "current_license": "OCM-CULT-24-000059",
+    "current_name": "Kennedys herbal solution",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "David Kennedy",
+    "email": "Kennedysherbalsolution@gmail.com",
+    "county": "Washington",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000019",
+    "aucc_name": "Tricolla Gardens LLC / DBA Tricolla Farms",
+    "current_license": "OCM-CULT-24-000082",
+    "current_name": "Tricolla Gardens LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Erik Carbone",
+    "email": "erikcarbone@gmail.com",
+    "county": "Tioga",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000022",
+    "aucc_name": "ReliefLeaf LLC",
+    "current_license": "OCM-CULT-24-000058",
+    "current_name": "ReliefLeaf LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "David Nesheiwat",
+    "email": "dj.nesheiwat@gmail.com",
+    "county": "Schenectady",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000026",
+    "aucc_name": "Slack Hollow Organics LLC",
+    "current_license": "OCM-CULT-24-000070",
+    "current_name": "Slack Hollow Organics LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Martha Johnson",
+    "email": "hightunnelfarmer@gmail.com; martha@slackhollowfarm.com",
+    "county": "Washington",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000031",
+    "aucc_name": "Cornucopia Growers LLC",
+    "current_license": "OCM-CULT-24-000021",
+    "current_name": "Cornucopia Growers LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Wanda DelVillar",
+    "email": "Cornucopiagrowers@gmail.com",
+    "county": "Schoharie",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000036",
+    "aucc_name": "EAST END FLOWER FARM LTD",
+    "current_license": "OCM-CULT-24-000154",
+    "current_name": "EAST END FLOWER FARM LTD",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "MARCOS RIBEIRO",
+    "email": "EASTENDFLOWERFARM@GMAIL.COM",
+    "county": "Suffolk",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000043",
+    "aucc_name": "Chickidoo LLC / DBA Chickidoo Hempstead",
+    "current_license": "OCM-CULT-24-000057",
+    "current_name": "Chickidoo LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Arthur Brownsey",
+    "email": "arthurbrownsey@gmail.com",
+    "county": "Orange",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000044",
+    "aucc_name": "ROUTE 27 HOPYARD LLC",
+    "current_license": "OCM-CULT-24-000064",
+    "current_name": "ROUTE 27 HOPYARD LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "RYAN ANDOOS",
+    "email": "Ryan@route27hempyard.com",
+    "county": "Suffolk",
+    "cultivation_methods": [],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000045",
+    "aucc_name": "Honest Pharmco, Inc / DBA Honest Pharm CO",
+    "current_license": "OCM-CULT-24-000099",
+    "current_name": "Honest Pharmco, Inc",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jeremy Jimenez",
+    "email": "jonc@honestpharmco.com; justbuyitforyou@yahoo.com; jeremyj@honestpharmco.com",
+    "county": "Wayne",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000046",
+    "aucc_name": "Rippin' Ridge Farm, LLC",
+    "current_license": "OCM-CULT-24-000005",
+    "current_name": "Rippin' Ridge Farm, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jennifer Basic",
+    "email": "JBasicLaw@BasicCompanies.com",
+    "county": "Madison",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000047",
+    "aucc_name": "Hudson River Hemp L.L.C.",
+    "current_license": "OCM-CULT-24-000153",
+    "current_name": "Hudson River Hemp L.L.C.",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Ryan McGrath",
+    "email": "alex@alexanderkeenanlaw.com",
+    "county": "Dutchess",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000049",
+    "aucc_name": "Westkill Bend Inc / DBA Blackbird Gardens",
+    "current_license": "OCM-CULT-24-000037",
+    "current_name": "Westkill Bend Inc",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Derek Montana",
+    "email": "Blackbirdgardens13@gmail.com",
+    "county": "Schoharie",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000050",
+    "aucc_name": "Brian F Conlon",
+    "current_license": "OCM-CULT-24-000042",
+    "current_name": "Brian F Conlon",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Brian Conlon",
+    "email": "tiremanbri@aol.com",
+    "county": "Schenectady",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000052",
+    "aucc_name": "Claverack Farm LLC / DBA Claverack Creek Farm",
+    "current_license": "OCM-CULT-24-000083",
+    "current_name": "Claverack Farm LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Sophia Mokotoff",
+    "email": "moke.mokotoff@gmail.com",
+    "county": "Columbia",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000054",
+    "aucc_name": "Bone Creek Farm LLC",
+    "current_license": "OCM-CULT-24-000002",
+    "current_name": "Bone Creek Farm LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Joseph Gelormino",
+    "email": "bonecreekfarmllc@gmail.com",
+    "county": "Broome",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000058",
+    "aucc_name": "MDCAPMD LLC / DBA Patriot Farms",
+    "current_license": "OCM-CULT-24-000047",
+    "current_name": "MDCAPMD LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Matthew Capuano",
+    "email": "patriotfarms1954@gmail.com",
+    "county": "Monroe",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000061",
+    "aucc_name": "4 Erratic Farm LLC",
+    "current_license": "OCM-CULT-24-000003",
+    "current_name": "4 Erratic Farm LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "David Dzielak",
+    "email": "dzielakd@gmail.com",
+    "county": "Onondaga",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000064",
+    "aucc_name": "Old Mud Creek Farm LLC",
+    "current_license": "OCM-CULT-24-000113",
+    "current_name": "Old Mud Creek Farm LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Brandon Curtin",
+    "email": "Contact@hudsonhemp.com; melany@hudsonhemp.com",
+    "county": "Columbia",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000066",
+    "aucc_name": "Bridgehampton Loam, LLC",
+    "current_license": "OCM-CULT-24-000063",
+    "current_name": "Bridgehampton Loam, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "David Falkowski",
+    "email": "Davidfalkowski@hotmail.com; nicole@openmindedorganics.com",
+    "county": "Suffolk",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000068",
+    "aucc_name": "Jack Bear Farm LLC / DBA Jack Bear Farm",
+    "current_license": "OCM-CULT-25-000193",
+    "current_name": "Jack Bear Farm LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "George Horstmann",
+    "email": "george.horstmann@gmail.com",
+    "county": "Otsego",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000073",
+    "aucc_name": "Graceful Roses LLC",
+    "current_license": "OCM-CULT-25-000200",
+    "current_name": "Graceful Roses LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jason Henderson",
+    "email": "gracefulroses@yahoo.com",
+    "county": "Oswego",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000074",
+    "aucc_name": "Windsor Cider LLC / DBA State Line Orchard",
+    "current_license": "OCM-CULT-25-000204",
+    "current_name": "Windsor Cider LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Goldy Mastey",
+    "email": "statelineorchard@gmail.com",
+    "county": "Broome",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000075",
+    "aucc_name": "Tumbleweed Farms, LLC",
+    "current_license": "OCM-CULT-24-000014",
+    "current_name": "Tumbleweed Farms, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jose Rodrigues",
+    "email": "joesrodriguesiii@gmail.com; kailarodrigues1225@gmail.com",
+    "county": "Otsego",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000077",
+    "aucc_name": "Unhinged hemp farm",
+    "current_license": "OCM-CULT-24-000036",
+    "current_name": "Unhinged hemp farm",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "William Allen",
+    "email": "Unhingedhemp@gmail.com",
+    "county": "Oswego",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000079",
+    "aucc_name": "NG Growers Inc. / DBA Nanticoke Gardens",
+    "current_license": "OCM-CULT-24-000006",
+    "current_name": "NG Growers Inc.",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Peter Shafer",
+    "email": "pete@nanticokegardens.com",
+    "county": "Broome",
+    "cultivation_methods": [],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000080",
+    "aucc_name": "La Dolce Vita Farm Inc.",
+    "current_license": "OCM-CULT-24-000067",
+    "current_name": "La Dolce Vita Farm Inc.",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Anthony Pizzella",
+    "email": "Safari1016@aol.com",
+    "county": "Nassau",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000082",
+    "aucc_name": "Donald Spoth farm",
+    "current_license": "OCM-CULT-24-000076",
+    "current_name": "Donald Spoth farm",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Daniel Spoth",
+    "email": "dspoth@verizon.net",
+    "county": "Erie",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000085",
+    "aucc_name": "JRS Naturals",
+    "current_license": "OCM-CULT-24-000074",
+    "current_name": "JRS Naturals",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Hannah Karcheski",
+    "email": "jeremypeele@me.com",
+    "county": "Columbia",
+    "cultivation_methods": [],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000086",
+    "aucc_name": "SKX LLC",
+    "current_license": "OCM-CULT-24-000144",
+    "current_name": "SKX LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Hannah Karcheski",
+    "email": "2skyfarm@gmail.com; regan2923@gmail.com",
+    "county": "Dutchess",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000089",
+    "aucc_name": "Miss Perry Farms LLC",
+    "current_license": "OCM-CULT-24-000085",
+    "current_name": "Miss Perry Farms LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Maria Perry",
+    "email": "teamperry2017@gmail.com",
+    "county": "Oneida",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000102",
+    "aucc_name": "Island Grow, LLC",
+    "current_license": "OCM-CULT-24-000146",
+    "current_name": "Island Grow, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "kevin Afonso",
+    "email": "islandgrowllc@gmail.com",
+    "county": "Suffolk",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000103",
+    "aucc_name": "Simply Gold LLC / DBA Simply Gold",
+    "current_license": "OCM-CULT-24-000137",
+    "current_name": "Simply Gold LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Daniel Goldshtein",
+    "email": "simplygoldfarms@gmail.com; Danny@simplygoldhemp.com",
+    "county": "Kings",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000106",
+    "aucc_name": "Earthborn Garden LLC",
+    "current_license": "OCM-CULT-24-000026",
+    "current_name": "Earthborn Garden LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Anne Banks",
+    "email": "earthborngarden@gmail.com",
+    "county": "Columbia",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000110",
+    "aucc_name": "New York Seed Laboratory LLC",
+    "current_license": "OCM-CULT-24-000041",
+    "current_name": "New York Seed Laboratory LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Daniel Casacci",
+    "email": "MichaelCasacci@gmail.com",
+    "county": "Erie",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000111",
+    "aucc_name": "Flowerhouse Walden LLC / DBA Flowerhouse",
+    "current_license": "OCM-CULT-24-000179",
+    "current_name": "Flowerhouse Walden LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Sam Phelps",
+    "email": "sid@flowerhouseny.com; jeff@flowerhouseny.com; sam@flowerhouseny.com; katie@flowerhouseny.com; linsay@flowerhouseny.com",
+    "county": "Orange",
+    "cultivation_methods": [],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000114",
+    "aucc_name": "Gen V Growers, LLC",
+    "current_license": "OCM-CULT-24-000043",
+    "current_name": "Gen V Growers, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jacqueline Coudriet",
+    "email": "mack@beakandskiff.com",
+    "county": "Onondaga",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000116",
+    "aucc_name": "Pine Rose 420 LLC",
+    "current_license": "OCM-CULT-24-000050",
+    "current_name": "Pine Rose 420 LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Leslie Rosemann",
+    "email": "pinerosefarm420@gmail.com",
+    "county": "Tompkins",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000117",
+    "aucc_name": "Saratoga Hemp Farms LLC",
+    "current_license": "OCM-CULT-24-000028",
+    "current_name": "Saratoga Hemp Farms LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Nathaniel Vincek",
+    "email": "saratogahempfarms@gmail.com; thereal.nathanielvincek@gmail.com",
+    "county": "Saratoga",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000118",
+    "aucc_name": "The Hemptons LLC",
+    "current_license": "OCM-CULT-24-000122",
+    "current_name": "The Hemptons LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Vanessa Villanova",
+    "email": "vanessa@thehemptons.com",
+    "county": "Columbia",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000119",
+    "aucc_name": "Skeeterborofarms LLC",
+    "current_license": "OCM-CULT-24-000046",
+    "current_name": "Skeeterborofarms LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Rex Mazur",
+    "email": "skeeterborofarms@gmail.com",
+    "county": "Oneida",
+    "cultivation_methods": [],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000122",
+    "aucc_name": "Moby & Zeke, LLC",
+    "current_license": "OCM-CULT-24-000015",
+    "current_name": "Moby & Zeke, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Nicholas pistolesi",
+    "email": "indialaurie@yahoo.com",
+    "county": "Albany",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000126",
+    "aucc_name": "Dennis D Van Wagenen",
+    "current_license": "OCM-CULT-24-000116",
+    "current_name": "Dennis D Van Wagenen",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Dennis Van Wagenen",
+    "email": "ddvanwagenen@aol.com",
+    "county": "Ulster",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000129",
+    "aucc_name": "Humble Hill Farm LLC",
+    "current_license": "OCM-CULT-24-000096",
+    "current_name": "Humble Hill Farm LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Richard Tarantelli",
+    "email": "farmerrick@frontier.com",
+    "county": "Tioga",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000131",
+    "aucc_name": "Gage Farms",
+    "current_license": "OCM-CULT-24-000055",
+    "current_name": "Gage Farms LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Elizabeth Gage",
+    "email": "elh25@cornell.edu",
+    "county": "Yates",
+    "cultivation_methods": [],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000132",
+    "aucc_name": "Weaver Road Farms LLC",
+    "current_license": "OCM-CULT-24-000145",
+    "current_name": "Weaver Road Farms LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Edward Cleary",
+    "email": "WRFLLC@hotmail.com",
+    "county": "Chautauqua",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000134",
+    "aucc_name": "Wessels Farms Inc.",
+    "current_license": "OCM-CULT-24-000089",
+    "current_name": "Wessels Farms Inc.",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Susan Petak",
+    "email": "sue@wesselsfarms.com; mike@wesselsfarms.com",
+    "county": "Orange",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000138",
+    "aucc_name": "Hempire Inc. / DBA Empire Farm 1830",
+    "current_license": "OCM-CULT-24-000051",
+    "current_name": "Hempire Inc.",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Tessa Edick",
+    "email": "Hempire1830@gmail.com",
+    "county": "Columbia",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000141",
+    "aucc_name": "Nectara Ltd. / DBA SKYROSE",
+    "current_license": "OCM-CULT-24-000119",
+    "current_name": "Nectara Ltd.",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jennifer Hindes",
+    "email": "jennyhindes@yahoo.com",
+    "county": "Columbia",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000143",
+    "aucc_name": "Blackberry Falls Farm",
+    "current_license": "OCM-CULT-24-000044",
+    "current_name": "Blackberry Falls Farm",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Bradley McWhorter",
+    "email": "bradcompany@yahoo.com",
+    "county": "Washington",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000145",
+    "aucc_name": "Sugarhouse Farms Limited Liability Company",
+    "current_license": "OCM-CULT-24-000110",
+    "current_name": "Sugarhouse Farms Limited Liability Company",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Nicholas Polsinelli",
+    "email": "JEremiah.Ford@sugarhousefarms.org; info@sugarhousefarms.org; Michael.Lyons@sugarhousefarms.org",
+    "county": "Otsego",
+    "cultivation_methods": [],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000147",
+    "aucc_name": "Night Owl Farm LLC",
+    "current_license": "OCM-CULT-24-000138",
+    "current_name": "Night Owl Farm LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "James Gaffney",
+    "email": "nightowlfarmllc@gmail.com",
+    "county": "Tioga",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000149",
+    "aucc_name": "Kingston Reserve LLC",
+    "current_license": "OCM-CULT-24-000062",
+    "current_name": "Kingston Reserve LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Rustin Kluge",
+    "email": "kingstonreserveny245@gmail.com; rstearns@lippes.com",
+    "county": "Dutchess",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000151",
+    "aucc_name": "Lifted NY Corp.",
+    "current_license": "OCM-CULT-24-000112",
+    "current_name": "Lifted NY Corp.",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Ricki Rebeiro",
+    "email": "Ricki@electraleaf.com",
+    "county": "Tompkins",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000154",
+    "aucc_name": "Hemp at Action Acres LLC",
+    "current_license": "OCM-CULT-24-000016",
+    "current_name": "Hemp at Action Acres LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Courtney Carlton",
+    "email": "suddenstorm1066@yahoo.com; courtneymnolan@yahoo.com",
+    "county": "Washington",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000155",
+    "aucc_name": "PECONIC GROWERS LLC",
+    "current_license": "OCM-CULT-24-000008",
+    "current_name": "PECONIC GROWERS LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Dillon White",
+    "email": "Dillon.peconicgrowers@gmail.com",
+    "county": "Suffolk",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000158",
+    "aucc_name": "Rec Roots, LLC",
+    "current_license": "OCM-CULT-24-000173",
+    "current_name": "Rec Roots, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Brian Batrowny",
+    "email": "admin@recreationalroots.com",
+    "county": "Chemung",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000159",
+    "aucc_name": "marissa hemp acres inc",
+    "current_license": "OCM-CULT-24-000033",
+    "current_name": "marissa hemp acres inc",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Richard DePalma",
+    "email": "rick@marissaacres.com",
+    "county": "Sullivan",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000161",
+    "aucc_name": "Next Gen Hemp Growers LLC",
+    "current_license": "OCM-CULT-24-000001",
+    "current_name": "Next Gen Hemp Growers LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Lorraine Kellogg",
+    "email": "lorikellogg@hotmail.com; bkrealestateservices@hotmail.com",
+    "county": "Chenango",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000162",
+    "aucc_name": "Hempire Farms LLC",
+    "current_license": "OCM-CULT-24-000163",
+    "current_name": "Hempire Farms LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jorden Seamans",
+    "email": "hempirefarmsllc@gmail.com",
+    "county": "Broome",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000164",
+    "aucc_name": "Canna Cure Farms, LLC",
+    "current_license": "OCM-CULT-24-000134",
+    "current_name": "Canna Cure Farms, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Matthew White",
+    "email": "whiteysbox@hotmail.com",
+    "county": "Saratoga",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000165",
+    "aucc_name": "Great Lakes Canopy, LLC",
+    "current_license": "OCM-CULT-24-000066",
+    "current_name": "Great Lakes Canopy, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jeramy Bernardoni",
+    "email": "GreatLakesCanopy@gmail.com",
+    "county": "Genesee",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000167",
+    "aucc_name": "Trucann LLC / Trucann",
+    "current_license": "OCM-CULT-24-000156",
+    "current_name": "Trucann LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Paal Elfstrum",
+    "email": "paalelfstrum@me.com",
+    "county": "Niagara",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000168",
+    "aucc_name": "Main Street Farms 2 LLC",
+    "current_license": "OCM-CULT-24-000048",
+    "current_name": "Main Street Farms 2 LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Allan Gandelman",
+    "email": "produce@mainstreetfarms.com",
+    "county": "Cortland",
+    "cultivation_methods": [],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000169",
+    "aucc_name": "Blossom Valley Growers LLC",
+    "current_license": "OCM-CULT-24-000126",
+    "current_name": "Blossom Valley Growers LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Stephen Pennings",
+    "email": "skpennings@gmail.com; blossomvalleygrowers@gmail.com",
+    "county": "Orange",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000173",
+    "aucc_name": "Hemp Farms LLC",
+    "current_license": "OCM-CULT-26-000245",
+    "current_name": "Hemp Farms LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "maya mirzokandova",
+    "email": "Hempfarms@yahoo.com",
+    "county": "Schenectady",
+    "cultivation_methods": [
+      "Indoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000176",
+    "aucc_name": "1821 Hemp LLC",
+    "current_license": "OCM-CULT-24-000060",
+    "current_name": "1821 Hemp LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Todd Town",
+    "email": "ttown@ceicny.com",
+    "county": "Onondaga",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000177",
+    "aucc_name": "Sebastiano Bulfamante",
+    "current_license": "OCM-CULT-24-000029",
+    "current_name": "Sebastiano Bulfamante",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Sebastiano Bulfamante",
+    "email": "abandson@gmail.com",
+    "county": "Westchester",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000181",
+    "aucc_name": "Shawn Burke / DBA Elev8 Organix",
+    "current_license": "OCM-CULT-24-000049",
+    "current_name": "Shawn Burke",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Shawn Burke",
+    "email": "Sburke3131@gmail.com",
+    "county": "Tompkins",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000184",
+    "aucc_name": "Homestead Hemp 1787 LLC",
+    "current_license": "OCM-CULT-24-000084",
+    "current_name": "Homestead Hemp 1787 LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Rebecca Rogers",
+    "email": "rrogers970@gmail.com",
+    "county": "Washington",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000185",
+    "aucc_name": "George Sheldrake / DBA Earlybird Farm",
+    "current_license": "OCM-CULT-24-000095",
+    "current_name": "George Sheldrake",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "George Sheldrake",
+    "email": "GeorgeEBF@gmail.com",
+    "county": "Tompkins",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000188",
+    "aucc_name": "Big Sky Ranch Holdings LLC / DBA Carol Wolff and Deborah Shanaman",
+    "current_license": "OCM-CULT-24-000078",
+    "current_name": "Big Sky Ranch Holdings LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "TOM AYRES",
+    "email": "tomayres@ymail.com",
+    "county": "Suffolk",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000189",
+    "aucc_name": "Franco's Farm LLC",
+    "current_license": "OCM-CULT-24-000169",
+    "current_name": "Franco's Farm LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Frank Jarocki",
+    "email": "francosfarm7@gmail.com",
+    "county": "Orange",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000190",
+    "aucc_name": "Raga Growers, LLC",
+    "current_license": "OCM-CULT-24-000024",
+    "current_name": "Raga Growers, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Gary Glowaczewski",
+    "email": "ragagrowers@gmail.com",
+    "county": "Orange",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000191",
+    "aucc_name": "Cherry Valley Growers, Inc",
+    "current_license": "OCM-CULT-24-000023",
+    "current_name": "Cherry Valley Growers, Inc",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Joseph Passalaqua",
+    "email": "jopass@yahoo.com",
+    "county": "Otsego",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000193",
+    "aucc_name": "Sidoti Seven Gardens LLC",
+    "current_license": "OCM-CULT-24-000186",
+    "current_name": "Sidoti Seven Gardens LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Joseph Sidoti",
+    "email": "Sidotisevengardens@gmail.com",
+    "county": "Orange",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000194",
+    "aucc_name": "Monument Mountain Farms LLC",
+    "current_license": "OCM-CULT-24-000121",
+    "current_name": "Monument Mountain Farms LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Floyd Bronson",
+    "email": "mbfb92112@gmail.com",
+    "county": "Broome",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000200",
+    "aucc_name": "GRASSE RIVER HEMP, LLC / DBA Grasse River Hemp",
+    "current_license": "OCM-CULT-24-000125",
+    "current_name": "GRASSE RIVER HEMP, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Akarsh Narang",
+    "email": "northernlimitsfarm@yahoo.com; dlaub@twcny.rr.com",
+    "county": "St Lawrence",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000201",
+    "aucc_name": "Julie Ann's Vegetable and Honey Farm Limited Liability Company",
+    "current_license": "OCM-CULT-24-000157",
+    "current_name": "Julie Ann's Vegetable and Honey Farm Limited Liability Company",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Donald Markoff",
+    "email": "jmarkofffarms@yahoo.com",
+    "county": "Broome",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000202",
+    "aucc_name": "Four Winds Terracult, LLC",
+    "current_license": "OCM-CULT-24-000030",
+    "current_name": "Four Winds Terracult, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Bradley Mills",
+    "email": "4windsterra@gmail.com",
+    "county": "Livingston",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000203",
+    "aucc_name": "Triple HHH Farm, LLC",
+    "current_license": "OCM-CULT-24-000177",
+    "current_name": "Triple HHH Farm, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Matthew Meola",
+    "email": "mattiefishes@gmail.com",
+    "county": "Schenectady",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000205",
+    "aucc_name": "Akron Bloom LLC",
+    "current_license": "OCM-CULT-24-000123",
+    "current_name": "Akron Bloom LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jason Abounader",
+    "email": "akronbloom@gmail.com",
+    "county": "Niagara",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000217",
+    "aucc_name": "HempChain Farms LLC",
+    "current_license": "OCM-CULT-24-000136",
+    "current_name": "HempChain Farms LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Maxson Freeman",
+    "email": "maxsonfreeman@gmail.com; maxson@naturaeoils.com",
+    "county": "Rensselaer",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000218",
+    "aucc_name": "Java Sprouts, LLC",
+    "current_license": "OCM-CULT-24-000133",
+    "current_name": "Java Sprouts, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Chad Meyer",
+    "email": "chadmeyer32@gmail.com",
+    "county": "Wyoming",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000225",
+    "aucc_name": "PreProcess, Inc.",
+    "current_license": "OCM-CULT-24-000158",
+    "current_name": "PreProcess, Inc.",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Marc Privitera",
+    "email": "christina@preprocessinc.com; marc@preprocessinc.com",
+    "county": "Jefferson",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000230",
+    "aucc_name": "Hyde Flower, LLC",
+    "current_license": "OCM-CULT-24-000093",
+    "current_name": "Hyde Flower, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Kai Pien",
+    "email": "hydeflower2022@gmail.com",
+    "county": "Dutchess",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000231",
+    "aucc_name": "Pre Emption Road Farms LLC",
+    "current_license": "OCM-CULT-24-000075",
+    "current_name": "Pre Emption Road Farms LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Ralph Poole",
+    "email": "rpoolie14@gmail.com",
+    "county": "Ontario",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000233",
+    "aucc_name": "Glenna & Co. LLC",
+    "current_license": "OCM-CULT-24-000018",
+    "current_name": "Glenna & Co. LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Glenna Colaprete",
+    "email": "glenna.colaprete@gmail.com",
+    "county": "Monroe",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000235",
+    "aucc_name": "Green Wells Venture LLC",
+    "current_license": "OCM-CULT-24-000117",
+    "current_name": "Green Wells Venture LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Luis Delgado",
+    "email": "kanapecollective@gmail.com",
+    "county": "Allegany",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000240",
+    "aucc_name": "County Line Ventures, LLC",
+    "current_license": "OCM-CULT-24-000077",
+    "current_name": "County Line Ventures, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Charles Colaruotolo",
+    "email": "countylineventuresllc@yahoo.com",
+    "county": "Columbia",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000241",
+    "aucc_name": "MegCare One, LLC",
+    "current_license": "OCM-CULT-24-000114",
+    "current_name": "MegCare One, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Thomas Hefferon",
+    "email": "thefferon22@gmail.com",
+    "county": "Jefferson",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000243",
+    "aucc_name": "Hemppire Farms LLC",
+    "current_license": "OCM-CULT-24-000115",
+    "current_name": "Hemppire Farms LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Dave Breitman",
+    "email": "Hotwaterplus1@gmail.com",
+    "county": "Suffolk",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000247",
+    "aucc_name": "Tadt Services LLC",
+    "current_license": "OCM-CULT-24-000061",
+    "current_name": "Tadt Services LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Alexander Tadt",
+    "email": "terpenealchemygrow@gmail.com",
+    "county": "Chautauqua",
+    "cultivation_methods": [],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000248",
+    "aucc_name": "Dew Good Industries LLC",
+    "current_license": "OCM-CULT-24-000159",
+    "current_name": "Dew Good Industries LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Tania Doverspike",
+    "email": "tndoverspike@gmail.com",
+    "county": "Seneca",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000249",
+    "aucc_name": "N&M Farms, LLC",
+    "current_license": "OCM-CULT-24-000140",
+    "current_name": "N&M Farms, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Robert Neuman",
+    "email": "BOBQBI@aol.com",
+    "county": "Niagara",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000250",
+    "aucc_name": "Descript LLC",
+    "current_license": "OCM-CULT-24-000020",
+    "current_name": "Descript LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Brianna Delgado",
+    "email": "descriptLLC@gmail.com",
+    "county": "Orange",
+    "cultivation_methods": [
+      "Indoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000254",
+    "aucc_name": "Central Processors NY, LLC",
+    "current_license": "OCM-CULT-24-000022",
+    "current_name": "Central Processors NY, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "John Vavalo",
+    "email": "ny@centralprocessors.com; john@centralprocessors.com",
+    "county": "Onondaga",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000257",
+    "aucc_name": "Scotch Valley Ranch Hemp LLC",
+    "current_license": "OCM-CULT-24-000135",
+    "current_name": "Scotch Valley Ranch Hemp LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "John Houshmand",
+    "email": "accounting@svrhemp.com; davidandrewbecker@gmail.com; john@svrhemp.com",
+    "county": "Delaware",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000258",
+    "aucc_name": "Woodstock Organic, LLC",
+    "current_license": "OCM-CULT-24-000071",
+    "current_name": "Woodstock Organic, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Mahlon Clements",
+    "email": "woodstockorganic92@gmail.com; rstearns@lippes.com; woodstock.organicllc37@gmail.com",
+    "county": "St. Lawrence",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000261",
+    "aucc_name": "Honey Dog Heaven LLC",
+    "current_license": "OCM-CULT-24-000007",
+    "current_name": "Honey Dog Heaven LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "james chambers",
+    "email": "judithcsullivan@gmail.com; packwoodd@gmail.com",
+    "county": "Columbia",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000262",
+    "aucc_name": "Big Yield Growers LLC",
+    "current_license": "OCM-CULT-25-000224",
+    "current_name": "Big Yield Growers LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "James Dutcher",
+    "email": "jdutcherBYG@gmail.com; mroche@hselaw.com; brooksawash@gmail.com",
+    "county": "St. Lawrence",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000265",
+    "aucc_name": "ZIZ NY GRW LLC",
+    "current_license": "OCM-CULT-24-000079",
+    "current_name": "ZIZ NY GRW LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Zion Foss",
+    "email": "zizzlecompliance@gmail.com; danthemanmaclean@gmail.com",
+    "county": "Tompkins",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000271",
+    "aucc_name": "CM Spencer Farms LLC",
+    "current_license": "OCM-CULT-24-000045",
+    "current_name": "CM Spencer Farms LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Kirk Mandeville",
+    "email": "mandeville11@msn.com; johnmackewich@mackewich.com",
+    "county": "Tioga",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000272",
+    "aucc_name": "Bristol Extracts LLC",
+    "current_license": "OCM-CULT-24-000052",
+    "current_name": "Bristol Extracts LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Eric Blazak",
+    "email": "eblazak@bristolextracts.com",
+    "county": "Ontario",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000276",
+    "aucc_name": "Ahava Farms LLC",
+    "current_license": "OCM-CULT-24-000069",
+    "current_name": "Ahava Farms LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Moshe Borodkin",
+    "email": "ahavafarmscompliance@gmail.com",
+    "county": "Chenango",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000279",
+    "aucc_name": "Dolores H Dygert",
+    "current_license": "OCM-CULT-25-000201",
+    "current_name": "Dolores H Dygert",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Dolores Dygert",
+    "email": "leisuretimegreenhouse@gmail.com",
+    "county": "Saratoga",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000280",
+    "aucc_name": "TK Growers LLC",
+    "current_license": "OCM-CULT-24-000142",
+    "current_name": "TK Growers LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Todd Klubek",
+    "email": "TKgrowers481@gmail.com",
+    "county": "Broome",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000282",
+    "aucc_name": "Trinity Acres Farm, LLC",
+    "current_license": "OCM-CULT-24-000027",
+    "current_name": "Trinity Acres Farm, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Valerie Mendola",
+    "email": "118trinityacresfarm@gmail.com",
+    "county": "Chenango",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000283",
+    "aucc_name": "High End Grows, LLC",
+    "current_license": "OCM-CULT-24-000035",
+    "current_name": "High End Grows, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jeffrey Luciano",
+    "email": "nancy@highendgrows.com",
+    "county": "Tioga",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000284",
+    "aucc_name": "Roman Empire Farms",
+    "current_license": "OCM-CULT-24-000160",
+    "current_name": "Roman Empire Farms",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Oksana Pidhoreckyj",
+    "email": "oksana@romanempirefarms.com",
+    "county": "Montgomery",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000285",
+    "aucc_name": "Medfarm Inc",
+    "current_license": "OCM-CULT-24-000162",
+    "current_name": "Medfarm Inc",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jon Okenfus",
+    "email": "von@medfarminc.org",
+    "county": "Sussex, NJ",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000287",
+    "aucc_name": "Birdsong Hemp Company LLC",
+    "current_license": "OCM-CULT-24-000039",
+    "current_name": "Birdsong Hemp Company LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Potter Polk",
+    "email": "ppolk@kaylxdevelopment.com",
+    "county": "Delaware",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000288",
+    "aucc_name": "CSH Wyoming LLC",
+    "current_license": "OCM-CULT-24-000010",
+    "current_name": "CSH Wyoming LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Morgan Hopkins",
+    "email": "hello@cshwyoming.com; Stephanie@cshwyoming.com",
+    "county": "Wyoming",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000289",
+    "aucc_name": "MFNY Operations LLC",
+    "current_license": "OCM-CULT-24-000176",
+    "current_name": "MFNY Operations LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Michael Kandhorov",
+    "email": "mikek@hempfarmsofny.com; mike@godsflower.com; matt@otsnymgmt.com",
+    "county": "Orange",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-23-000292",
+    "aucc_name": "Hudson Valley Canna LLC",
+    "current_license": "OCM-CULT-24-000147",
+    "current_name": "Hudson Valley Canna LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Christopher Sherwin",
+    "email": "Chris@kannaworxindustries.com; chris@hudsonvalleycanna.com",
+    "county": "Orange",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-23-000293",
+    "aucc_name": "Harney Brothers LLC / DBA Harney Brothers",
+    "current_license": "OCM-CULT-24-000009",
+    "current_name": "Harney Brothers LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Michael Harney",
+    "email": "michael@harneyteas.com; paul@harneyteas.com",
+    "county": "Dutchess",
+    "cultivation_methods": [],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-23-000294",
+    "aucc_name": "Gflower LLC",
+    "current_license": "OCM-CULT-24-000189",
+    "current_name": "Gflower LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Christopher Flagg",
+    "email": "chriscflagg@msn.com; gflowerfloraculture@Gmail.com; seek4earth@gmail.com",
+    "county": "Monroe",
+    "cultivation_methods": [],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-23-000295",
+    "aucc_name": "Black Dirt Cannabis Company LLC",
+    "current_license": "OCM-CULT-24-000056",
+    "current_name": "Black Dirt Cannabis Company LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Michael White",
+    "email": "blackdirtcanna@gmail.com; indy@purlifenm.com",
+    "county": "Orange",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-23-000297",
+    "aucc_name": "Brabstown LLC",
+    "current_license": "OCM-CULT-24-000090",
+    "current_name": "Brabstown LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Alan Ochs",
+    "email": "ochsorchard1591@gmail.com",
+    "county": "Orange",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-23-000299",
+    "aucc_name": "Flo Extracts, LLC",
+    "current_license": "OCM-CULT-24-000143",
+    "current_name": "Flo Extracts, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Trever Sherman",
+    "email": "ithacaorganics@gmail.com",
+    "county": "Tompkins",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-23-000301",
+    "aucc_name": "Eaton License LLC",
+    "current_license": "OCM-CULT-24-000011",
+    "current_name": "Eaton License LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Daniel Dolgin",
+    "email": "dan@eatonhemp.com",
+    "county": "Madison",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-23-000303",
+    "aucc_name": "HV AG Corporation",
+    "current_license": "OCM-CULT-24-000054",
+    "current_name": "HV Ag Corporation",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Richard Weissman",
+    "email": "support@highfallsextracts.com; rick@highfallsextracts.com",
+    "county": "Ulster",
+    "cultivation_methods": [],
+    "status": "Active",
+    "verified": false
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000027",
+    "aucc_name": "Breathing Web Farms LLC",
+    "current_license": "OCM-CULT-24-000174",
+    "current_name": "Breathing Web Farms Cultivation LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Samir Mahadin",
+    "email": "samir@breathingwebfarms.com",
+    "county": "Onondaga",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 1.0
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000035",
+    "aucc_name": "Spadafarm, LLC",
+    "current_license": "OCM-CULT-24-000092",
+    "current_name": "Spadafarm LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Paul Spadafora",
+    "email": "cannabis@spadafarm.com",
+    "county": "Dutchess",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 1.0
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000042",
+    "aucc_name": "Outcast Acres Farm LLC",
+    "current_license": "OCM-CULT-24-000019",
+    "current_name": "Outcast Acres LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Christopher George",
+    "email": "outcastacresfarm@gmail.com",
+    "county": "Washington",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 1.0
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000053",
+    "aucc_name": "Hemp Industry Consultants, Inc.",
+    "current_license": "OCM-CULT-24-000132",
+    "current_name": "Hemp Industry Conultants Inc",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Victor Lazares",
+    "email": "info@strongholddistro.com",
+    "county": "Suffolk",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 0.5
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000060",
+    "aucc_name": "Torrwood Farm LLC",
+    "current_license": "OCM-CULT-24-000012",
+    "current_name": "Torrwood Farm, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Charles Kerr",
+    "email": "lucas.kerr@torrwoodfarm.com",
+    "county": "Sullivan",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 1.0
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000078",
+    "aucc_name": "Windy Hills Farms LLC",
+    "current_license": "OCM-CULT-24-000068",
+    "current_name": "Windy Hills Farms of Dutchess, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Richard Conniff",
+    "email": "windyhillsfarms@yahoo.com",
+    "county": "Nassau",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 1.0
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000093",
+    "aucc_name": "American Seed and Oil NY, LLC",
+    "current_license": "OCM-CULT-24-000080",
+    "current_name": "AMERICAN SEED AND OIL NY LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "John Hopf",
+    "email": "Amsovt@gmail.com",
+    "county": "Westchester",
+    "cultivation_methods": [
+      "Mixed Light"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 1.0
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000098",
+    "aucc_name": "MDI Properties, LLC",
+    "current_license": "OCM-CULT-24-000072",
+    "current_name": "MDI Properties LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Michael Maione",
+    "email": "mmaione3@yahoo.com",
+    "county": "Broome",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 1.0
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000170",
+    "aucc_name": "Adirondack Hemp Company, Inc",
+    "current_license": "OCM-CULT-24-000039",
+    "current_name": "Birdsong Hemp Company LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Potter Polk",
+    "email": "dbrown1262@verizon.net",
+    "county": "Saratoga",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 0.5
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000207",
+    "aucc_name": "Lamport Hemp Farm Corp / DBA Lamport Farm Store",
+    "current_license": "OCM-CULT-24-000036",
+    "current_name": "Unhinged hemp farm",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "William Allen",
+    "email": "roselamport@yahoo.com",
+    "county": "Delaware",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 0.5
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000211",
+    "aucc_name": "Tartan Ridge Farm LLC",
+    "current_license": "OCM-CULT-24-000005",
+    "current_name": "Rippin' Ridge Farm, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jennifer Basic",
+    "email": "Gardenworksm@gmail.com",
+    "county": "Washington",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 0.5
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000216",
+    "aucc_name": "Pine Island Growers LLC",
+    "current_license": "OCM-CULT-24-000146",
+    "current_name": "Island Grow, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "kevin Afonso",
+    "email": "mark@northaxisgroup.com; mrogow01@gmail.com",
+    "county": "Orange",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 1.0
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000256",
+    "aucc_name": "Empire Hemp Co LLC",
+    "current_license": "OCM-CULT-24-000175",
+    "current_name": "Empire Hemp Co.",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Christopher VanDusen",
+    "email": "chris@empirehempco.com; shelly@empirehempco.com; info@empirehempco.com",
+    "county": "Orleans",
+    "cultivation_methods": [
+      "Combination"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 1.0
+  },
+  {
+    "aucc_license": "OCM-AUCC-22-000278",
+    "aucc_name": "Agricultural Development Services LLC",
+    "current_license": "OCM-CULT-24-000053",
+    "current_name": "Empire Agricultural Services, LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Frank Mahns",
+    "email": "cwildman@agtogo.com",
+    "county": "Monroe",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 0.5
+  },
+  {
+    "aucc_license": "OCM-AUCC-23-000304",
+    "aucc_name": "Honey & Gold Lifestyle, LLC",
+    "current_license": "OCM-CULT-24-000172",
+    "current_name": "Honey & Gold Lifestyle LLC",
+    "current_type": "Adult-Use Cultivator License",
+    "contact_name": "Jasmine Burems",
+    "email": "king@claudinefieldapothecary.com; jasmine@claudinefieldapothecary.com",
+    "county": "Columbia",
+    "cultivation_methods": [
+      "Outdoor"
+    ],
+    "status": "Active",
+    "verified": false,
+    "match_confidence": 1.0
+  }
+]
