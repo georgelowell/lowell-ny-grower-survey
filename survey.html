@@ -72,7 +72,7 @@
 
     <form id="survey-form" onsubmit="return false;">
 
-      <!-- SECTION 1: Operations Profile -->
+      <!-- SECTION 1: About Your Operation -->
       <div class="survey-section active" data-section="0">
         <h2>About Your Operation</h2>
 
@@ -84,19 +84,6 @@
             <label><input type="radio" name="cultivation_method" value="mixed_light" /> Mixed Light (greenhouse with supplemental lighting)</label>
             <label><input type="radio" name="cultivation_method" value="combination" /> Combination (outdoor + indoor/greenhouse)</label>
           </div>
-        </div>
-
-        <div class="form-group">
-          <label>What is your total canopy size? (sq ft)</label>
-          <select name="canopy_size" required>
-            <option value="">Select...</option>
-            <option value="under_2500">Under 2,500 sq ft</option>
-            <option value="2500_5000">2,500 - 5,000 sq ft</option>
-            <option value="5000_12500">5,000 - 12,500 sq ft</option>
-            <option value="12500_25000">12,500 - 25,000 sq ft</option>
-            <option value="25000_50000">25,000 - 50,000 sq ft</option>
-            <option value="over_50000">Over 50,000 sq ft</option>
-          </select>
         </div>
 
         <div class="form-group">
@@ -127,14 +114,38 @@
         </div>
       </div>
 
-      <!-- SECTION 2: This Season's Crop -->
+      <!-- SECTION 2: Plant Counts & Genetics -->
       <div class="survey-section" data-section="1">
-        <h2>This Season's Crop</h2>
-        <p class="hint" style="margin-bottom:1.2rem;">For the 2026 growing season.</p>
+        <h2>Plant Counts &amp; Genetics</h2>
 
         <div class="form-group">
-          <label>How many strains are you growing this season?</label>
-          <select name="strain_count" required>
+          <label>How many plants did you flower last season (2025)?</label>
+          <select name="plants_last_year" required>
+            <option value="">Select...</option>
+            <option value="under_500">Under 500</option>
+            <option value="500_2000">500 - 2,000</option>
+            <option value="2000_5000">2,000 - 5,000</option>
+            <option value="5000_10000">5,000 - 10,000</option>
+            <option value="10000_plus">10,000+</option>
+            <option value="na">Not yet harvestable / first season</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>How many plants are you flowering this season (2026)?</label>
+          <select name="plants_this_year" required>
+            <option value="">Select...</option>
+            <option value="under_500">Under 500</option>
+            <option value="500_2000">500 - 2,000</option>
+            <option value="2000_5000">2,000 - 5,000</option>
+            <option value="5000_10000">5,000 - 10,000</option>
+            <option value="10000_plus">10,000+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>How many unique genetics (strains) did you run last season (2025)?</label>
+          <select name="genetics_last_year" required>
             <option value="">Select...</option>
             <option value="1_3">1-3</option>
             <option value="4_6">4-6</option>
@@ -144,41 +155,14 @@
         </div>
 
         <div class="form-group">
-          <label>Estimated total flower production this season (lbs)</label>
-          <select name="estimated_production" required>
+          <label>How many unique genetics (strains) are you running this season (2026)?</label>
+          <select name="genetics_this_year" required>
             <option value="">Select...</option>
-            <option value="under_100">Under 100 lbs</option>
-            <option value="100_500">100 - 500 lbs</option>
-            <option value="500_1000">500 - 1,000 lbs</option>
-            <option value="1000_5000">1,000 - 5,000 lbs</option>
-            <option value="5000_plus">5,000+ lbs</option>
+            <option value="1_3">1-3</option>
+            <option value="4_6">4-6</option>
+            <option value="7_10">7-10</option>
+            <option value="11_plus">11+</option>
           </select>
-        </div>
-
-        <div class="form-group">
-          <label>What's the biggest crop challenge you're facing this season?</label>
-          <select name="top_challenge" required>
-            <option value="">Select...</option>
-            <option value="mold_mildew">Powdery mildew / botrytis (mold)</option>
-            <option value="pests">Pests (mites, aphids, etc.)</option>
-            <option value="weather">Weather / climate unpredictability</option>
-            <option value="inputs">Input costs / supply availability</option>
-            <option value="labor">Labor availability</option>
-            <option value="regulatory">Regulatory / compliance burden</option>
-            <option value="genetics">Genetics / strain selection</option>
-            <option value="irrigation">Irrigation / water management</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Are you using any mold or pest prevention products this season?</label>
-          <div class="radio-group">
-            <label><input type="radio" name="using_prevention" value="yes_biological" /> Yes — biological (bacteria, beneficial fungi, etc.)</label>
-            <label><input type="radio" name="using_prevention" value="yes_chemical" /> Yes — conventional pesticides/fungicides</label>
-            <label><input type="radio" name="using_prevention" value="yes_both" /> Yes — both biological and conventional</label>
-            <label><input type="radio" name="using_prevention" value="no" /> No</label>
-          </div>
         </div>
 
         <div class="nav-buttons">
@@ -187,58 +171,56 @@
         </div>
       </div>
 
-      <!-- SECTION 3: Input Procurement -->
+      <!-- SECTION 3: Fresh Frozen vs Dried Flower -->
       <div class="survey-section" data-section="2">
-        <h2>Input Procurement</h2>
-        <p class="hint" style="margin-bottom:1.2rem;">We're interested in understanding how growers source their materials.</p>
+        <h2>Fresh Frozen &amp; Dried Flower</h2>
 
         <div class="form-group">
-          <label>Where do you primarily purchase cultivation inputs (soil, nutrients, pest control, etc.)?</label>
+          <label>What % of your 2025 harvest went to fresh frozen vs. dried flower?</label>
           <div class="radio-group">
-            <label><input type="radio" name="input_source" value="local_hydro" required /> Local hydro / grow store</label>
-            <label><input type="radio" name="input_source" value="national_retail" /> National retailer (GrowGeneration, Hawthorne, etc.)</label>
-            <label><input type="radio" name="input_source" value="direct_mfr" /> Direct from manufacturer</label>
-            <label><input type="radio" name="input_source" value="online_only" /> Online / e-commerce only</label>
-            <label><input type="radio" name="input_source" value="mixed" /> Mix of several sources</label>
+            <label><input type="radio" name="ff_last_year" value="all_dried" required /> 100% dried flower — none went to fresh frozen</label>
+            <label><input type="radio" name="ff_last_year" value="some_ff" /> Some fresh frozen (1-25%)</label>
+            <label><input type="radio" name="ff_last_year" value="quarter_ff" /> 25-50% fresh frozen</label>
+            <label><input type="radio" name="ff_last_year" value="mostly_ff" /> 50-75% fresh frozen</label>
+            <label><input type="radio" name="ff_last_year" value="mostly_ff" /> 75%+ fresh frozen</label>
+            <label><input type="radio" name="ff_last_year" value="na" /> Not applicable / first harvest</label>
           </div>
         </div>
 
         <div class="form-group">
-          <label>Which input category is hardest to source right now?</label>
-          <select name="hardest_input" required>
-            <option value="">Select...</option>
-            <option value="soil_media">Soil / growing media</option>
-            <option value="nutrients">Nutrients / fertilizers</option>
-            <option value="pest_control">Pest control / IPM products</option>
-            <option value="trellising">Trellising / support systems</option>
-            <option value="irrigation">Irrigation / drip equipment</option>
-            <option value="lighting">Lighting (for indoor/mixed)</option>
-            <option value="genetics">Genetics / clones / seeds</option>
-            <option value="testing">Lab testing / compliance supplies</option>
-            <option value="packaging">Harvest / post-harvest supplies</option>
-            <option value="nothing">Nothing — I can get everything I need</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>How important is supplier reliability / consistency to you?</label>
-          <select name="supplier_importance" required>
-            <option value="">Select...</option>
-            <option value="critical">Critical — my top priority</option>
-            <option value="important">Important</option>
-            <option value="moderate">Moderately important</option>
-            <option value="low">Low priority</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Would you be open to trying new input suppliers if they offered better pricing or terms?</label>
+          <label>What % of your 2026 harvest do you expect to go to fresh frozen vs. dried flower?</label>
           <div class="radio-group">
-            <label><input type="radio" name="new_supplier_open" value="yes_always" required /> Yes — actively looking</label>
-            <label><input type="radio" name="new_supplier_open" value="yes_quality" /> Yes — if quality and reliability are proven</label>
-            <label><input type="radio" name="new_supplier_open" value="maybe" /> Maybe — depends on the product</label>
-            <label><input type="radio" name="new_supplier_open" value="no" /> No — I'm locked in with current suppliers</label>
+            <label><input type="radio" name="ff_this_year" value="all_dried" required /> 100% dried flower — no plans for fresh frozen</label>
+            <label><input type="radio" name="ff_this_year" value="some_ff" /> Some fresh frozen (1-25%)</label>
+            <label><input type="radio" name="ff_this_year" value="quarter_ff" /> 25-50% fresh frozen</label>
+            <label><input type="radio" name="ff_this_year" value="mostly_ff" /> 50-75% fresh frozen</label>
+            <label><input type="radio" name="ff_this_year" value="mostly_ff" /> 75%+ fresh frozen</label>
           </div>
+        </div>
+
+        <div class="form-group">
+          <label>What % of your 2025 fresh frozen yield was sold as bulk biomass vs. processed/CPG (your own brand or partner brand)?</label>
+          <select name="ff_2025_sales" required>
+            <option value="">Select...</option>
+            <option value="no_ff">Didn't produce fresh frozen</option>
+            <option value="all_bulk">100% bulk biomass</option>
+            <option value="mostly_bulk">Mostly bulk (75%+ bulk)</option>
+            <option value="mixed">Roughly 50/50</option>
+            <option value="mostly_cpg">Mostly CPG/processed (75%+)</option>
+            <option value="all_cpg">100% CPG/processed</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>What % of your dried flower is expected to sell as CPG (branded retail) vs. bulk wholesale?</label>
+          <select name="flower_sales_mix" required>
+            <option value="">Select...</option>
+            <option value="all_bulk">100% bulk wholesale</option>
+            <option value="mostly_bulk">Mostly bulk (75%+ bulk)</option>
+            <option value="mixed">Roughly 50/50</option>
+            <option value="mostly_cpg">Mostly CPG (75%+)</option>
+            <option value="all_cpg">100% CPG / branded retail</option>
+          </select>
         </div>
 
         <div class="nav-buttons">
@@ -247,12 +229,12 @@
         </div>
       </div>
 
-      <!-- SECTION 4: Business Health -->
+      <!-- SECTION 4: Market Outlook -->
       <div class="survey-section" data-section="3">
-        <h2>Business Outlook</h2>
+        <h2>Market Outlook</h2>
 
         <div class="form-group">
-          <label>Approximately what % of your 2025 harvest has been sold?</label>
+          <label>Approximately what % of your 2025 harvest has been sold to date?</label>
           <select name="previous_sales" required>
             <option value="">Select...</option>
             <option value="0_25">0-25%</option>
@@ -261,29 +243,6 @@
             <option value="75_100">75-100%</option>
             <option value="na">Not applicable (new this season)</option>
           </select>
-        </div>
-
-        <div class="form-group">
-          <label>What average price per lb are you expecting for outdoor flower this season?</label>
-          <select name="expected_price" required>
-            <option value="">Select...</option>
-            <option value="under_500">Under $500/lb</option>
-            <option value="500_800">$500 - $800/lb</option>
-            <option value="800_1200">$800 - $1,200/lb</option>
-            <option value="1200_1800">$1,200 - $1,800/lb</option>
-            <option value="1800_plus">$1,800+ /lb</option>
-            <option value="indoor_only">Indoor/mixed-light only — different pricing</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Do you have offtake agreements or do you sell on the spot market?</label>
-          <div class="radio-group">
-            <label><input type="radio" name="sales_model" value="offtake" required /> Mostly offtake agreements / contracts</label>
-            <label><input type="radio" name="sales_model" value="mixed" /> Mix of contracts and spot market</label>
-            <label><input type="radio" name="sales_model" value="spot" /> Mostly spot market</label>
-            <label><input type="radio" name="sales_model" value="self_processed" /> I process/sell my own flower directly</label>
-          </div>
         </div>
 
         <div class="form-group">
@@ -298,7 +257,7 @@
             <option value="quality">Quality / crop loss challenges</option>
             <option value="labor">Labor / staffing</option>
             <option value="insurance">Insurance / banking access</option>
-            <option value="conversion">Converting conditional license / expansion costs</option>
+            <option value="conversion">License conversion / expansion costs</option>
           </select>
         </div>
 
@@ -320,53 +279,8 @@
         </div>
       </div>
 
-      <!-- SECTION 5: Future Plans -->
+      <!-- SECTION 5: Final & Submit -->
       <div class="survey-section" data-section="4">
-        <h2>Future Plans</h2>
-
-        <div class="form-group">
-          <label>Are you considering converting outdoor canopy to indoor or mixed-light (per OCM's new rule)?</label>
-          <div class="radio-group">
-            <label><input type="radio" name="conversion_interest" value="yes_planning" required /> Yes — actively planning or applied</label>
-            <label><input type="radio" name="conversion_interest" value="yes_considering" /> Yes — considering it</label>
-            <label><input type="radio" name="conversion_interest" value="no" /> No — staying outdoor</label>
-            <label><input type="radio" name="conversion_interest" value="already" /> Already indoor/mixed-light</label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>Do you plan to expand, maintain, or reduce canopy next season?</label>
-          <div class="radio-group">
-            <label><input type="radio" name="expansion_plan" value="expand" required /> Expand</label>
-            <label><input type="radio" name="expansion_plan" value="maintain" /> Maintain current size</label>
-            <label><input type="radio" name="expansion_plan" value="reduce" /> Reduce</label>
-            <label><input type="radio" name="expansion_plan" value="exit" /> Planning to exit cultivation</label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>What would most help you grow your business?</label>
-          <select name="most_helpful" required>
-            <option value="">Select...</option>
-            <option value="better_pricing">Higher wholesale prices</option>
-            <option value="lower_inputs">Lower input costs</option>
-            <option value="capital">Access to capital / equipment financing</option>
-            <option value="tech">Better technology / genetics</option>
-            <option value="training">Technical training / ag support</option>
-            <option value="connections">Better connections to processors / buyers</option>
-            <option value="reg_change">Regulatory reform / fewer barriers</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div class="nav-buttons">
-          <button type="button" class="btn btn-secondary" onclick="prevSection()">← Back</button>
-          <button type="button" class="btn btn-primary" onclick="nextSection()">Next →</button>
-        </div>
-      </div>
-
-      <!-- SECTION 6: Final & Submit -->
-      <div class="survey-section" data-section="5">
         <h2>Almost Done</h2>
 
         <div class="form-group">
@@ -403,7 +317,7 @@ const TOKENS_KEY = 'lowell_survey_tokens';
 const RESPONSES_KEY = 'lowell_survey_responses';
 
 // ── Survey Sections ──
-const TOTAL_SECTIONS = 6;
+const TOTAL_SECTIONS = 5;
 let currentSection = 0;
 let surveyToken = null;
 let surveyData = null;
