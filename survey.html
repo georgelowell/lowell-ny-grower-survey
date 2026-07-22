@@ -111,49 +111,22 @@
         <div class="two-col">
           <div class="form-group">
             <label>Plants flowered last season (2025)</label>
-            <select name="plants_ly" required>
-              <option value="">Select</option>
-              <option value="under_500">&lt;500</option>
-              <option value="500_2000">500-2,000</option>
-              <option value="2000_5000">2,000-5,000</option>
-              <option value="5000_10000">5,000-10,000</option>
-              <option value="10000_plus">10,000+</option>
-              <option value="na">First season</option>
-            </select>
+            <input type="number" name="plants_ly" placeholder="e.g. 2500" min="0" step="1" style="width:100%;" required />
           </div>
           <div class="form-group">
             <label>Plants flowering this season (2026)</label>
-            <select name="plants_ty" required>
-              <option value="">Select</option>
-              <option value="under_500">&lt;500</option>
-              <option value="500_2000">500-2,000</option>
-              <option value="2000_5000">2,000-5,000</option>
-              <option value="5000_10000">5,000-10,000</option>
-              <option value="10000_plus">10,000+</option>
-            </select>
+            <input type="number" name="plants_ty" placeholder="e.g. 3000" min="0" step="1" style="width:100%;" required />
           </div>
         </div>
 
         <div class="two-col">
           <div class="form-group">
             <label>Unique genetics last season</label>
-            <select name="genetics_ly" required>
-              <option value="">Select</option>
-              <option value="1_3">1-3</option>
-              <option value="4_6">4-6</option>
-              <option value="7_10">7-10</option>
-              <option value="11_plus">11+</option>
-            </select>
+            <input type="number" name="genetics_ly" placeholder="e.g. 8" min="0" step="1" style="width:100%;" required />
           </div>
           <div class="form-group">
             <label>Unique genetics this season</label>
-            <select name="genetics_ty" required>
-              <option value="">Select</option>
-              <option value="1_3">1-3</option>
-              <option value="4_6">4-6</option>
-              <option value="7_10">7-10</option>
-              <option value="11_plus">11+</option>
-            </select>
+            <input type="number" name="genetics_ty" placeholder="e.g. 10" min="0" step="1" style="width:100%;" required />
           </div>
         </div>
       </div>
@@ -166,26 +139,11 @@
         <div class="two-col">
           <div class="form-group">
             <label>% to fresh frozen — last season</label>
-            <select name="ff_ly" required>
-              <option value="">Select</option>
-              <option value="none">None — all dried</option>
-              <option value="1_25">1-25%</option>
-              <option value="25_50">25-50%</option>
-              <option value="50_75">50-75%</option>
-              <option value="75_plus">75%+</option>
-              <option value="na">First season</option>
-            </select>
+            <input type="number" name="ff_ly" placeholder="e.g. 20" min="0" max="100" step="1" style="width:100%;" required />
           </div>
           <div class="form-group">
             <label>% to fresh frozen — this season</label>
-            <select name="ff_ty" required>
-              <option value="">Select</option>
-              <option value="none">None — all dried</option>
-              <option value="1_25">1-25%</option>
-              <option value="25_50">25-50%</option>
-              <option value="50_75">50-75%</option>
-              <option value="75_plus">75%+</option>
-            </select>
+            <input type="number" name="ff_ty" placeholder="e.g. 35" min="0" max="100" step="1" style="width:100%;" required />
           </div>
         </div>
 
@@ -224,14 +182,7 @@
         <div class="two-col">
           <div class="form-group">
             <label>% of 2025 harvest sold to date?</label>
-            <select name="sold" required>
-              <option value="">Select</option>
-              <option value="0_25">0-25%</option>
-              <option value="25_50">25-50%</option>
-              <option value="50_75">50-75%</option>
-              <option value="75_100">75-100%</option>
-              <option value="na">First season</option>
-            </select>
+            <input type="number" name="sold" placeholder="e.g. 60" min="0" max="100" step="1" style="width:100%;" required />
           </div>
           <div class="form-group">
             <label>Biggest challenge right now?</label>
