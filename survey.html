@@ -307,6 +307,17 @@
 const RESPONSES_KEY = 'lowell_survey_responses';
 let surveyToken = null;
 
+// Auto-start from URL token
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get('token');
+  if (token) {
+    surveyToken = token.trim().toUpperCase();
+    document.getElementById('token-card').style.display = 'none';
+    document.getElementById('survey-body').style.display = 'block';
+  }
+})();
+
 function startSurvey() {
   const token = document.getElementById('token-input').value.trim().toUpperCase();
   if (!token || token.length < 8) {
