@@ -1,337 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lowell Grower's Letter — NY Cannabis Market</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      background: #f5f0e8;
-      color: #2c2c2c;
-      line-height: 1.7;
-      font-size: 16px;
-    }
-    .container {
-      max-width: 620px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
-    .letter {
-      background: #ffffff;
-      border-radius: 4px;
-      padding: 2.5rem 2rem;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    }
-    h1 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #236749;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 2px solid #236749;
-    }
-    p {
-      margin: 0;
-      padding: 0;
-    }
-    .greeting {
-      font-size: 1.05rem;
-      font-weight: 600;
-    }
-    .signoff {
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #e8e4dc;
-    }
-    .signoff p {
-      margin-bottom: 0.3rem;
-    }
-    .name {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #236749;
-    }
-    .title {
-      font-size: 0.85rem;
-      color: #6b6b6b;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lowell — A Letter to New York's Licensed Growers</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',Times,serif;background:#f5f0e8;color:#2c2c2c;line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+.container{max-width:580px;margin:0 auto;padding:32px 20px}
+.letter{background:#fff;padding:48px 40px;border-radius:8px}
+@media(max-width:500px){.letter{padding:32px 24px}.container{padding:16px 12px}}
 
-    /* ── Table ── */
-    .table-wrap {
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
-      background: #f8f6f1;
-      border-radius: 6px;
-      padding: 1.75rem 1.5rem;
-      border: 1px solid #e8e4dc;
-    }
-    .table-wrap h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #236749;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.85rem;
-    }
-    th {
-      text-align: left;
-      padding: 0.5rem 0.6rem;
-      border-bottom: 2px solid #236749;
-      color: #236749;
-      font-weight: 700;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
-    th:last-child, td:last-child { text-align: right; }
-    th:nth-child(2), td:nth-child(2) { text-align: right; }
-    th:nth-child(3), td:nth-child(3) { text-align: right; }
-    td {
-      padding: 0.45rem 0.6rem;
-      border-bottom: 1px solid #e8e4dc;
-    }
-    .accent { color: #236749; font-weight: 700; }
-    .green { color: #2d8a5c; font-weight: 700; }
-    .footnote {
-      font-size: 0.75rem;
-      color: #8a8a8a;
-      margin-top: 0.6rem;
-      font-style: italic;
-    }
-    .green-bold { color: #236749; font-weight: 700; }
+/* Header */
+h1{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:700;color:#236749;text-transform:uppercase;letter-spacing:0.1em;padding-bottom:20px;border-bottom:2px solid #236749;margin-bottom:32px}
+h1 span{font-weight:400;opacity:0.5}
+.logo{text-align:center;margin-bottom:28px}
+.logo img{width:120px;height:auto;display:inline-block}
 
-    /* ── Callout ── */
-    .callout {
-      background: #e6f4ea;
-      border: 3px solid #236749;
-      padding: 1.25rem 1.5rem;
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
-    }
-    .callout strong {
-      color: #236749;
-    }
+/* Typography */
+p{margin:0;padding:0;line-height:1.7;font-size:16px;color:#2c2c2c}
+.greeting{font-size:17px;font-weight:600;margin-bottom:4px}
+.spacer{display:block;height:28px}
+.spacer-s{display:block;height:20px}
+.spacer-l{display:block;height:36px}
 
-    /* ── Event promo ── */
-    .event-box {
-      background: #f8f6f1;
-      border: 3px solid #c8a84e;
-      border-radius: 6px;
-      padding: 1.5rem;
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-    .event-box h3 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #c8a84e;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.5rem;
-    }
-    .event-box p {
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-    }
-    .event-box .date {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #236749;
-    }
-    @media (max-width: 500px) {
-      .container { padding: 1rem; }
-      .letter { padding: 1.5rem 1.25rem; }
-      table { font-size: 0.78rem; }
-    }
-  </style>
+.bold{font-weight:700;color:#236749}
+
+/* Tables */
+.table-wrap{background:#f8f6f1;border-radius:8px;padding:24px 20px;margin:0}
+.table-wrap h2{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;color:#236749;text-transform:uppercase;letter-spacing:0.08em;text-align:center;margin-bottom:16px}
+table{width:100%;border-collapse:collapse;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;font-size:14px}
+th{text-align:left;padding:10px 8px;border-bottom:2px solid #236749;color:#236749;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.05em}
+th:last-child,td:last-child{text-align:right}
+th:nth-child(2),td:nth-child(2){text-align:right}
+th:nth-child(3),td:nth-child(3){text-align:right}
+td{padding:10px 8px;border-bottom:1px solid #e0dcd4;font-size:14px}
+tr:last-child td{border-bottom:none}
+.accent{color:#236749;font-weight:700}
+.green{color:#2d8a5c;font-weight:700}
+.footnote{font-size:12px;color:#8a8a8a;margin-top:12px;font-style:italic;text-align:center}
+
+/* Callout */
+.callout{background:#eaf3ed;border:3px solid #236749;border-radius:8px;padding:20px 24px;margin:0}
+.callout p{font-size:15px;line-height:1.6;color:#236749;margin:0}
+.callout strong{color:#1a5a3a}
+
+/* Event box */
+.event-box{background:#f8f6f1;border:3px solid #c8a84e;border-radius:8px;padding:28px 24px;text-align:center;margin:0}
+.event-box h3{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;color:#c8a84e;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px}
+.event-box p{font-size:15px;margin-bottom:4px;line-height:1.5}
+.event-box .date{font-size:20px;font-weight:700;color:#236749;margin-bottom:8px;margin-top:4px}
+
+/* CTA */
+.cta-wrap{text-align:center;margin:0}
+.cta-btn{display:inline-block;background:#236749;color:#fff!important;padding:16px 40px;border-radius:6px;text-decoration:none;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:17px;letter-spacing:0.02em}
+.cta-btn:hover{background:#1d5a3d}
+
+/* Flower box */
+.flower-box{background:#eaf3ed;border:3px solid #236749;border-radius:8px;padding:24px;text-align:center;margin:0}
+.flower-box p{font-size:17px;font-weight:600;color:#236749;margin-bottom:4px;line-height:1.4}
+.flower-box .email{font-size:15px;font-weight:400;color:#236749;margin:0}
+
+/* Signoff */
+.signoff{padding-top:24px;border-top:1px solid #e0dcd4;margin:0}
+.signoff p{font-size:15px;margin-bottom:4px;line-height:1.6;color:#2c2c2c}
+.name{font-weight:700;color:#236749}
+.title{font-size:13px;color:#8a8a8a;margin-top:4px}
+</style>
 </head>
 <body>
 <div class="container">
-  <div class="letter">
+<div class="letter">
 
-    <h1>A Letter to New York's Licensed Growers</h1>
+<div class="logo">
+  <img src="https://georgelowell.github.io/lowell-ny-grower-survey/assets/ny_logo.png" alt="Lowell Herb Co" width="120" height="120" />
+</div>
 
-    <p class="greeting">Licensed growers of New York,</p>
-    <br/><br/>
+<h1>A Letter to New York's Licensed Growers</h1>
 
-    <p>When weed prices fall, buyers don't line up to tell you. It's just quiet. The phone doesn't ring. Another leg down.</p>
-    <br/><br/>
+<p class="greeting">Licensed growers of New York,</p>
+<span class="spacer"></span>
 
-    <p>It took us three and a half years for the falling prices in California to drop below our marginal cost of production. Along the path we watched as the tempest devastated friends and neighbors as those of us remaining burned more of our furniture to stay warm and fend off aphids, spider-mites and HLVd.</p>
-    <br/><br/>
+<p>When weed prices fall, buyers don't line up to tell you. It's just quiet. The phone doesn't ring. Another leg down.</p>
+<span class="spacer"></span>
 
-    <p>One day, we're on a big call and someone points out that waiting the storm out might be easier to endure without any plants in the ground because each one of them is losing money. It's a shitty day when the spreadsheet tells you to lay everyone off. Didn't matter, another leg down.</p>
-    <br/><br/>
+<p>It took us three and a half years for the falling prices in California to drop below our marginal cost of production. Along the path we watched as the tempest devastated friends and neighbors as those of us remaining burned more of our furniture to stay warm and fend off aphids, spider-mites and HLVd.</p>
+<span class="spacer"></span>
 
-    <p>As dominoes fell, we were afforded some protection resulting from our larger scale but closures swept down through the state from the north, loosely correlated to hours of sunlight and winter temps. In Monterey we outlasted most of the triangle but ultimately our greenhouses couldn't compete with the bountiful sun of Santa Barbara only 200 miles to our south.</p>
-    <br/><br/>
+<p>One day, we're on a big call and someone points out that waiting the storm out might be easier to endure without any plants in the ground because each one of them is losing money. It's a shitty day when the spreadsheet tells you to lay everyone off. Didn't matter, another leg down.</p>
+<span class="spacer"></span>
 
-    <p>I run Lowell Herb Company and I have a profound respect for what you do. We built our business in NY depending on the health of the diverse growing community so we feel a responsibility to contribute. Like many of you, I have witnessed the apocalypse caused by uncapped licensing. We must do better in New York.</p>
-    <br/><br/>
+<p>As dominoes fell, we were afforded some protection resulting from our larger scale but closures swept down through the state from the north, loosely correlated to hours of sunlight and winter temps. In Monterey we outlasted most of the triangle but ultimately our greenhouses couldn't compete with the bountiful sun of Santa Barbara only 200 miles to our south.</p>
+<span class="spacer-l"></span>
 
-    <!-- THE TABLE -->
-    <div class="table-wrap">
-      <h2>New York Cannabis Market: 2024 → 2026</h2>
-      <table>
-        <tr>
-          <th>Metric</th>
-          <th>2024</th>
-          <th>2026</th>
-          <th>Growth</th>
-        </tr>
-        <tr>
-          <td>Retail Sales</td>
-          <td>$882M</td>
-          <td class="accent">$2,600M</td>
-          <td class="green">3.0x</td>
-        </tr>
-        <tr>
-          <td>Retail Locations</td>
-          <td>391</td>
-          <td class="accent">854</td>
-          <td class="green">2.2x</td>
-        </tr>
-        <tr>
-          <td>Physical Canopy</td>
-          <td>69.5 ac</td>
-          <td class="accent">130.9 ac</td>
-          <td class="green">1.9x</td>
-        </tr>
-        <tr>
-          <td>Production-Equivalent Canopy*</td>
-          <td>118 ac</td>
-          <td class="accent">274 ac</td>
-          <td class="green">2.3x</td>
-        </tr>
-        <tr>
-          <td>Sales per Store (monthly)</td>
-          <td>$188K</td>
-          <td class="accent">$254K</td>
-          <td class="green">1.3x</td>
-        </tr>
-      </table>
-      <div class="footnote">*Weighted by harvest cycles: Outdoor 1x, Greenhouse 3x, Indoor 7x per sq ft per year</div>
-    </div>
-    <br/><br/>
+<p class="bold">I run Lowell Herb Company and I have a profound respect for what you do. We built our business in NY depending on the health of the diverse growing community so we feel a responsibility to contribute. Like many of you, I have witnessed the apocalypse caused by uncapped licensing. We must do better in New York.</p>
+<span class="spacer-l"></span>
 
-    <p>This table is the reason I'm writing you today. In California, supply outraced demand by a wide margin and never caught up. Here in New York, <strong class="green-bold">demand is growing 30% faster than production capacity</strong>. Retail sales have tripled while cultivation has only doubled. Per-store revenue is up 30%, not down.</p>
-    <br/><br/>
+<div class="table-wrap">
+  <h2>New York Cannabis Market: 2024 → 2026</h2>
+  <table>
+    <tr><th>Metric</th><th>2024</th><th>2026</th><th>Growth</th></tr>
+    <tr><td>Retail Sales</td><td>$882M</td><td class="accent">$2,600M</td><td class="green">3.0x</td></tr>
+    <tr><td>Retail Locations</td><td>391</td><td class="accent">854</td><td class="green">2.2x</td></tr>
+    <tr><td>Physical Canopy</td><td>69.5 ac</td><td class="accent">130.9 ac</td><td class="green">1.9x</td></tr>
+    <tr><td>Production-Equivalent Canopy*</td><td>118 ac</td><td class="accent">274 ac</td><td class="green">2.3x</td></tr>
+    <tr><td>Sales per Store (monthly)</td><td>$188K</td><td class="accent">$254K</td><td class="green">1.3x</td></tr>
+  </table>
+  <div class="footnote">*Weighted by harvest cycles: Outdoor 1x, Greenhouse 3x, Indoor 7x per sq ft per year</div>
+</div>
+<span class="spacer-l"></span>
 
-    <p>New York is doing something different. The market is young, the licensing is tiered, and the trajectory is healthy — but only if we defend it together. An uncapped free-for-all would turn this table upside down in a year. We've seen that movie. It ends badly.</p>
-    <br/><br/>
+<p>This table is the reason I'm writing you today. In California, supply outraced demand by a wide margin and never caught up. Here in New York, <span class="bold">demand is growing 30% faster than production capacity</span>. Retail sales have tripled while cultivation has only doubled. Per-store revenue is up 30%, not down.</p>
+<span class="spacer"></span>
 
-    <!-- PRODUCT MIX TABLE -->
-    <div class="table-wrap">
-      <h2>Where the Market Is — and Isn't</h2>
-      <table>
-        <tr>
-          <th>Product Category</th>
-          <th>Share of Sales</th>
-          <th>2026 Est. ($2.6B)</th>
-        </tr>
-        <tr>
-          <td>Flower</td>
-          <td>33%</td>
-          <td class="accent">$858M</td>
-        </tr>
-        <tr>
-          <td>Pre-rolls</td>
-          <td>12%</td>
-          <td class="accent">$312M</td>
-        </tr>
-        <tr>
-          <td>Vape</td>
-          <td>28%</td>
-          <td class="accent">$728M</td>
-        </tr>
-        <tr>
-          <td>Edibles</td>
-          <td>14%</td>
-          <td class="accent">$364M</td>
-        </tr>
-        <tr>
-          <td>Concentrates (live resin, rosin, etc.)</td>
-          <td>11%</td>
-          <td class="accent">$286M</td>
-        </tr>
-        <tr>
-          <td>Other</td>
-          <td>2%</td>
-          <td class="accent">$52M</td>
-        </tr>
-      </table>
-      <div class="footnote">Source: OCM Market Report, retail sales data</div>
-    </div>
-    <br/><br/>
+<p>New York is doing something different. The market is young, the licensing is tiered, and the trajectory is healthy — but only if we defend it together. An uncapped free-for-all would turn this table upside down in a year. We've seen that movie. It ends badly.</p>
+<span class="spacer-l"></span>
 
-    <p>I'm telling you this because of something we keep hearing from growers around the state. There's a recurring theme: more and more canopy is being directed toward genetics engineered to perform as fresh frozen — flower that goes straight to the freezer instead of the drying rack, destined for live resin, live rosin, and infused prerolls. On its face it makes sense: less drying infrastructure, faster turnaround, and the concentrate side of the market is where the excitement is.</p>
-    <br/><br/>
+<div class="table-wrap">
+  <h2>Where the Market Is — and Isn't</h2>
+  <table>
+    <tr><th>Product Category</th><th>Share of Sales</th><th>2026 Est. ($2.6B)</th></tr>
+    <tr><td>Flower</td><td>33%</td><td class="accent">$858M</td></tr>
+    <tr><td>Pre-rolls</td><td>12%</td><td class="accent">$312M</td></tr>
+    <tr><td>Vape</td><td>28%</td><td class="accent">$728M</td></tr>
+    <tr><td>Edibles</td><td>14%</td><td class="accent">$364M</td></tr>
+    <tr><td>Concentrates (live resin, rosin, etc.)</td><td>11%</td><td class="accent">$286M</td></tr>
+    <tr><td>Other</td><td>2%</td><td class="accent">$52M</td></tr>
+  </table>
+  <div class="footnote">Source: OCM Market Report, retail sales data</div>
+</div>
+<span class="spacer-l"></span>
 
-    <p>But look at the second table. The concentrate market — the entire category that absorbs fresh frozen biomass — is <strong class="green-bold">11% of total sales</strong>. Flower and prerolls together are <strong class="green-bold">45%</strong>.</p>
-    <br/><br/>
+<p>I'm telling you this because of something we keep hearing from growers around the state. There's a recurring theme: more and more canopy is being directed toward genetics engineered to perform as fresh frozen — flower that goes straight to the freezer instead of the drying rack, destined for live resin, live rosin, and infused prerolls. On its face it makes sense: less drying infrastructure, faster turnaround, and the concentrate side of the market is where the excitement is.</p>
+<span class="spacer"></span>
 
-    <p>That raises a question that none of us can answer alone: <strong class="green-bold">how many growers are actually making this pivot, and can the market handle it?</strong> If 5% of the state's canopy shifts to fresh frozen, that's one thing. If 30% does, we are likely to see a glut of frozen weed without a home. The concentrate market is a teacup. A coordinated rush in any direction is the kind of supply glut nobody wants to discover they're part of until it's too late.</p>
-    <br/><br/>
+<p>But look at the second table. The concentrate market — the entire category that absorbs fresh frozen biomass — is <span class="bold">11% of total sales</span>. Flower and prerolls together are <span class="bold">45%</span>.</p>
+<span class="spacer"></span>
 
-    <div class="callout">
-      <strong>That's exactly why we're doing this survey — and why your participation matters.</strong> The only way to know whether you're heading toward an opportunity or into a crowded room is to see what everybody else is doing. Right now, nobody has that picture.
-    </div>
-    <br/><br/>
+<p>That raises a question that none of us can answer alone: <span class="bold">how many growers are actually making this pivot, and can the market handle it?</span> If 5% of the state's canopy shifts to fresh frozen, that's one thing. If 30% does, we are likely to see a glut of frozen weed without a home. The concentrate market is a teacup. A coordinated rush in any direction is the kind of supply glut nobody wants to discover they're part of until it's too late.</p>
+<span class="spacer-l"></span>
 
-    <p>Here's what the survey covers: <strong>plant counts</strong> (this season vs. last), <strong>fresh frozen plans</strong> (how much of your harvest is headed to the freezer), and <strong>CPG vs. bulk mix</strong>. Plus a few quick pulse checks on market confidence. It takes about 3 minutes.</p>
-    <br/><br/>
+<div class="callout">
+  <p><strong>That's exactly why we're doing this survey — and why your participation matters.</strong> The only way to know whether you're heading toward an opportunity or into a crowded room is to see what everybody else is doing. Right now, nobody has that picture.</p>
+</div>
+<span class="spacer-l"></span>
 
-    <p>Every respondent gets access to the full aggregated results — so you can see where the market is actually heading, not just where the loudest voices say it is. Your individual responses are private. Only the aggregate gets published and the only people that see results are the folks who contribute. Nobody else.</p>
-    <br/><br/>
+<p>Here's what the survey covers: <span class="bold">plant counts</span> (this season vs. last), <span class="bold">fresh frozen plans</span> (how much of your harvest is headed to the freezer), and <span class="bold">CPG vs. bulk mix</span>. Plus a few quick pulse checks on market confidence. It takes about 3 minutes.</p>
+<span class="spacer"></span>
 
-    <p>This isn't a Lowell survey. It's an industry survey. We're just hosting it.</p>
-    <br/><br/>
+<p>Every respondent gets access to the full aggregated results — so you can see where the market is actually heading, not just where the loudest voices say it is. Your individual responses are private. Only the aggregate gets published and the only people that see results are the folks who contribute. Nobody else.</p>
+<span class="spacer"></span>
 
-    <div style="text-align:center; margin-top:0.5rem; margin-bottom:0.5rem;">
-      <a href="https://georgelowell.github.io/lowell-ny-grower-survey/survey.html" style="display:inline-block; background:#236749; color:white; padding:0.75rem 2rem; border-radius:6px; text-decoration:none; font-weight:600; font-size:1rem;">Take the Survey →</a>
-    </div>
-    <br/><br/>
+<p>This isn't a Lowell survey. It's an industry survey. We're just hosting it.</p>
+<span class="spacer-l"></span>
 
-    <p><strong>About us:</strong> Some folks who buy flower on the bulk market want their retail customers to believe they grew the flower themselves. In contrast, we prefer to share your stories with as many people as we can so they too can be proud of our cannabis community.</p>
-    <br/><br/>
+<div class="cta-wrap">
+  <a class="cta-btn" href="https://georgelowell.github.io/lowell-ny-grower-survey/survey.html">Take the Survey →</a>
+</div>
+<span class="spacer-l"></span>
 
-    <div class="event-box">
-      <h3>Celebrating our Growers</h3>
-      <p>In late October we will host nearly 150 budtenders, buyers and store owners from across the state at a golf event in Dutchess County called the</p>
-      <p class="date">Lowell Harvest Cup</p>
-      <p>All of our growers will be our guests and invited to showcase their goods. We are proud of the flower you grow.</p>
-    </div>
-    <br/><br/>
+<p><span class="bold">About us:</span> Some folks who buy flower on the bulk market want their retail customers to believe they grew the flower themselves. In contrast, we prefer to share your stories with as many people as we can so they too can be proud of our cannabis community.</p>
+<span class="spacer-l"></span>
 
-    <div style="text-align:center; padding:1.5rem; background:#e6f4ea; border:3px solid #236749; border-radius:6px; margin-top:0.5rem; margin-bottom:0.5rem;">
-      <p style="font-size:1.05rem; font-weight:600; color:#236749; margin-bottom:0.3rem;">If you have flower to sell, please reach out to me directly.</p>
-      <p style="font-weight:400; font-size:0.95rem; color:#236749; margin:0;">george@lowellherbco.com</p>
-    </div>
-    <br/><br/>
+<div class="event-box">
+  <h3>Celebrating our Growers</h3>
+  <p>In late October we will host nearly 150 budtenders, buyers and store owners from across the state at a golf event in Dutchess County called the</p>
+  <p class="date">Lowell Harvest Cup</p>
+  <p>All of our growers will be our guests and invited to showcase their goods. We are proud of the flower you grow.</p>
+</div>
+<span class="spacer-l"></span>
 
-    <div class="signoff">
-      <p>I'm a lifelong New Yorker. My name is <span class="name">George Allen</span>, I live in Dutchess County and our headquarters is in Red Hook, NY. I coach high school rowing, my family and I live on a farm and I love great weed. Come see us if you are in town.</p>
-      <p class="title">Lowell Herb Co</p>
-    </div>
+<div class="flower-box">
+  <p>If you have flower to sell, please reach out to me directly.</p>
+  <p class="email">george@lowellherbco.com</p>
+</div>
+<span class="spacer-l"></span>
 
-  </div>
+<div class="signoff">
+  <p>I'm a lifelong New Yorker. My name is <span class="name">George Allen</span>, I live in Dutchess County and our headquarters is in Red Hook, NY. I coach high school rowing, my family and I live on a farm and I love great weed. Come see us if you are in town.</p>
+  <p class="title">Lowell Herb Co</p>
+</div>
+
+</div>
 </div>
 </body>
 </html>
