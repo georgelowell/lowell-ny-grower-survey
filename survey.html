@@ -53,24 +53,12 @@
     </p>
     <span style="display:block;height:10px;"></span>
     <p style="font-size:0.9rem; line-height:1.6; color:#4a4a4a;">
-      We&#39;ve fixed the system and the store is now reliable. <strong style="color:#236749;">Please submit your answers again</strong> so we have a true, current picture of what&#39;s in the ground this season. It takes about 3 minutes. Your individual answers stay private &mdash; only the aggregate gets shared, and only with growers who contribute.
+      We&#39;ve fixed the system and the store is now reliable. <strong style="color:#236749;">Please submit your answers again</strong> so we have a true, current picture of what&#39;s in the ground this season. It takes about 3 minutes. Your individual answers stay private &mdash; only the aggregate gets shared.
     </p>
-  </div>
-
-  <!-- TOKEN CHECK -->
-  <div class="card" id="token-card">
-    <p style="color:#6b6b6b; font-size:0.9rem; margin-bottom:0.75rem;">
-      Enter the access code from your email invitation to begin.
-    </p>
-    <div style="display:flex; gap:0.5rem; max-width:350px;">
-      <input type="text" id="token-input" placeholder="LOW-XXXX-XXXX-XXXX" style="flex:1; font-family:monospace; letter-spacing:0.08em;" autocomplete="off" />
-      <button class="btn btn-primary" onclick="startSurvey()">Start</button>
-    </div>
-    <p id="token-error" style="color:#c62828; margin-top:0.4rem; font-size:0.85rem; display:none;"></p>
   </div>
 
   <!-- SURVEY FORM -->
-  <div id="survey-body" style="display:none;">
+  <div id="survey-body">
     <div class="card">
       <p style="font-size:0.85rem; color:#6b6b6b; margin-bottom:0.5rem;">
         Thank you for taking the time. All responses are strictly confidential. Only aggregated data is shared &mdash; with the growers who contribute. Takes about 3 minutes.
@@ -78,6 +66,23 @@
     </div>
 
     <form id="survey-form" onsubmit="return false;">
+
+      <!-- SECTION 0: ABOUT YOU (identity — added so a single BCC email + open form works) -->
+      <div class="card">
+        <h2>About You</h2>
+        <div class="section-desc">So we know whose operation this is.</div>
+
+        <div class="form-group">
+          <label>Farm / business name</label>
+          <input type="text" name="farm_name" placeholder="e.g. Hudson Valley Sun Growers" style="width:100%;" required />
+        </div>
+
+        <div class="form-group">
+          <label>Contact email</label>
+          <input type="email" name="email" placeholder="you@yourfarm.com" style="width:100%;" required />
+          <div class="hint" style="font-size:0.75rem; color:#8a8a8a;">We&#39;ll use this to send you the aggregated results and follow up about the Croptober Cup.</div>
+        </div>
+      </div>
 
       <!-- SECTION 1 -->
       <div class="card">
@@ -216,13 +221,7 @@
 
       <!-- SECTION 5 -->
       <div class="card">
-        <h2>Results &amp; Follow-Up</h2>
-
-        <div class="form-group">
-          <label>Where should we send the survey results?</label>
-          <div class="hint">We'll email you the aggregated data once responses come in. Multiple emails ok — separate with commas.</div>
-          <input type="text" name="results_email" placeholder="you@email.com, partner@email.com" style="width:100%;" />
-        </div>
+        <h2>A Few Final Questions</h2>
 
         <div class="form-group">
           <label>What topics would you like to see covered in future surveys?</label>
@@ -258,30 +257,6 @@
 
 <script>
 const RESPONSES_KEY = 'lowell_survey_responses';
-let surveyToken = null;
-
-// Auto-start from URL token
-(function() {
-  const params = new URLSearchParams(window.location.search);
-  const token = params.get('token');
-  if (token) {
-    surveyToken = token.trim().toUpperCase();
-    document.getElementById('token-card').style.display = 'none';
-    document.getElementById('survey-body').style.display = 'block';
-  }
-})();
-
-function startSurvey() {
-  const token = document.getElementById('token-input').value.trim().toUpperCase();
-  if (!token || token.length < 8) {
-    document.getElementById('token-error').textContent = 'Please enter a valid access code.';
-    document.getElementById('token-error').style.display = 'block';
-    return;
-  }
-  surveyToken = token;
-  document.getElementById('token-card').style.display = 'none';
-  document.getElementById('survey-body').style.display = 'block';
-}
 
 function submitSurvey() {
   const btn = document.querySelector('.btn-gold');
@@ -315,23 +290,38 @@ function submitSurvey() {
     }
   }
 
-  response._token = surveyToken;
   response._submitted_at = new Date().toISOString();
-  response._version = '2.0';
+  response._version = '3.0';
 
-  // Send to server
+  // Send to server (durable store: GCS-backed collector).
+  // If this POST fails, the response is NOT silent-lost: it's kept in
+  // localStorage and we surface an error to the respondent.
   fetch('https://survey-collector-wablvffojq-uc.a.run.app/submit', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(response)
+  }).then(function(r) {
+    if (!r.ok) {
+      // Durable write failed on the server — tell the respondent, don't hide it.
+      throw new Error('Server returned ' + r.status);
+    }
+    return r.json();
+  }).then(function() {
+    document.getElementById('survey-body').style.display = 'none';
+    document.getElementById('results-screen').style.display = 'block';
+    var el = document.getElementById('results-content');
+    el.innerHTML = '<div class="alert alert-success"><strong>Thank you! Your response has been recorded. We will send you the aggregated results once responses close.</strong></div>';
+    localStorage.removeItem(RESPONSES_KEY);
   }).catch(function(err) {
     console.error('Submit failed:', err);
+    // Keep the response locally AND tell the user — never a silent loss.
+    saveResponse(response);
+    alert('We had trouble reaching our server. Your answers were saved on this device and we will retry. If this persists, please email george@lowellherbco.com.');
   });
-
-  saveResponse(response);
 }
 
 function saveResponse(response) {
+  // local fallback only (used when the server post fails). Never marks success.
   let allResponses = [];
   try {
     const stored = localStorage.getItem(RESPONSES_KEY);
@@ -339,8 +329,6 @@ function saveResponse(response) {
   } catch(e) {}
   allResponses.push(response);
   localStorage.setItem(RESPONSES_KEY, JSON.stringify(allResponses));
-
-  showResults(response);
 }
 
 function showResults(response) {
