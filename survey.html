@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2026 Lowell Grower's Survey</title>
+  <title>The Grower's Harvest Survey</title>
   <link rel="stylesheet" href="assets/style.css" />
   <style>
     body { background: #f5f0e8; }
@@ -34,14 +34,29 @@
 <header>
   <div class="container">
     <div>
-      <h1>2026 Grower's Survey</h1>
-      <div class="subtitle">New York Cannabis Cultivation Market</div>
+      <h1>The Grower's Harvest Survey</h1>
+      <div class="subtitle">Invited by the Croptober Cup &middot; New York's cultivators, together</div>
     </div>
-    <div style="font-size:0.8rem; opacity:0.7;">By <strong>Lowell Herb Co</strong></div>
+    <div style="font-size:0.8rem; opacity:0.7;">Hosted by <strong>Lowell Herb Co</strong></div>
   </div>
 </header>
 
 <main class="container">
+  <!-- RESUBMIT NOTICE (own the loss — direct, no spin) -->
+  <div class="card" id="resubmit-notice" style="border:2px solid #c8a84e; background:#fdf9ef;">
+    <p style="font-size:0.95rem; line-height:1.65; color:#2c2c2c;">
+      <strong style="color:#236749;">If you took this survey earlier this season &mdash; we need you to take it again, and we&#39;re sorry to ask.</strong>
+    </p>
+    <span style="display:block;height:10px;"></span>
+    <p style="font-size:0.9rem; line-height:1.6; color:#4a4a4a;">
+      Our first attempt at collecting responses had a technical failure and the early submissions were lost. That&#39;s on us &mdash; the data collected before that fix does not exist, which risks making this survey worse than useless: it would paint a picture of a market that isn&#39;t real.
+    </p>
+    <span style="display:block;height:10px;"></span>
+    <p style="font-size:0.9rem; line-height:1.6; color:#4a4a4a;">
+      We&#39;ve fixed the system and the store is now reliable. <strong style="color:#236749;">Please submit your answers again</strong> so we have a true, current picture of what&#39;s in the ground this season. It takes about 3 minutes. Your individual answers stay private &mdash; only the aggregate gets shared, and only with growers who contribute.
+    </p>
+  </div>
+
   <!-- TOKEN CHECK -->
   <div class="card" id="token-card">
     <p style="color:#6b6b6b; font-size:0.9rem; margin-bottom:0.75rem;">
@@ -58,7 +73,7 @@
   <div id="survey-body" style="display:none;">
     <div class="card">
       <p style="font-size:0.85rem; color:#6b6b6b; margin-bottom:0.5rem;">
-        All responses are strictly confidential. Only aggregated data is shared. Takes about 3 minutes.
+        Thank you for taking the time. All responses are strictly confidential. Only aggregated data is shared &mdash; with the growers who contribute. Takes about 3 minutes.
       </p>
     </div>
 
@@ -238,7 +253,7 @@
 </main>
 
 <footer>
-  <p>2026 Lowell Grower's Survey · Lowell Herb Co · Responses confidential</p>
+  <p>The Grower's Harvest Survey &middot; Hosted by Lowell Herb Co &middot; Invited by the Croptober Cup &middot; Responses confidential</p>
 </footer>
 
 <script>
@@ -287,13 +302,13 @@ function submitSurvey() {
       const name = el.name;
       if (!form.querySelector(`input[name="${name}"]:checked`)) {
         btn.disabled = false;
-        btn.textContent = '📊 Submit & View Results';
+        btn.textContent = 'Submit';
         alert('Please answer all required questions before submitting.');
         return;
       }
     } else if (!el.value) {
       btn.disabled = false;
-      btn.textContent = '📊 Submit & View Results';
+      btn.textContent = 'Submit';
       el.focus();
       alert('Please answer all required questions before submitting.');
       return;
